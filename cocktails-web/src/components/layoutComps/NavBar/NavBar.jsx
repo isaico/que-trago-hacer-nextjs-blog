@@ -30,7 +30,7 @@ const NavBar = () => {
             text: 'Cocktails para cualquier ocasion',
         },
         {
-            path: '/10-tragos-pocos-ingredientes',
+            path: '/blog/10-tragos-pocos-ingredientes',
             text: 'Top 10 tragos con pocos ingredientes',
         },
     ];
@@ -87,7 +87,7 @@ const NavBar = () => {
                     </Dropdown>
                 </li>
 
-                <Link href="/ruta">Ruta</Link>
+                
                 <Link href="#">Contact</Link>
             </Navbar.Collapse>
         </Navbar>

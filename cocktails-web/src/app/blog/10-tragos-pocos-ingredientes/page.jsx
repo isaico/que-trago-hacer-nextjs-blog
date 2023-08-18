@@ -1,9 +1,9 @@
-import React from 'react';
-
+import PostContainer from "@/components/layoutComps/PostContainer/PostContainer";
  const Page = () => {
   return (
     <div>
       10 tragos con pocos ingredientes
+      <PostContainer></PostContainer>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 export const metadata={
-    title:"Blog de tragos y cocteles",
+    title:"titlo del tema de la pagina",
     description:"desc"
 }
 const layout = ({ children }) => {
