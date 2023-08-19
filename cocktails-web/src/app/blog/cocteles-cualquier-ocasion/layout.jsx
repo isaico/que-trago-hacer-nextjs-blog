@@ -1,5 +1,5 @@
 export const metadata={
-    title:"titlo del tema de la pagina",
+    title:"Cócteles para cualquier ocasión",
     description:"desc"
 }
 const layout = ({ children }) => {

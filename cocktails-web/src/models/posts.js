@@ -5,7 +5,9 @@ const PostsSchema = new Schema(
         title: String,
         description: String,
         ingredients: [String],
-        image_url:String
+        image_url:String,
+        alt:String,
+        category:String
     },
     {
         timestamps: true,

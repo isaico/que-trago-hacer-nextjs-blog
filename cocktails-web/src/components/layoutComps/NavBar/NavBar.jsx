@@ -10,34 +10,36 @@ const NavBar = () => {
         {
             path: '/tragos/ron',
             text: 'Tragos con Ron',
-            key:1
+            key: 1,
         },
         {
             path: '/tragos/vodka',
             text: 'Tragos con Vodka',
-            key:2
+            key: 2,
         },
         {
             path: '/tragos/gin',
             text: 'Tragos con Gin',
-            key:3
+            key: 3,
         },
         {
             path: '/tragos/jaggermeister',
             text: 'Tragos con Jagger',
-            key:4
+            key: 4,
         },
     ];
     const blogRoutes = [
         {
-            path: '/cocteles-cualquier-ocasion',
-            text: 'Cocktails para cualquier ocasion',
-            key:100
-        },
-        {
             path: '/blog/10-tragos-pocos-ingredientes',
             text: 'Top 10 tragos con pocos ingredientes',
-            key:101
+            key: 101,
+            category: 'blog-1',
+        },
+        {
+            path: '/blog/cocteles-cualquier-ocasion',
+            text: 'Cocktails para cualquier ocasion',
+            key: 100,
+            category: 'blog-2',
         },
     ];
     return (
@@ -77,8 +79,23 @@ const NavBar = () => {
                 <li className="p-2 pl-3 md:p-0 text-gray-700 border-gray-100 border-b md:border-none">
                     <Dropdown label="Tragos" inline className="font-normal">
                         {tragosRoutes.map((item) => (
-                            <Dropdown.Item className="px-6 py-3 hover:text-primary" key={item.key}>
-                                <NavLink src={item.path}>{item.text}</NavLink>
+                            <Dropdown.Item
+                                className="px-6 py-3 hover:text-primary"
+                                key={item.key}
+                            >
+                                {item.category && (
+                                    <NavLink
+                                        src={item.path}
+                                        category={item.category}
+                                    >
+                                        {item.text}
+                                    </NavLink>
+                                )}
+                                {!item.category && (
+                                    <NavLink src={item.path}>
+                                        {item.text}
+                                    </NavLink>
+                                )}
                             </Dropdown.Item>
                         ))}
                     </Dropdown>
@@ -86,14 +103,21 @@ const NavBar = () => {
                 <li className="p-2 pl-3 md:p-0 text-gray-700 border-gray-100 border-b md:border-none">
                     <Dropdown label="Blog" inline className="font-normal">
                         {blogRoutes.map((item) => (
-                            <Dropdown.Item className="px-6 py-3 hover:text-primary" key={item.key}>
-                                <NavLink src={item.path}>{item.text}</NavLink>
+                            <Dropdown.Item
+                                className="px-6 py-3 hover:text-primary"
+                                key={item.key}
+                            >
+                                <NavLink
+                                    src={item.path}
+                                    category={item.category}
+                                >
+                                    {item.text}
+                                </NavLink>
                             </Dropdown.Item>
                         ))}
                     </Dropdown>
                 </li>
 
-                
                 <Link href="#">Contact</Link>
             </Navbar.Collapse>
         </Navbar>

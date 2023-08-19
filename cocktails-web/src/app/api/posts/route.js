@@ -16,6 +16,7 @@ export async function POST(request, { params }) {
         await connectDB();
         const body = await request.json();
         const newPost = new Posts(body);
+        console.log(body,":body")
         const resp = await newPost.save();
         console.log(resp)
         return NextResponse.json(resp);

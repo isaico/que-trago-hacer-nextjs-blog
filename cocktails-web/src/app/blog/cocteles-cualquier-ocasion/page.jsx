@@ -1,9 +1,11 @@
-import React from 'react'
+import PostContainer from '@/components/layoutComps/PostContainer/PostContainer';
+const Page = ({ searchParams }) => {
+    return (
+        <div>
+            Cócteles para cualquier ocasión
+            <PostContainer category={searchParams.category}></PostContainer>
+        </div>
+    );
+};
 
-const Page = () => {
-  return (
-    <div>Cócteles para cualquier ocasión</div>
-  )
-}
-
-export default Page
+export default Page;
