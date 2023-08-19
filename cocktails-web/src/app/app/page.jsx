@@ -1,8 +1,8 @@
-
+//EN ESTE RUTA SE CONSTRUIRA LA APP
 const Page = () => {
   return (
     <div>
-      qth app route
+      APP ROUTE
     </div>
   );
 }

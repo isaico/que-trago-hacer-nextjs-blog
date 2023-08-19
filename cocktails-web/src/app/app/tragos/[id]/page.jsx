@@ -4,8 +4,9 @@ import React from 'react';
 const PageTitle = ({params}) => {
   return (
     <div>
-      page title: 
-      <p>{params.title}</p>
+      page: 
+      <p>{params.id}</p>
+      
     </div>
   );
 }
