@@ -1,11 +1,11 @@
 import PostContainer from '@/components/layoutComps/PostContainer/PostContainer';
 
 const Page = ({ searchParams }) => {
-    
     return (
         <div>
             10 tragos con pocos ingredientes
             <PostContainer category={searchParams.category}></PostContainer>
+            <div> articulo recomendado ... </div>
         </div>
     );
 };

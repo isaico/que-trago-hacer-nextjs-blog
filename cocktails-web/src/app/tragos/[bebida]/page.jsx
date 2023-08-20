@@ -1,11 +1,13 @@
-import React from 'react';
 //cargare los post desde la api local con el params id como prametro
-const Page = ({params}) => {
-  return (
-    <div>
-      <p>{params.bebida}</p>
-    </div>
-  );
-}
+import CocktailContainer from '@/components/layoutComps/CocktailContainer/CocktailContainer';
+
+const Page = ({ params }) => {
+    return (
+        <div>
+            <p>Cocktails con {params.bebida}</p>
+            <CocktailContainer ingredient={params.bebida}></CocktailContainer>
+        </div>
+    );
+};
 
 export default Page;
