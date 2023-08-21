@@ -1,16 +1,31 @@
+'use client';
 import Image from 'next/image';
-const PostCard = ({item}) => {
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const PostCard = ({ post }) => {
+    const paths = usePathname();
     return (
-        <div>
-            page:
-            <p>titulo: {item.title}</p>
-            <p> desc: {item.description}</p>
+        <div key={post._id} className="bg-gray-300 p-2 border-2">
+            <div>soy post card</div>
             <Image
-                src={item.image_url}
+                loading="lazy"
+                src={post.image_url}
+                alt={post.alt}
                 width={500}
                 height={500}
-                alt={item.alt}
             ></Image>
+            <h2 className="text-lg pb-2">{post.title}</h2>
+            <hr />
+            <p className="text-sm">{post.description}</p>
+            <Link
+                href={{
+                    pathname: `/blog/${post._id}`,
+                    query: post,
+                }}
+            >
+                <button>Ver Receta</button>
+            </Link>
         </div>
     );
 };

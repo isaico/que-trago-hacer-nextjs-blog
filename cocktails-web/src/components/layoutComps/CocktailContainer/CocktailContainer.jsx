@@ -3,7 +3,7 @@ import Cocktail from '@/models/cocktails';
 import Link from 'next/link';
 
 const getCocktails = async (ing) => {
-    console.log(ing);
+    // const fistUpper = ing.charAt(0).toUpperCase() + ing.slice(1)
     connectDB();
     // pido en la base de datos los elementos que tenga coicidencia en el array "ingredients", con lo pasado por params
     const dbResp = await Cocktail.find({

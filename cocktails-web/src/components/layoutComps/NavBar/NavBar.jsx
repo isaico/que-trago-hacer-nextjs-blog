@@ -11,34 +11,38 @@ const NavBar = () => {
             path: '/tragos/ron',
             text: 'Tragos con Ron',
             key: 1,
+            category: 'ron',
         },
         {
             path: '/tragos/vodka',
             text: 'Tragos con Vodka',
             key: 2,
+            category: 'vodka',
         },
         {
             path: '/tragos/gin',
             text: 'Tragos con Gin',
             key: 3,
+            category: 'gin',
         },
         {
             path: '/tragos/jaggermeister',
             text: 'Tragos con Jagger',
             key: 4,
+            category: 'jaggermeister',
         },
     ];
     const blogRoutes = [
         {
-            path: '/blog/10-tragos-pocos-ingredientes',
+            path: '/blog/post/top-10-tragos-pocos-ingredientes',
             text: 'Top 10 tragos con pocos ingredientes',
             key: 101,
             category: 'blog-1',
         },
         {
-            path: '/blog/cocteles-cualquier-ocasion',
+            path: '/blog/post/cocteles-cualquier-ocasion',
             text: 'Cocktails para cualquier ocasion',
-            key: 100,
+            key: 102,
             category: 'blog-2',
         },
     ];
