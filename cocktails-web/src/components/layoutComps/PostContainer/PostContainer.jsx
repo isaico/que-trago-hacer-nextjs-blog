@@ -3,11 +3,7 @@ import connectDB from '@/libs/mongodb';
 import Image from 'next/image';
 import Link from 'next/link';
 import PostCard from '@/components/UiComps/PostCard';
-const getPosts = async (category) => {
-    connectDB();
-    const dbresp = await Posts.find({ category });
-    return dbresp;
-};
+
 
 const PostContainer = async ({ posts }) => {
     // const data = await getPosts(category);

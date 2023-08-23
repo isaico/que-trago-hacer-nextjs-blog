@@ -9,7 +9,7 @@
 } */
 
 @media (prefers-color-scheme: none) {
-  /* :root {
+    /* :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
@@ -17,7 +17,7 @@
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb));
+    /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
@@ -25,6 +25,39 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
-.active{
-  @apply text-primary
+.active {
+    @apply text-primary;
+}
+.bg-grad-1 {
+    background-color: rgb(154, 52, 18);
+    background-image: radial-gradient(
+            at 31% 89%,
+            rgb(168, 85, 247) 0,
+            transparent 52%
+        ),
+        radial-gradient(at 33% 17%, rgb(243, 232, 255) 0, transparent 79%),
+        radial-gradient(at 79% 34%, rgb(225, 29, 72) 0, transparent 76%),
+        radial-gradient(at 15% 39%, rgb(194, 65, 12) 0, transparent 90%),
+        radial-gradient(at 0% 2%, rgb(244, 114, 182) 0, transparent 100%),
+        radial-gradient(at 57% 31%, rgb(107, 114, 128) 0, transparent 22%);
+}
+.bg-grad-2 {
+    background-color: rgb(236, 72, 153);
+    background-image: radial-gradient(
+            at 18% 81%,
+            rgb(216, 180, 254) 0,
+            transparent 49%
+        ),
+        radial-gradient(at 63% 38%, rgb(239, 68, 68) 0, transparent 52%),
+        radial-gradient(at 46% 58%, rgb(75, 85, 99) 0, transparent 51%),
+        radial-gradient(at 68% 90%, rgb(244, 114, 182) 0, transparent 37%);
+}
+.bg-grad-main {
+    @apply bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-black via-pink-500 to-purple-500;
+}
+.bg-dot {
+    background-image: radial-gradient(#9999995e 5%, transparent 0);
+    background-size: 20px 20px;
+    /* background-repeat: repeat-y; */
+    /* background-size: cover; */
 }

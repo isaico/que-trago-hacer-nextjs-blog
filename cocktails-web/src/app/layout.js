@@ -1,12 +1,18 @@
 import DefaultLayout from './DefaultLayout';
 import NavBar from '../components/layoutComps/NavBar/NavBar';
 import Footer from '@/components/layoutComps/Footer/Footer';
-import { Poppins } from 'next/font/google';
+// import { Poppins } from 'next/font/google';
+import { Jost} from 'next/font/google';
 import './globals.css';
 
-const poppins = Poppins({
+// const poppins = Poppins({
+//     subsets: ['latin'],
+//     weight: ['200', '300', '400', '500', '700'],
+//     style: ['normal', 'italic'],
+// });
+const jost = Jost({
     subsets: ['latin'],
-    weight: ['200', '300', '400','500', '700'],
+    weight: ['200', '300', '400', '500', '700'],
     style: ['normal', 'italic'],
 });
 
@@ -18,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="es">
-            <body className={poppins.className}>
+            <body className={`${jost.className} `}>
                 <NavBar />
                 <DefaultLayout>{children}</DefaultLayout>
                 <Footer />

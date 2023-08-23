@@ -20,8 +20,8 @@ const PostCard = ({ post }) => {
             <p className="text-sm">{post.description}</p>
             <Link
                 href={{
-                    pathname: `/blog/${post._id}`,
-                    query: post,
+                    pathname: `/app/${post.title}`,
+                    query: {title:post.title},
                 }}
             >
                 <button>Ver Receta</button>

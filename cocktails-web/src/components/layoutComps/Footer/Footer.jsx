@@ -2,7 +2,7 @@ import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 
 export default function Footer() {
     return (
-        <footer className="bg-white w-full">
+        <footer className="bg-white w-full border-t">
             <div className=" w-full p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">

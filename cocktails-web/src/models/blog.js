@@ -2,9 +2,11 @@ import { Schema, model, models } from 'mongoose';
 
 const BlogSchema = new Schema(
     {
-        title: String,
+        title: { type: String, required: true, unique: true },
+        brief_desc: String,
         description: String,
         image_url: String,
+        alt: String,
         posts: [
             {
                 title: String,
@@ -15,7 +17,12 @@ const BlogSchema = new Schema(
                 category: String,
             },
         ],
-        blogCategory:String
+        blogCategory: String,
+        categoryId: {
+            type: String,
+            required: true,
+            unique: true,
+        },
     },
     {
         timestamps: true,
@@ -23,4 +30,4 @@ const BlogSchema = new Schema(
 );
 const Blog = models.Blog || model('Blog', BlogSchema);
 
-export default Blog
+export default Blog;

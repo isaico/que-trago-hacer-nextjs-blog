@@ -4,50 +4,16 @@ import { Navbar, Button, Dropdown } from 'flowbite-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import NavLink from '@/components/UiComps/NavLink';
+import {
+    categoryTragos,
+    categoryPosts,
+    categoryPreparacion,
+} from '@/utils/paths';
 const NavBar = () => {
     const pathname = usePathname();
-    const tragosRoutes = [
-        {
-            path: '/tragos/ron',
-            text: 'Tragos con Ron',
-            key: 1,
-            category: 'ron',
-        },
-        {
-            path: '/tragos/vodka',
-            text: 'Tragos con Vodka',
-            key: 2,
-            category: 'vodka',
-        },
-        {
-            path: '/tragos/gin',
-            text: 'Tragos con Gin',
-            key: 3,
-            category: 'gin',
-        },
-        {
-            path: '/tragos/jaggermeister',
-            text: 'Tragos con Jagger',
-            key: 4,
-            category: 'jaggermeister',
-        },
-    ];
-    const blogRoutes = [
-        {
-            path: '/blog/post/top-10-tragos-pocos-ingredientes',
-            text: 'Top 10 tragos con pocos ingredientes',
-            key: 101,
-            category: 'blog-1',
-        },
-        {
-            path: '/blog/post/cocteles-cualquier-ocasion',
-            text: 'Cocktails para cualquier ocasion',
-            key: 102,
-            category: 'blog-2',
-        },
-    ];
+
     return (
-        <Navbar fluid rounded className="bg-bg-white ">
+        <Navbar fluid rounded className="bg-bg-white border-b border-gray-300">
             {/* <Navbar.Brand href="https://flowbite-react.com">
                     <img
                         alt="Flowbite React Logo"
@@ -59,7 +25,7 @@ const NavBar = () => {
                     </span>
                 </Navbar.Brand> */}
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-                QTH -Blog
+                QTH-Blog
             </span>
             <div className="flex md:order-2">
                 <Link href="/app">
@@ -80,23 +46,23 @@ const NavBar = () => {
                     Inicio
                 </Link>
 
-                <li className="p-2 pl-3 md:p-0 text-gray-700 border-gray-100 border-b md:border-none">
-                    <Dropdown label="Tragos" inline className="font-normal">
-                        {tragosRoutes.map((item) => (
+                <li className="p-2 pl-3 md:p-0  text-gray-700 border-gray-100 border-b md:border-none">
+                    <Dropdown
+                        label="Tragos"
+                        inline
+                        className="font-normal bg-gray-300 flex"
+                    >
+                        {categoryTragos.map((item) => (
                             <Dropdown.Item
-                                className="px-6 py-3 hover:text-primary"
+                                className="px-6 py-3 hover:text-primary hover:underline bg-gray-100"
                                 key={item.key}
                             >
-                                {item.category && (
+                                {item && (
                                     <NavLink
                                         src={item.path}
                                         category={item.category}
+                                        id={item.id}
                                     >
-                                        {item.text}
-                                    </NavLink>
-                                )}
-                                {!item.category && (
-                                    <NavLink src={item.path}>
                                         {item.text}
                                     </NavLink>
                                 )}
@@ -105,15 +71,38 @@ const NavBar = () => {
                     </Dropdown>
                 </li>
                 <li className="p-2 pl-3 md:p-0 text-gray-700 border-gray-100 border-b md:border-none">
-                    <Dropdown label="Blog" inline className="font-normal">
-                        {blogRoutes.map((item) => (
+                    <Dropdown label="Posts" inline className="font-normal">
+                        {categoryPosts.map((item) => (
                             <Dropdown.Item
-                                className="px-6 py-3 hover:text-primary"
+                                className="px-6 py-3 hover:text-primary hover:underline"
                                 key={item.key}
                             >
                                 <NavLink
                                     src={item.path}
                                     category={item.category}
+                                    id={item.id}
+                                >
+                                    {item.text}
+                                </NavLink>
+                            </Dropdown.Item>
+                        ))}
+                    </Dropdown>
+                </li>
+                <li className="p-2 pl-3 md:p-0 text-gray-700 border-gray-100 border-b md:border-none">
+                    <Dropdown
+                        label="Preparacion"
+                        inline
+                        className="font-normal"
+                    >
+                        {categoryPreparacion.map((item) => (
+                            <Dropdown.Item
+                                className="px-6 py-3 hover:text-primary hover:underline"
+                                key={item.key}
+                            >
+                                <NavLink
+                                    src={item.path}
+                                    category={item.category}
+                                    id={item.id}
                                 >
                                     {item.text}
                                 </NavLink>
@@ -122,7 +111,8 @@ const NavBar = () => {
                     </Dropdown>
                 </li>
 
-                <Link href="#">Contact</Link>
+                <Link href="/blog">Blog</Link>
+                <Link href="#">Contacto</Link>
             </Navbar.Collapse>
         </Navbar>
     );
