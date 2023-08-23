@@ -2,9 +2,9 @@ import React from 'react';
 import fetchBlog from '@/utils/fetchBlog';
 import BlogCard from '@/components/UiComps/BlogCard';
 import BlogLayout from '@/components/layoutComps/Blog/BlogLayout';
-const Page = async ({ params, searchParams }) => {
-    console.log(params, searchParams);
-    const blog = await fetchBlog(searchParams.id);
+const Page = async ({ params }) => {
+    
+    const blog = await fetchBlog(params.metodo);
     return (
         <div>
             Metodo de preparacion {params.metodo}

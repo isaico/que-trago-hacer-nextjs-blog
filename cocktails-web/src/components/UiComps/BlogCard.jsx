@@ -1,48 +1,47 @@
-import React from 'react';
 import Image from 'next/image';
-import fetchBlog from '@/utils/fetchBlog';
-const BlogCard = async ({ categoryId }) => {
-    const blog = await fetchBlog(categoryId);
+import Link from 'next/link';
+
+const BlogCard = ({ blog }) => {
+    let route = ""
+    if(blog.blogCategory == "posts"){
+        let titleNoSpaces = blog.title.replace(/ /g, '-')
+        let titleLowerCase = titleNoSpaces.toLowerCase()
+        route = titleLowerCase.replace(/[^a-zA-Z0-9-]/g, '-')
+        console.log(route)
+    }
+    // console.log(blog.title)
+    // console.log(blog.categoryId)
 
     return (
-        <div className=" shadow-lg ">
-            <a
-                href="#"
-                class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        <div>
+            <Link
+                href={blog.blogCategory == "posts"?{
+                    pathname: `/blog/${blog.blogCategory}/${route}`,
+                    query:{id:blog.title.trim()}
+                }  : {
+                    pathname:`/blog/${blog.blogCategory}/${blog.categoryId}`,
+                    // query:{id:blog.categoryId}
+                }
+            }
             >
-                <Image
-                    class="object-cover w-full rounded-t-lg h-full  md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                    src={blog.image_url}
-                    height={600}
-                    width={200}
-                    alt={blog.alt}
-                />
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Noteworthy technology acquisitions 2021
-                    </h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        Here are the biggest enterprise technology acquisitions
-                        of 2021 so far, in reverse chronological order.
-                    </p>
-                </div>
-            </a>
-
-            {/* soy blog card
-            {blog ? (
-                <div className='flex'>
-                    <Image
-                        src={blog.image_url}
-                        height={400}
-                        width={400}
-                        alt={blog.alt}
-                    ></Image>
-                    <h1>{blog.title}</h1>
-                    <p>{blog.description}</p>
-                </div>
-            ) : (
-                <div> error al cargar datos</div>
-            )} */}
+                {blog ? (
+                    <div className="flex">
+                        <Image
+                            className="object-cover w-full rounded-t-lg h-full  md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                            src={blog.image_url}
+                            height={400}
+                            width={400}
+                            alt={blog.alt}
+                        ></Image>
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h1>{blog.title}</h1>
+                            <p>{blog.description}</p>
+                        </div>
+                    </div>
+                ) : (
+                    <div> error al cargar datos</div>
+                )}
+            </Link>
         </div>
     );
 };

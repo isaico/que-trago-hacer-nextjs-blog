@@ -30,25 +30,25 @@ export const categoryTragos = [
 ];
 export const categoryPosts = [
     {
-        path: '/blog/post/top-10-tragos-pocos-ingredientes',
-        text: 'Top 10 tragos con pocos ingredientes',
+        path: '/blog/posts/top-10-tragos',
+        text: 'Top 10 tragos',
         key: 101,
         category: 'posts',
-        id: 'post-1',
+        id: 'Top 10 tragos ',
     },
     {
-        path: '/blog/post/como-hacer-almibares-en-casa',
-        text: 'Cocktails para cualquier ocasion',
+        path: '/blog/posts/como-hacer-algo',
+        text: 'Como hacer algo',
         key: 102,
         category: 'posts',
-        id: 'post-2',
+        id: 'Como hacer algo',
     },
     {
-        path: '/blog/post/vodka-vs-gin',
-        text: 'Vodka vs Gin',
+        path: '/blog/posts/vodka-vs-gin',
+        text: 'Vodka vs gin',
         key: 103,
         category: 'posts',
-        id: 'post-3',
+        id: 'Vodka vs gin',
     },
 ];
 export const categoryPreparacion = [
@@ -57,20 +57,20 @@ export const categoryPreparacion = [
         text: 'Cocteles Batidos',
         key: 201,
         category: 'preparacion',
-        id: 'batido',
+        id: 'batidos',
     },
     {
         path: '/blog/preparacion/licuados',
         text: 'Cocteles Licuados',
         key: 202,
         category: 'preparacion',
-        id: 'licuado',
+        id: 'licuados',
     },
     {
         path: '/blog/preparacion/directos',
         text: 'Cocteles Directos',
         key: 203,
         category: 'preparacion',
-        id: 'directo',
+        id: 'directos',
     },
 ];
