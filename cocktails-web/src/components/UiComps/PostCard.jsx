@@ -1,10 +1,8 @@
-'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 const PostCard = ({ post }) => {
-    const paths = usePathname();
+    console.log(post.title,"envio por query")
     return (
         <div key={post._id} className="bg-gray-300 p-2 border-2">
             <div>soy post card</div>

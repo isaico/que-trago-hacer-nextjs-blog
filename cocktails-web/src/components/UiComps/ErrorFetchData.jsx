@@ -1,20 +1,18 @@
 'use client';
-import { Button } from 'flowbite-react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-const notFound = () => {
+import { Button } from 'flowbite-react';
+const ErrorFetchData = () => {
     const router = useRouter();
-
     return (
         <section class="bg-bg-white ">
             <div class="py-8 px-4 mx-auto  lg:py-16 lg:px-6">
                 <div class="mx-auto max-w-screen-xl text-center">
                     <h1 class="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent ">
-                        404
+                        500
                     </h1>
                     <div className="flex flex-col items-center">
                         <p class="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl flex ">
-                            Ups! no se encontro la pagina!
+                            Error al cargar desde la base de datos
                             <svg
                                 viewBox="0 0 24 24"
                                 fill="currentColor"
@@ -88,7 +86,18 @@ const notFound = () => {
                 </div>
             </div>
         </section>
+        // <div>
+        //    <h2> Error al cargar la base de datos</h2>
+        //     <svg
+        //         viewBox="0 0 24 24"
+        //         fill="currentColor"
+        //         height="1em"
+        //         width="1em"
+        //     >
+        //         <path d="M20 13.09V7c0-2.21-3.58-4-8-4S4 4.79 4 7v10c0 2.21 3.59 4 8 4 .46 0 .9 0 1.33-.06A5.94 5.94 0 0113 19v-.05c-.32.05-.65.05-1 .05-3.87 0-6-1.5-6-2v-2.23c1.61.78 3.72 1.23 6 1.23.65 0 1.27-.04 1.88-.11A5.986 5.986 0 0119 13c.34 0 .67.04 1 .09m-2-.64c-1.3.95-3.58 1.55-6 1.55s-4.7-.6-6-1.55V9.64c1.47.83 3.61 1.36 6 1.36s4.53-.53 6-1.36v2.81M12 9C8.13 9 6 7.5 6 7s2.13-2 6-2 6 1.5 6 2-2.13 2-6 2m8.41 10l2.13 2.12-1.42 1.42L19 20.41l-2.12 2.13-1.41-1.42L17.59 19l-2.12-2.12 1.41-1.41L19 17.59l2.12-2.12 1.42 1.41L20.41 19" />
+        //     </svg>
+        // </div>
     );
 };
 
-export default notFound;
+export default ErrorFetchData;

@@ -1,10 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 import PostContainer from '../PostContainer/PostContainer';
-
+import BackButton from '@/components/UiComps/BackButton';
+import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
 const BlogLayout = ({ blog }) => {
     return (
         <>
+            <div>
+                <BackButton/>
+            </div>
             {blog ? (
                 <div>
                     <Image
@@ -19,7 +23,7 @@ const BlogLayout = ({ blog }) => {
                     <div> articulo relacionado dentro de blog ... </div>
                 </div>
             ) : (
-                <div>error al obtener datos</div>
+                <ErrorFetchData>error al obtener datos</ErrorFetchData>
             )}
         </>
     );
