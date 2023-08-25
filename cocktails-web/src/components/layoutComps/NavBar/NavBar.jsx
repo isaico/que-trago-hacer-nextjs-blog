@@ -24,7 +24,7 @@ const NavBar = () => {
                         Flowbite React
                     </span>
                 </Navbar.Brand> */}
-            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white text-grad-main">
                 QTH-Blog
             </span>
             <div className="flex md:order-2">

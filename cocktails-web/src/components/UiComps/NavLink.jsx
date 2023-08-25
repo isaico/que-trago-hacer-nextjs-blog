@@ -9,7 +9,7 @@ const NavLink = ({ src, children, category, id }) => {
                 pathname: src,
                 query: { category: category, id: id },
             }}
-            className={pathname == { src } ? 'active' : ''}
+            className={pathname ===  src ? 'active' : ''}
         >
             {children}
         </Link>

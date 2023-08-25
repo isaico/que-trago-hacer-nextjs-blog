@@ -1,5 +1,4 @@
-//cargare los post desde la api local con el params id como prametro
-import Blog from '@/models/blog';
+
 import fetchBlog from '@/utils/fetchBlog';
 import BlogLayout from '@/components/layoutComps/Blog/BlogLayout';
 import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
@@ -12,8 +11,7 @@ const Page = async ({ params }) => {
             ) : (
                 <ErrorFetchData></ErrorFetchData>
             )}
-            {/* <PostContainer posts={}></PostContainer> */}
-            {/* <CocktailContainer ingredient={params.bebida}></CocktailContainer> */}
+            
         </div>
     );
 };

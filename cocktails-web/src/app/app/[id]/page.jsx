@@ -2,6 +2,7 @@
 import BackButton from '@/components/UiComps/BackButton';
 import Image from 'next/image';
 import fetchCocktail from '@/utils/fetchCocktail';
+import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
 //utilizo searchParams para evitar modificaciones en la cadena y utilizarlo directamente
 const Page = async ({ searchParams }) => {
     const data = await fetchCocktail(searchParams.title);
@@ -24,7 +25,7 @@ const Page = async ({ searchParams }) => {
                     <div>puedo mostrar articulos relacionado</div>
                 </div>
             ) : (
-                <div>error al obtener datos</div>
+                <ErrorFetchData/>
             )}
         </div>
     );

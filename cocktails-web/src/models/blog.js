@@ -23,6 +23,8 @@ const BlogSchema = new Schema(
             required: true,
             unique: true,
         },
+        tips: [String],
+        extra: String,
     },
     {
         timestamps: true,

@@ -7,7 +7,7 @@ const ErrorFetchData = () => {
         <section class="bg-bg-white ">
             <div class="py-8 px-4 mx-auto  lg:py-16 lg:px-6">
                 <div class="mx-auto max-w-screen-xl text-center">
-                    <h1 class="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent ">
+                    <h1 class="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-grad-main ">
                         500
                     </h1>
                     <div className="flex flex-col items-center">

@@ -8,7 +8,6 @@ export async function generateMetadata({ params }, parent) {
   }
    
 const layout = ({ children, params }) => {
-    console.log(params);
     return <>{children}</>;
 };
 

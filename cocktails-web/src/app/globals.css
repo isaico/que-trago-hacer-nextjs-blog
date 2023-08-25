@@ -61,3 +61,6 @@ body {
     /* background-repeat: repeat-y; */
     /* background-size: cover; */
 }
+.text-grad-main{
+    @apply bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent
+}
