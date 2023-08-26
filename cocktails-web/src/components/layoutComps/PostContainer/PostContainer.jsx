@@ -6,9 +6,9 @@ import PostCard from '@/components/UiComps/PostCard';
 
 const PostContainer = async ({ posts }) => {
     return (
-        <div className=" flex flex-col" id="post-container">
-            {posts.map((post) => (
-                <PostCard post={post}></PostCard>
+        <div className="flex flex-col" id="post-container">
+            {posts.map((post,i) => (
+                <PostCard post={post} index={i} postLength={posts.length}/>
             ))}
         </div>
     );

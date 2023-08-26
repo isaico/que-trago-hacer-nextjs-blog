@@ -36,7 +36,7 @@ const BlogLayout = ({ blog }) => {
                     </span>
                 </div>
                 <div className="text-xl leading-8 font-normal text-gray-700">
-                    <h1 className="lg:text-5xl text-2xl py-8 font-semibold text-grad-main text-center">
+                    <h1 className="lg:text-6xl text-2xl py-8 font-semibold text-grad-main text-center">
                         {blog?.title}
                     </h1>
 
@@ -49,23 +49,25 @@ const BlogLayout = ({ blog }) => {
                         alt={blog?.alt}
                         className="opacity-2"
                     />
-                    <div className='pt-8 pb-12'>
-                        <h2 className='text-2xl font-medium text-gray-900'>{blog.title_desc}</h2>
-                        <p className="pt-4">{blog.description}</p>
+                    <div className="pt-8 pb-12">
+                        <h2 className="text-2xl font-medium text-gray-900 pb-4">
+                            {blog?.title_desc}
+                        </h2>
+                        <p className="">{blog?.description}</p>
                     </div>
-                
 
-                {blog.posts.length > 0 ? (
-                    <div>
-                        <PostContainer posts={blog?.posts}></PostContainer>
-                        <div> articulo relacionado dentro de blog ... </div>
-                    </div>
-                ) : (
-                    // blog con datos si la lista posts no existe
-                    <div>
-                        {blog.extra}
-                    </div>
-                )}
+                    {blog.posts.length > 0 ? (
+                        <div >
+                            <h2 className="text-2xl font-medium text-gray-900 pb-2">
+                                {blog?.title_posts}:
+                            </h2>
+                            <PostContainer posts={blog?.posts}></PostContainer>
+                            <div> articulo relacionado dentro de blog ... </div>
+                        </div>
+                    ) : (
+                        // blog con datos si la lista posts no existe
+                        <div>{blog.extra}</div>
+                    )}
                 </div>
             </div>
         </article>
