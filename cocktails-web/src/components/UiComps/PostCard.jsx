@@ -3,12 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const PostCard = ({ post, index, postLength }) => {
-    const description = post.description;
     return (
-        <div key={post._id} className="my-6 p-0.5 bg-grad-3 rounded-xl shadow-lg">
-            <div className="bg-gray-50 p-4 rounded-xl">
-                <h3 className="text-2xl font-medium pt-2 pb-8 text-gray-900">
-                    <span className="font-semibold text-gray-800">
+        <div
+            key={post._id}
+            className="my-6 p-0.5 bg-grad-3 rounded-xl shadow-lg"
+        >
+            <div className="bg-gray-50 p-6 py-8 rounded-xl flex flex-col">
+                <h3 className="text-3xl font-medium  pb-8 text-gray-900">
+                    <span className="font-medium text-gray-900">
                         #{postLength - index}
                     </span>{' '}
                     {post?.title}
@@ -23,13 +25,10 @@ const PostCard = ({ post, index, postLength }) => {
                         height={200}
                         className="float-left mr-8 rounded-md"
                     ></Image>
-                    {/* <p className="">{`${post?.description} ${<b></b>}`}</p> */}
-                    <div
-                        dangerouslySetInnerHTML={{ __html: description }}
-                    ></div>
+                    <p className="">{post?.description}</p>
                 </div>
                 <div className="my-6">
-                    <h4 className="text-2xl mb-4">Ingredientes: </h4>
+                    <h4 className="text-2xl font-medium mb-4">Ingredientes: </h4>
                     <ul className="">
                         {post?.ingredients.map((ing) => (
                             <li className="flex items-center mb-2">
@@ -47,22 +46,25 @@ const PostCard = ({ post, index, postLength }) => {
                         ))}
                     </ul>
                 </div>
-               <button className='w-full border-2 border-gray-900 flex items-center justify-center py-4 hover:bg-primary-light hover:shadow-lg hover:translate-y-1 ease-in-out duration-100 text-gray-800 font-medium rounded-lg  bg-bg-white'>
+                <h4 className="text-2xl font-medium mb-4">Receta: </h4>
+
+                <p>{post?.recepy}</p>
+                <button className="w-full border-2 border-gray-900 flex items-center justify-center py-3 mt-4 hover:bg-primary-light hover:shadow-lg hover:translate-y-1 ease-in-out duration-100 text-gray-800 font-medium rounded-lg  bg-bg-white">
                     <Link
-                    className=' '
+                        className=" "
                         href={{
                             pathname: `/app/${post.title}`,
                             query: { title: post.title },
                         }}
                     >
                         <p className="flex items-center ">
-                            Ver receta y tips de: {post.title}
+                            Tips del bartender: {post.title}
                             <svg
                                 fill="none"
                                 viewBox="0 0 15 15"
                                 height="1em"
                                 width="1em"
-                                className='ml-2'
+                                className="ml-2"
                             >
                                 <path
                                     stroke="currentColor"
@@ -70,9 +72,8 @@ const PostCard = ({ post, index, postLength }) => {
                                 />
                             </svg>
                         </p>
-                     
                     </Link>
-               </button>
+                </button>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const { DATABASE_URL } = process.env;
-
+const { DATABASE_URL } = process.env ;
+console.log(DATABASE_URL)
 if (!DATABASE_URL) {
   throw new Error("DATABASE_URL must be defined");
 }

@@ -13,6 +13,7 @@ const BlogSchema = new Schema(
                 title: String,
                 description: String,
                 ingredients: [String],
+                recepy:String,
                 image_url: String,
                 alt: String,
                 category: String,

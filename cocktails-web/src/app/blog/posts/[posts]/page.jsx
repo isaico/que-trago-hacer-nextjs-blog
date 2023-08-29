@@ -3,7 +3,6 @@ import BlogLayout from '@/components/layoutComps/Blog/BlogLayout';
 import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
 
 const Blogs = async ({ searchParams }) => {
-   
     const blog = await fetchBlog(searchParams.id.trim());
     return (
         <>
@@ -12,7 +11,7 @@ const Blogs = async ({ searchParams }) => {
             ) : (
                <ErrorFetchData/>
             )}
-            <div> articulo recomendado en page ... </div>
+            
         </>
     );
 };

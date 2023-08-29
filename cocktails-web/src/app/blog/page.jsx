@@ -1,22 +1,30 @@
 import fetchBlogs from '@/utils/fetchBlogs';
 import BlogCard from '@/components/UiComps/BlogCard';
 import BackButton from '@/components/UiComps/BackButton';
-const Page = async ({ params }) => {
-    const blogs = await fetchBlogs();
-    console.log(params, 'blog');
+import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
+import CategoryButtons from '@/components/UiComps/CategoryButtons';
+
+const Page = async () => {
+    const blogs = await fetchBlogs(null);
     return (
-        <div class="pb-4 mx-auto max-w-screen-xl lg:pb-4">
+        <div class="pb-4">
             <div>
                 <BackButton></BackButton>
             </div>
 
-            <div className="grid md:grid-cols-2  gap-8 mb-8">
+            <div className=" justify-center">
                 {blogs ? (
-                    blogs.map((blog) => <BlogCard blog={blog}></BlogCard>)
+                    <>
+
+                        <div className="grid md:grid-col-2 gap-8 max-w-2xl">
+                            {blogs.map((blog) => (
+                                <BlogCard blog={blog}></BlogCard>
+                            ))}
+                        </div>
+                    </>
                 ) : (
-                    <div>Error al cargar datos</div>
+                    <ErrorFetchData />
                 )}
-                Blog
             </div>
         </div>
     );

@@ -13,7 +13,11 @@ const NavBar = () => {
     const pathname = usePathname();
 
     return (
-        <Navbar fluid rounded className="bg-bg-white border-b border-gray-300">
+        <Navbar
+            fluid
+            rounded
+            className="bg-bg-white border-b border-gray-300 fixed w-full z-10"
+        >
             {/* <Navbar.Brand href="https://flowbite-react.com">
                     <img
                         alt="Flowbite React Logo"
@@ -24,7 +28,7 @@ const NavBar = () => {
                         Flowbite React
                     </span>
                 </Navbar.Brand> */}
-            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white text-grad-main">
+            <span className="self-center whitespace-nowrap text-xl font-semibold  text-grad-main">
                 QTH-Blog
             </span>
             <div className="flex md:order-2">
@@ -41,20 +45,21 @@ const NavBar = () => {
                 </Link>
                 <Navbar.Toggle />
             </div>
-            <Navbar.Collapse className="font-semibold">
-                <Link href="/" className={pathname == '/' ? 'active' : ''}>
+            <Navbar.Collapse className=" text-gray-900 ">
+                <Link
+                    href="/"
+                    className={`${
+                        pathname == '/' ? 'active' : ''
+                    } text-lg font-normal`}
+                >
                     Inicio
                 </Link>
 
-                <li className="p-2 pl-3 md:p-0  text-gray-700 border-gray-100 border-b md:border-none">
-                    <Dropdown
-                        label="Tragos"
-                        inline
-                        className="font-normal bg-gray-300 flex"
-                    >
+                <li className="p-2 pl-3 md:p-0  border-gray-100 border-b md:border-none text-lg font-normal">
+                    <Dropdown label="Tragos" inline>
                         {categoryTragos.map((item) => (
                             <Dropdown.Item
-                                className="px-6 py-3 hover:text-primary hover:underline bg-gray-100"
+                                className="px-6 py-3 hover:text-primary hover:underline "
                                 key={item.key}
                             >
                                 {item && (
@@ -70,7 +75,7 @@ const NavBar = () => {
                         ))}
                     </Dropdown>
                 </li>
-                <li className="p-2 pl-3 md:p-0 text-gray-700 border-gray-100 border-b md:border-none">
+                <li className="p-2 pl-3 md:p-0  border-gray-100 border-b md:border-none text-lg font-normal">
                     <Dropdown label="Posts" inline className="font-normal">
                         {categoryPosts.map((item) => (
                             <Dropdown.Item
@@ -88,15 +93,15 @@ const NavBar = () => {
                         ))}
                     </Dropdown>
                 </li>
-                <li className="p-2 pl-3 md:p-0 text-gray-700 border-gray-100 border-b md:border-none">
+                <li className="p-2 pl-3 md:p-0  border-gray-100 border-b md:border-none text-lg font-normal">
                     <Dropdown
                         label="Preparacion"
                         inline
-                        className="font-normal"
+                        className="font-normal "
                     >
                         {categoryPreparacion.map((item) => (
                             <Dropdown.Item
-                                className="px-6 py-3 hover:text-primary hover:underline"
+                                className="px-6 py-3 hover:text-primary hover:underline "
                                 key={item.key}
                             >
                                 <NavLink
@@ -111,8 +116,12 @@ const NavBar = () => {
                     </Dropdown>
                 </li>
 
-                <Link href="/blog">Blog</Link>
-                <Link href="#">Contacto</Link>
+                <Link href="/blog" className="font-normal text-lg">
+                    Blog
+                </Link>
+                <Link href="#" className="font-normal text-lg">
+                    Contacto
+                </Link>
             </Navbar.Collapse>
         </Navbar>
     );

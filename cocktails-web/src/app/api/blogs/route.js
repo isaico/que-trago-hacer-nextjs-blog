@@ -9,13 +9,12 @@ export async function GET() {
         await connectDB();
         const resp = await Blog.find();
         console.log(resp);
-        return NextResponse.json(resp);
+        return NextResponse.json(resp,{ status: 200 });
     } catch (error) {
         return NextResponse.json(error.message, {
             status: 500,
         });
     }
-    // return NextResponse.json({ data: resp }, { status: 201 });
 }
 export async function POST(request, { params }) {
     try {
@@ -23,7 +22,6 @@ export async function POST(request, { params }) {
         const body = await request.json();
         const newBlog = new Blog(body);
         const resp = await newBlog.save();
-        console.log(resp)
         return NextResponse.json(resp,{ status: 201 });
     } catch (error) {
         return NextResponse.json(error.message, {

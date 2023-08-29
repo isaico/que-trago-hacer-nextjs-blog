@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Breadcrumb } from 'flowbite-react';
 import { HiHome } from 'react-icons/hi';
 export default function DefaultBreadcrumb({ category, title }) {
+    const upperCategory = category[0].toUpperCase() + category.slice(1)
     return (
         <Breadcrumb aria-label="Default breadcrumb example">
             <Breadcrumb.Item icon={HiHome}>
@@ -16,7 +17,7 @@ export default function DefaultBreadcrumb({ category, title }) {
                 </Link>
             </Breadcrumb.Item>
             <Breadcrumb.Item>
-                <p className="text-sm font-normal">{category}</p>
+                <p className="text-sm font-normal">{upperCategory}</p>
             </Breadcrumb.Item>
             <Breadcrumb.Item>
                 <p className="text-sm font-normal">{title}</p>
