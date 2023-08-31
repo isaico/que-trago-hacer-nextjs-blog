@@ -1,26 +1,28 @@
-'use client';
 import Image from 'next/image';
-
-import { Button } from 'flowbite-react';
+import Link from 'next/link';
+import RecommendedCards from '@/components/layoutComps/RecommendedCards/RecommendedCardsContainer';
+import HomeBlogCards from '@/components/layoutComps/HomeBlogCards/HomeBlogCards';
 export default function Home() {
     return (
         <main className="text-gray-500">
             {/* hero section */}
-            <section class="bg-center bg-no-repeat bg-[url('https://res.cloudinary.com/dzyllqqxi/image/upload/v1692819606/pexels-chris-f-1283219_z11q9e.jpg')] bg-cover bg-gray-700 bg-blend-multiply rounded-lg drop-shadow-lg my-8 ">
-                <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-                    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
-                        We invest in the world’s potential
+            <section className="bg-center bg-no-repeat bg-[url('https://res.cloudinary.com/dzyllqqxi/image/upload/v1692819606/pexels-chris-f-1283219_z11q9e.jpg')] bg-cover bg-gray-700 bg-blend-multiply rounded-lg drop-shadow-lg my-8 ">
+                <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                    <h1 className="mb-4 px-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+                        ¿Qué trago hacer?, encuentra los mejores tragos y
+                        cocktails a tu medida.
                     </h1>
-                    <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
-                        Here at Flowbite we focus on markets where technology,
-                        innovation, and capital can unlock long-term value and
-                        drive economic growth.
-                    </p>
-                    <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                        <button class="bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center rounded-full text-md text-white px-4 py-2 border-2  hover:from-transparent hover:to-transparent hover:border border-gray-200">
-                            <span> Usar Buscador</span>
+                    <h2 className="mb-8 text-lg font-normal text-gray-300 lg:text-2xl sm:px-16 lg:px-48">
+                        Este es un blog dedicado a los amantes de los tragos.
+                        Aquí encontrarás recetas de cócteles clásicos y
+                        modernos, recetas de tragos faciles de hacer en casa y
+                        tambien consejos para prepararlos correctamente.
+                    </h2>
+                    <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                        <button className="bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center rounded-full text-md text-white px-4 py-2 border-2  hover:from-transparent hover:to-transparent hover:border border-gray-200">
+                            <span>Usar buscador </span>
                             <svg
-                                class="w-3.5 h-3.5 ml-2"
+                                className="w-3.5 h-3.5 ml-2"
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -28,58 +30,71 @@ export default function Home() {
                             >
                                 <path
                                     stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
                                     d="M1 5h12m0 0L9 1m4 4L9 9"
                                 />
                             </svg>
                         </button>
                         <a
                             href="#"
-                            class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400"
+                            className="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400"
                         >
-                            Learn more
+                            Ver publicaciones
                         </a>
                     </div>
                 </div>
             </section>
             {/* cards section */}
-            <section class="">
-                <div class="pb-4 mx-auto max-w-screen-xl lg:pb-4">
-                    <div class="grid md:grid-cols-2 gap-8 mb-8">
-                        <div class="bg-gray-50  border border-gray-200  rounded-lg p-8 md:p-12 shadow-lg  ">
-                            <a
-                                href="#"
-                                class="bg-primary-light text-purple-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2"
+            <h2 className="text-black  text-3xl md:text-5xl  mb-12 mt-16 text-center">
+                En nuestro blog encontrarás
+            </h2>
+            <section className="">
+                <div className="pb-4 mx-auto max-w-screen-xl lg:pb-4">
+                    <HomeBlogCards />
+
+                    <h2 className="text-black  text-3xl md:text-5xl  mb-12 mt-16 text-center border-b pb-8">
+                        <span className="text-grad-main font-medium">
+                            "¿Qué trago hacer?"
+                        </span>
+                        es el blog ideal para los amantes de los tragos, puedes
+                        ver todo nuestro contenido{' '}
+                        <Link href="/blog" className="text-primary underline ">
+                            aqui
+                        </Link>
+                    </h2>
+                    {/* <div className="grid md:grid-cols-2 gap-8 mb-8">
+                        <div className="bg-gray-50  border border-gray-200  rounded-lg p-8 md:p-12 shadow-lg  ">
+                            <Link
+                                href="/blog"
+                                className="bg-pink-100 text-secondary text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2 "
                             >
                                 <svg
-                                    class="w-2.5 h-2.5 mr-1.5"
-                                    aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor"
-                                    viewBox="0 0 18 18"
+                                    viewBox="0 0 16 16"
+                                    className="w-2.5 h-2.5 mr-1.5"
                                 >
-                                    <path d="M17 11h-2.722L8 17.278a5.512 5.512 0 0 1-.9.722H17a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1ZM6 0H1a1 1 0 0 0-1 1v13.5a3.5 3.5 0 1 0 7 0V1a1 1 0 0 0-1-1ZM3.5 15.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM16.132 4.9 12.6 1.368a1 1 0 0 0-1.414 0L9 3.55v9.9l7.132-7.132a1 1 0 0 0 0-1.418Z" />
+                                    <path d="M14 4.5V14a2 2 0 01-2 2H4a2 2 0 01-2-2V2a2 2 0 012-2h5.5L14 4.5zm-3 0A1.5 1.5 0 019.5 3V1H4a1 1 0 00-1 1v12a1 1 0 001 1h8a1 1 0 001-1V4.5h-2z" />
+                                    <path d="M4 6.5a.5.5 0 01.5-.5h7a.5.5 0 01.5.5v7a.5.5 0 01-.5.5h-7a.5.5 0 01-.5-.5v-7zm0-3a.5.5 0 01.5-.5H7a.5.5 0 010 1H4.5a.5.5 0 01-.5-.5z" />
                                 </svg>
-                                Design
-                            </a>
-                            <h2 class="text-gray-900 text-3xl font-medium mb-6">
-                                Start with Flowbite Design System
+                                Posts
+                            </Link>
+                            <h2 className="text-gray-900 text-3xl font-medium mb-6">
+                                Historia de los Tragos
                             </h2>
-                            <p class="text-lg font-normal text-gray-500  mb-4">
-                                Static websites are now used to bootstrap lots
-                                of websites and are becoming the basis for a
-                                variety of tools that even influence both web
-                                designers and developers.
+                            <p className="text-lg font-normal text-gray-500  mb-4">
+                                Los tragos tienen una larga historia que se
+                                remonta a la antigua Grecia y Roma. Descubre
+                                cómo evolucionaron los cócteles desde entonces.
                             </p>
-                            <a
+                            <Link
                                 href="#"
-                                class="text-primary  hover:underline font-medium text-lg inline-flex items-center"
+                                className="text-primary  hover:underline font-medium text-lg inline-flex items-center"
                             >
-                                Read more
+                                Ver articulo
                                 <svg
-                                    class="w-3.5 h-3.5 ml-2"
+                                    className="w-3.5 h-3.5 ml-2"
                                     aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -93,46 +108,39 @@ export default function Home() {
                                         d="M1 5h12m0 0L9 1m4 4L9 9"
                                     />
                                 </svg>
-                            </a>
+                            </Link>
                         </div>
-                        <div class="bg-gray-50 border border-gray-200  rounded-lg p-8 md:p-12 shadow-md ">
-                            <a
-                                href="#"
-                                class="bg-primary-light text-purple-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2 "
+
+                        <div className="bg-gray-50 border border-gray-200  rounded-lg p-8 md:p-12 shadow-md ">
+                            <Link
+                                href="/blog"
+                                className="bg-pink-100 text-secondary text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2 "
                             >
                                 <svg
-                                    class="w-2.5 h-2.5 mr-1.5"
-                                    aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 20 16"
+                                    fill="currentColor"
+                                    viewBox="0 0 16 16"
+                                    className="w-2.5 h-2.5 mr-1.5"
                                 >
-                                    <path
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
-                                    />
+                                    <path d="M14 4.5V14a2 2 0 01-2 2H4a2 2 0 01-2-2V2a2 2 0 012-2h5.5L14 4.5zm-3 0A1.5 1.5 0 019.5 3V1H4a1 1 0 00-1 1v12a1 1 0 001 1h8a1 1 0 001-1V4.5h-2z" />
+                                    <path d="M4 6.5a.5.5 0 01.5-.5h7a.5.5 0 01.5.5v7a.5.5 0 01-.5.5h-7a.5.5 0 01-.5-.5v-7zm0-3a.5.5 0 01.5-.5H7a.5.5 0 010 1H4.5a.5.5 0 01-.5-.5z" />
                                 </svg>
-                                Code
-                            </a>
-                            <h2 class="text-gray-900  text-3xl font-medium mb-6">
-                                Best react libraries around the web
+                                Posts
+                            </Link>
+                            <h2 className="text-gray-900  text-3xl font-medium mb-6">
+                                Recetas de Tragos Clásicos
                             </h2>
-                            <p class="text-lg font-normal text-gray-500  mb-4">
-                                Static websites are now used to bootstrap lots
-                                of websites and are becoming the basis for a
-                                variety of tools that even influence both web
-                                designers and developers.
+                            <p className="text-lg font-normal text-gray-500  mb-4">
+                                Si eres un fanático de los tragos clásicos,
+                                aprende a preparar estos cócteles que nunca
+                                pasarán de moda.
                             </p>
-                            <a
+                            <Link
                                 href="#"
-                                class="text-primary  hover:underline font-medium text-lg inline-flex items-center"
+                                className="text-primary  hover:underline font-medium text-lg inline-flex items-center"
                             >
-                                Read more
+                                Ver articulo
                                 <svg
-                                    class="w-3.5 h-3.5 ml-2"
+                                    className="w-3.5 h-3.5 ml-2"
                                     aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -146,55 +154,57 @@ export default function Home() {
                                         d="M1 5h12m0 0L9 1m4 4L9 9"
                                     />
                                 </svg>
-                            </a>
+                            </Link>
                         </div>
-                    </div>
-                    <div class="bg-gray-50  border border-gray-200 rounded-lg p-8 md:p-12 mb-8 shadow-md  bg-grad-main">
-                        <a
-                            href="#"
-                            class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2"
-                        >
-                            <svg
-                                class="w-2.5 h-2.5 mr-1.5"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                viewBox="0 0 20 14"
-                            >
-                                <path d="M11 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm8.585 1.189a.994.994 0 0 0-.9-.138l-2.965.983a1 1 0 0 0-.685.949v8a1 1 0 0 0 .675.946l2.965 1.02a1.013 1.013 0 0 0 1.032-.242A1 1 0 0 0 20 12V2a1 1 0 0 0-.415-.811Z" />
-                            </svg>
-                            Tutorial
-                        </a>
-                        <h2 class="text-black  text-3xl md:text-5xl font-extrabold mb-2">
-                            How to quickly deploy a static website
+                    </div> */}
+                    <h2 className="text-black  text-3xl md:text-5xl font-extrabold mb-12 mt-16 text-center">
+                        Articulos recomendados
+                    </h2>
+                    {/* <RecommendedCards field={[""]}></RecommendedCards> */}
+                    <div className="bg-gray-50  border border-gray-200 rounded-lg p-8 md:p-12 mb-8 shadow-md  ">
+                        <h2 className="text-black  text-3xl md:text-5xl font-extrabold mb-6">
+                            Consejos para Preparar Tragos en Casa
                         </h2>
-                        <p class="text-lg font-normal text-gray-200  mb-6">
-                            Static websites are now used to bootstrap lots of
-                            websites and are becoming the basis for a variety of
-                            tools that even influence both web designers and
-                            developers.
+                        <p className="text-lg font-normal text-gray-500  mb-4">
+                            Con estos consejos te convertirás en el experto de
+                            la coctelería en casa.
                         </p>
-                        <a
-                            href="#"
-                            class="text-white  hover:underline font-medium text-lg inline-flex items-center"
-                        >
-                            Read more
-                            <svg
-                                class="w-3.5 h-3.5 ml-2"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 14 10"
-                            >
-                                <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M1 5h12m0 0L9 1m4 4L9 9"
-                                />
-                            </svg>
-                        </a>
+                        <div>
+                            <ol className="grid md:grid-cols-2 list-decimal list-inside text-gray-600 gap-6">
+                                <li className="border border-gray-200 rounded-lg p-4 text-xl bg-grad-main font-medium text-gray-100">
+                                    Practica medidas precisas
+                                    <p className="text-lg font-normal pt-4 text-gray-200">
+                                        Un ingrediente más o menos puede
+                                        arruinar tu preparación, ¡así que mide
+                                        con precisión los ingredientes!
+                                    </p>
+                                </li>
+                                <li className="border botder-gray-200 rounded-xl p-4 text-xl  bg-grad-main font-medium text-gray-100">
+                                    Hielo, hielo y más hielo
+                                    <p className="text-lg font-normal pt-4">
+                                        Un ingrediente más o menos puede
+                                        arruinar tu preparación, ¡así que mide
+                                        con precisión los ingredientes!
+                                    </p>
+                                </li>
+                                <li className="border botder-gray-200 rounded-xl p-4 text-xl  bg-grad-main font-medium text-gray-100">
+                                    Usa los utensilios básicos
+                                    <p className="text-lg font-normal pt-4">
+                                        Batidor, coctelera, colador, jigger,
+                                        copa. Con estos básicos podrás preparar
+                                        casi cualquier trago.
+                                    </p>
+                                </li>
+                                <li className="border border-gray-200 rounded-xl p-4 text-xl  bg-grad-main font-medium text-gray-100">
+                                    Prueba diferentes tragos
+                                    <p className="text-lg font-normal pt-4">
+                                        Prueba con diferentes bebidas,
+                                        combinaciones y sabores. Sé creativo y
+                                        combina diferentes elementos.
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </section>

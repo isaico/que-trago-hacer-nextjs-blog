@@ -7,7 +7,7 @@ const BackButton = ({ children }) => {
     const router = useRouter();
 
     return (
-        <Button pill color="red" onClick={() => router.back()}>
+        <Button pill outline color="light" onClick={() => router.back()}>
             <p className='flex items-center text-sm'>
                 <svg
                     viewBox="0 0 21 21"

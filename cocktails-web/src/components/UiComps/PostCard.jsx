@@ -23,12 +23,21 @@ const PostCard = ({ post, index, postLength }) => {
                         z
                         width={250}
                         height={200}
-                        className="float-left mr-8 rounded-md"
+                        className="float-left mr-8 rounded-md w-auto h-auto"
                     ></Image>
-                    <p className="">{post?.description}</p>
+                    <p
+                        className=""
+                        dangerouslySetInnerHTML={{
+                            __html: post?.description,
+                        }}
+                    >
+                        {}
+                    </p>
                 </div>
                 <div className="my-6">
-                    <h4 className="text-2xl font-medium mb-4">Ingredientes: </h4>
+                    <h4 className="text-2xl font-medium mb-4">
+                        Ingredientes:{' '}
+                    </h4>
                     <ul className="">
                         {post?.ingredients.map((ing) => (
                             <li className="flex items-center mb-2">
@@ -51,7 +60,6 @@ const PostCard = ({ post, index, postLength }) => {
                 <p>{post?.recepy}</p>
                 <button className="w-full border-2 border-gray-900 flex items-center justify-center py-3 mt-4 hover:bg-primary-light hover:shadow-lg hover:translate-y-1 ease-in-out duration-100 text-gray-800 font-medium rounded-lg  bg-bg-white">
                     <Link
-                        className=" "
                         href={{
                             pathname: `/app/${post.title}`,
                             query: { title: post.title },

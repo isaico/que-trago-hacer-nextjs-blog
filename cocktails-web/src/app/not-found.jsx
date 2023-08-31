@@ -6,14 +6,14 @@ const notFound = () => {
     const router = useRouter();
 
     return (
-        <section class="bg-bg-white ">
-            <div class="py-8 px-4 mx-auto  lg:py-16 lg:px-6">
-                <div class="mx-auto max-w-screen-xl text-center">
-                    <h1 class="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-grad-main ">
+        <section className="bg-bg-white ">
+            <div className="py-8 px-4 mx-auto  lg:py-16 lg:px-6">
+                <div className="mx-auto max-w-screen-xl text-center">
+                    <h1 className="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-grad-main ">
                         404
                     </h1>
                     <div className="flex flex-col items-center">
-                        <p class="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl flex ">
+                        <p className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl flex ">
                             Ups! no se encontro la pagina!
                             <svg
                                 viewBox="0 0 24 24"

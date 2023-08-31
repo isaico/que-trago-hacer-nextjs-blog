@@ -16,7 +16,7 @@ const NavBar = () => {
         <Navbar
             fluid
             rounded
-            className="bg-bg-white border-b border-gray-300 fixed w-full z-10"
+            className="bg-bg-white border-b border-gray-300 fixed w-full z-50"
         >
             {/* <Navbar.Brand href="https://flowbite-react.com">
                     <img
@@ -56,10 +56,10 @@ const NavBar = () => {
                 </Link>
 
                 <li className="p-2 pl-3 md:p-0  border-gray-100 border-b md:border-none text-lg font-normal">
-                    <Dropdown label="Tragos" inline>
+                    <Dropdown label="Tragos" inline onClick={() => placement="top"}>
                         {categoryTragos.map((item) => (
                             <Dropdown.Item
-                                className="px-6 py-3 hover:text-primary hover:underline "
+                                className="px-6 py-3 text-base hover:none  "
                                 key={item.key}
                             >
                                 {item && (

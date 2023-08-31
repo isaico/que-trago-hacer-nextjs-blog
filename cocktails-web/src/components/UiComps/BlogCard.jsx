@@ -1,16 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
-
+import PostedBy from './PostedBy';
+import { stringToRoute } from '@/utils/stringToRoute';
 const BlogCard = ({ blog }) => {
     let route = '';
     if (blog.blogCategory == 'posts') {
-        let titleNoSpaces = blog.title.replace(/ /g, '-');
-        let titleLowerCase = titleNoSpaces.toLowerCase();
-        route = titleLowerCase.replace(/[^a-zA-Z0-9-]/g, '-');
+        route = stringToRoute(blog.title)
     }
-    // console.log(blog.title)
-    // console.log(blog.categoryId)
-
+   
     return (
         <>
             <Link
@@ -25,22 +22,38 @@ const BlogCard = ({ blog }) => {
                               // query:{id:blog.categoryId}
                           }
                 }
+                className="hover:-translate-y-1 ease-in-out duration-100 group"
             >
                 {blog ? (
-                    <div className="flex relative">
-                        <span class="bg-purple-500 text-xs font-medium text-gray-200 text-center p-0.5 leading-none rounded-full px-2 dark:bg-blue-900 dark:text-blue-200 absolute -translate-y-1/2 translate-x-1/2 left-auto top-0 right-0">
-                            {blog.blogCategory}
-                        </span>
+                    <div className="flex relative max-w-3xl justify-center border rounded-xl bg-gray-50 border-gray-200  shadow-lg group-hover:shadow-xl group-hover:border-primary ">
+                        {blog.blogCategory === 'posts' ? (
+                            <span className="bg-pink-200 text-xs font-medium text-pink-900 text-center p-0.5 leading-none rounded-full px-2 dark:bg-blue-900 dark:text-blue-200 absolute -translate-y-1/2 translate-x-1/2 left-auto top-0 right-2">
+                                Recomendado
+                            </span>
+                        ) : null}
                         <Image
-                            className="object-cover w-full rounded-t-lg h-full  md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                            className="object-cover rounded-tl-xl rounded-bl-xl h-full  md:h-auto"
                             src={blog.image_url}
-                            height={400}
-                            width={400}
+                            height={300}
+                            width={300}
                             alt={blog.alt}
                         ></Image>
-                        <div class="flex flex-col justify-between p-4 leading-normal">
-                            <h1>{blog.title}</h1>
-                            <p>{blog.description}</p>
+                        <div className="flex flex-col justify-between p-8 leading-normal">
+                            <div>
+                                <PostedBy time={blog.createdAt}></PostedBy>
+                                <span className="text-sm text-gray-500">
+                                    Categoria: {blog.blogCategory}
+                                </span>
+                                <span></span>
+                            </div>
+                            <h3 className="text-2xl font-medium pb-2">
+                                {blog.title}
+                            </h3>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: blog?.description,
+                                }}
+                            ></p>
                         </div>
                     </div>
                 ) : (

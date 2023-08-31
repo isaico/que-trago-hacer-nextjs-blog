@@ -7,7 +7,10 @@ const BlogSchema = new Schema(
         title_desc:String,
         description: String,
         image_url: String,
+        small_image_url:String,
         alt: String,
+        recommended:Boolean,
+        recommendedPosts:[String],
         posts: [
             {
                 title: String,
