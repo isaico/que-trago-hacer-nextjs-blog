@@ -4,11 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PostCard from '@/components/UiComps/PostCard';
 
-const PostContainer = async ({ posts }) => {
+const PostContainer = async ({ cocktails }) => {
     return (
         <div className="flex flex-col" id="post-container">
-            {posts.map((post,i) => (
-                <PostCard post={post} index={i} postLength={posts.length}/>
+            {cocktails.map((cocktail,i) => (
+                <PostCard cocktail={cocktail} index={i} cocktailLength={cocktails.length}/>
             ))}
         </div>
     );

@@ -1,45 +1,44 @@
-import Blog from '@/models/blog';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const PostCard = ({ post, index, postLength }) => {
+const PostCard = ({ cocktail, index, cocktailLength }) => {
     return (
         <div
-            key={post._id}
+            key={cocktail._id}
             className="my-6 p-0.5 bg-grad-3 rounded-xl shadow-lg"
         >
             <div className="bg-gray-50 p-6 py-8 rounded-xl flex flex-col">
                 <h3 className="text-3xl font-medium  pb-8 text-gray-900">
                     <span className="font-medium text-gray-900">
-                        #{postLength - index}
+                        #{cocktailLength - index}
                     </span>{' '}
-                    {post?.title}
+                    {cocktail?.name}
                 </h3>
                 <div className="container">
                     <Image
                         loading="lazy"
-                        src={post.image_url}
-                        alt={post.alt}
-                        z
+                        src={cocktail.image_url}
+                        alt={cocktail.alt}
                         width={250}
                         height={200}
                         className="float-left mr-8 rounded-md w-auto h-auto"
                     ></Image>
-                    <p
-                        className=""
-                        dangerouslySetInnerHTML={{
-                            __html: post?.description,
-                        }}
-                    >
-                        {}
-                    </p>
+                    {cocktail?.description && (
+                        <p
+                            dangerouslySetInnerHTML={{
+                                __html: cocktail?.description,
+                            }}
+                        >
+                            {}
+                        </p>
+                    )}
                 </div>
                 <div className="my-6">
                     <h4 className="text-2xl font-medium mb-4">
                         Ingredientes:{' '}
                     </h4>
                     <ul className="">
-                        {post?.ingredients.map((ing) => (
+                        {cocktail?.ingredients.map((ing) => (
                             <li className="flex items-center mb-2">
                                 <svg
                                     className="flex-shrink-0 w-3.5 h-3.5 text-primary-light mr-2"
@@ -55,18 +54,36 @@ const PostCard = ({ post, index, postLength }) => {
                         ))}
                     </ul>
                 </div>
-                <h4 className="text-2xl font-medium mb-4">Receta: </h4>
+                <div>
+                    <h4 className="text-2xl font-medium mb-4">Receta: </h4>
+                    <p>{cocktail?.recepy}</p>
+                </div>
+                {cocktail?.tips && (
+                    <div>
+                        <h4 className="text-2xl font-medium mb-4">
+                            Tip del bartender:{' '}
+                        </h4>
+                        <p>{cocktail?.tip}</p>
+                    </div>
+                )}
+                {cocktail?.optional && (
+                    <div>
+                        <h4 className="text-2xl font-medium mb-4">
+                            Opcional:{' '}
+                        </h4>
+                        <p>{cocktail?.optional}</p>
+                    </div>
+                )}
 
-                <p>{post?.recepy}</p>
-                <button className="w-full border-2 border-gray-900 flex items-center justify-center py-3 mt-4 hover:bg-primary-light hover:shadow-lg hover:translate-y-1 ease-in-out duration-100 text-gray-800 font-medium rounded-lg  bg-bg-white">
+                {/* <button className="w-full border-2 border-gray-900 flex items-center justify-center py-3 mt-4 hover:bg-primary-light hover:shadow-lg hover:translate-y-1 ease-in-out duration-100 text-gray-800 font-medium rounded-lg  bg-bg-white">
                     <Link
                         href={{
-                            pathname: `/app/${post.title}`,
-                            query: { title: post.title },
+                            pathname: `/app/${cocktail.name}`,
+                            query: { title: cocktail.name },
                         }}
                     >
                         <p className="flex items-center ">
-                            Tips del bartender: {post.title}
+                            Tips del bartender: {cocktail.name}
                             <svg
                                 fill="none"
                                 viewBox="0 0 15 15"
@@ -81,7 +98,7 @@ const PostCard = ({ post, index, postLength }) => {
                             </svg>
                         </p>
                     </Link>
-                </button>
+                </button> */}
             </div>
         </div>
     );

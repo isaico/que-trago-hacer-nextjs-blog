@@ -59,7 +59,7 @@ const NavBar = () => {
                     <Dropdown label="Tragos" inline onClick={() => placement="top"}>
                         {categoryTragos.map((item) => (
                             <Dropdown.Item
-                                className="px-6 py-3 text-base hover:none  "
+                                className="px-6 py-3 text-base hover:cursor-default"
                                 key={item.key}
                             >
                                 {item && (
@@ -79,7 +79,7 @@ const NavBar = () => {
                     <Dropdown label="Posts" inline className="font-normal">
                         {categoryPosts.map((item) => (
                             <Dropdown.Item
-                                className="px-6 py-3 hover:text-primary hover:underline"
+                                className="px-6 py-3 text-base hover:cursor-default"
                                 key={item.key}
                             >
                                 <NavLink
@@ -101,7 +101,7 @@ const NavBar = () => {
                     >
                         {categoryPreparacion.map((item) => (
                             <Dropdown.Item
-                                className="px-6 py-3 hover:text-primary hover:underline "
+                                className="px-6 py-3 text-base hover:cursor-default "
                                 key={item.key}
                             >
                                 <NavLink
@@ -116,10 +116,14 @@ const NavBar = () => {
                     </Dropdown>
                 </li>
 
-                <Link href="/blog" className="font-normal text-lg">
+                <Link href="/blog"   className={`${
+                        pathname == '/blog' ? 'active' : ''
+                    } text-lg font-normal`}>
                     Blog
                 </Link>
-                <Link href="#" className="font-normal text-lg">
+                <Link href="/contacto" className={`${
+                        pathname == '/contacto' ? 'active' : ''
+                    } text-lg font-normal`}>
                     Contacto
                 </Link>
             </Navbar.Collapse>

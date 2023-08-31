@@ -6,13 +6,30 @@ import DefaultCarousel from '@/components/UiComps/Carousel';
 import DefaultBreadcrumb from '@/components/UiComps/BreadCrumb';
 import RecommendedCards from '../RecommendedCards/RecommendedCardsContainer';
 import { getDate } from '@/utils/getDate';
+import fetchCocktails from '@/utils/fetchCocktails';
 
-const BlogLayout = ({ blog }) => {
+const BlogLayout = async ({ blog }) => {
     const date = getDate(blog.createdAt);
+    let field = undefined;
+    let cocktails = [];
+    // const field = blog.cocktailsNames || blog.blogCategory =="preparacion"? blog.categoryId;
+    //chequeo que el blog pida un array de cockteles
+    if (blog.getCocktails) {
+        //dentro de la funcion hay un switch que devolvera un array en cada caso dependiendo de la categoria 
+        cocktails = await fetchCocktails({
+            blogCategory: blog.blogCategory,
+            categoryId: blog.categoryId,
+            cocktailsNames:blog.cocktailsNames
+        });
+       console.log(cocktails)
+    }
     return (
         <article className="mt-12 flex flex-col  justify-end relative w-full">
             <div className="md:grid md:grid-cols-8 md:grid-flow-col md:gap-6 w-full flex flex-col">
-                <div className=" flex flex-col justify-center justify-self-center mx-auto col-span-4">
+                <div className=" flex flex-col justify-center justify-self-center mx-auto col-span-4 col-start-3">
+                    <div className="absolute left-0 top-0">
+                        <BackButton></BackButton>
+                    </div>
                     <DefaultBreadcrumb
                         category={blog.blogCategory}
                         title={blog.title}
@@ -42,7 +59,6 @@ const BlogLayout = ({ blog }) => {
                         <h1 className="lg:text-6xl text-2xl py-8 font-semibold text-grad-main text-center">
                             {blog?.title}
                         </h1>
-
                         <p className="pb-6">{blog?.brief_desc}</p>
 
                         <Image
@@ -50,7 +66,7 @@ const BlogLayout = ({ blog }) => {
                             height={800}
                             width={800}
                             alt={blog?.alt}
-                            className="opacity-2 w-auto h-auto"
+                            className=" w-auto h-auto"
                         />
                         <div className="pt-8 pb-12">
                             <h2 className="text-2xl font-medium text-gray-900 pb-4">
@@ -64,13 +80,13 @@ const BlogLayout = ({ blog }) => {
                             ></p>
                         </div>
 
-                        {blog.posts.length > 0 ? (
+                        {cocktails.length > 0 ? (
                             <div>
                                 <h2 className="text-2xl font-medium text-gray-900 pb-2">
                                     {blog?.title_posts}
                                 </h2>
                                 <PostContainer
-                                    posts={blog?.posts}
+                                    cocktails={cocktails}
                                 ></PostContainer>
                             </div>
                         ) : (
@@ -81,34 +97,47 @@ const BlogLayout = ({ blog }) => {
                                 }}
                             ></p>
                         )}
+                        {blog?.extra && (
+                            <div className="py-8">
+                                <h3 className="font-medium pb-2  text-gray-900">
+                                    Extra
+                                </h3>
+                                <p
+                                    className=""
+                                    dangerouslySetInnerHTML={{
+                                        __html: blog.extra,
+                                    }}
+                                >
+                                    {/* {blog.extra && blog.extra} */}
+                                </p>
+                            </div>
+                        )}
+                        {blog?.tips && (
+                            <ul className="list-disc list-inside">
+                                <h3 className="font-medium pb-2 text-gray-900">
+                                    recomendaciones
+                                </h3>
+                                {blog.tips &&
+                                    blog?.tips.map((tip) => <li>{tip}</li>)}
+                            </ul>
+                        )}
                     </div>
-                    <div
-                        className="bg-gray-200 w-full h-52 pt-8"
-                        dangerouslySetInnerHTML={{
-                            __html: blog?.extra && blog.extra,
-                        }}
-                    >
-                        {/* {blog.extra && blog.extra} */}
-                    </div>
-                    <ul className="list-disc">
-                        {blog.tips.map((tip) => (
-                            <li>{tip}</li>
-                        ))}
-                    </ul>
                     {/* <div>articulo</div> */}
                 </div>
-                <aside className="border-l-2 col-span-2  ">
+                {/* <aside className="border-l-2 col-span-2  ">
                     <div className="h-[300px] bg-blue-400">algo</div>
                     <div className="flex justify-center items-center sticky top-16  ">
                         <div className="justify-center w-full text-center h-[500px] bg-red-400">
                             <h3 className="">Ultimos Articulos</h3>
                         </div>
                     </div>
-                </aside>
-                <aside className="col-span-2 col-start-1">otro aside</aside>
+                </aside> */}
+                {/* <aside className="col-span-2 col-start-1">otro aside</aside> */}
             </div>
 
-            <h3 className="text-2xl text-center">Articulos destacados</h3>
+            <h3 className="text-2xl text-center my-20 mb-4">
+                Articulos relacionados
+            </h3>
             <RecommendedCards quantity={4} field={blog.recommendedPosts} />
 
             {/* <DefaultCarousel></DefaultCarousel> */}

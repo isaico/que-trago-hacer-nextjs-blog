@@ -34,10 +34,10 @@ const Page = async () => {
                     <ErrorFetchData />
                 )}
             </div>
-            <h2 className="text-3xl text-center mt-20 mb-12  font-medium ">
+            {/* <h2 className="text-3xl text-center mt-20 mb-12  font-medium ">
                 Articulos Destacados
             </h2>
-            <RecommendedCards quantity={4} field={null} />
+            <RecommendedCards quantity={4} field={null} /> */}
         </div>
     );
 };

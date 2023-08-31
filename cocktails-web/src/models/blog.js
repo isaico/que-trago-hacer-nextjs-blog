@@ -9,8 +9,9 @@ const BlogSchema = new Schema(
         image_url: String,
         small_image_url:String,
         alt: String,
-        recommended:Boolean,
         recommendedPosts:[String],
+        getCocktails:Boolean,
+        cocktailsNames:[String],
         posts: [
             {
                 title: String,
@@ -38,3 +39,4 @@ const BlogSchema = new Schema(
 const Blog = models.Blog || model('Blog', BlogSchema);
 
 export default Blog;
+

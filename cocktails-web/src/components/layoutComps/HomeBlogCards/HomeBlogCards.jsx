@@ -2,10 +2,11 @@ import Link from 'next/link';
 const HomeBlogCards = () => {
     return (
         <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-gray-50  border border-gray-200  rounded-lg p-8 md:p-12 shadow-lg  ">
+            <div className="bg-gray-50  border-2 border-primary  rounded-lg p-8 md:p-12 shadow-lg relative ">
                 <Link
                     href="/blog"
-                    className="bg-pink-100 text-secondary text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2 "
+                    className="bg-pink-100 text-secondary  text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2 hover:scale-105"
+                    
                 >
                     <svg
                         fill="currentColor"
@@ -17,6 +18,9 @@ const HomeBlogCards = () => {
                     </svg>
                     Posts
                 </Link>
+                    <span className="bg-pink-200 text-xs font-medium text-pink-900 text-center p-1 leading-none rounded-full px-2  absolute -translate-y-1/2 translate-x-1/2 left-auto top-0 right-4 ">
+                        Recomendado
+                    </span>
                 <h2 className="text-gray-900 text-3xl font-medium mb-6">
                     Historia de los Tragos
                 </h2>
@@ -27,7 +31,7 @@ const HomeBlogCards = () => {
                 </p>
                 <Link
                     href="#"
-                    className="text-primary  hover:underline font-medium text-lg inline-flex items-center"
+                    className="text-primary  hover:underline font-medium text-lg inline-flex items-center "
                 >
                     Ver articulo
                     <svg
@@ -51,7 +55,7 @@ const HomeBlogCards = () => {
             <div className="bg-gray-50 border border-gray-200  rounded-lg p-8 md:p-12 shadow-md ">
                 <Link
                     href="/blog"
-                    className="bg-pink-100 text-secondary text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2 "
+                    className="bg-pink-100 text-secondary text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2 hover:scale-105 "
                 >
                     <svg
                         fill="currentColor"
@@ -95,7 +99,7 @@ const HomeBlogCards = () => {
             <div className="bg-gray-50  border border-gray-200  rounded-lg p-8 md:p-12 shadow-lg  ">
                 <Link
                     href="/blog"
-                    className="bg-pink-100 text-secondary text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2 "
+                    className="bg-pink-100 text-secondary text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2 hover:scale-105"
                 >
                     <svg
                         fill="currentColor"
@@ -141,7 +145,7 @@ const HomeBlogCards = () => {
             <div className="bg-gray-50 border border-gray-200  rounded-lg p-8 md:p-12 shadow-md ">
                 <Link
                     href="/blog"
-                    className="bg-pink-100 text-secondary text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2 "
+                    className="bg-pink-100 text-secondary text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md  mb-2 hover:scale-105"
                 >
                     <svg
                         fill="currentColor"
