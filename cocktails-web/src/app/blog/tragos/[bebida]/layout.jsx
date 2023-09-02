@@ -7,7 +7,7 @@ export async function generateMetadata({ params }, parent) {
     }
   }
    
-const layout = ({ children, params }) => {
+const layout = ({ children }) => {
     return <>{children}</>;
 };
 

@@ -1,28 +1,24 @@
-import React from 'react';
 import Image from 'next/image';
-import PostContainer from '../PostContainer/PostContainer';
+import PostContainer from '../CocktailsContainer/CocktailsContainer';
 import BackButton from '@/components/UiComps/BackButton';
-import DefaultCarousel from '@/components/UiComps/Carousel';
 import DefaultBreadcrumb from '@/components/UiComps/BreadCrumb';
 import RecommendedCards from '../RecommendedCards/RecommendedCardsContainer';
-import { getDate } from '@/utils/getDate';
+import PostedBy from '@/components/UiComps/PostedBy';
 import fetchCocktails from '@/utils/fetchCocktails';
+import ArticleLayout from './ArticleLayout';
 
 const BlogLayout = async ({ blog }) => {
-    const date = getDate(blog.createdAt);
-    let field = undefined;
     let cocktails = [];
-    // const field = blog.cocktailsNames || blog.blogCategory =="preparacion"? blog.categoryId;
     //chequeo que el blog pida un array de cockteles
     if (blog.getCocktails) {
-        //dentro de la funcion hay un switch que devolvera un array en cada caso dependiendo de la categoria 
+        //dentro de la funcion hay un switch que devolvera un array en cada caso dependiendo de la categoria
         cocktails = await fetchCocktails({
             blogCategory: blog.blogCategory,
             categoryId: blog.categoryId,
-            cocktailsNames:blog.cocktailsNames
+            cocktailsNames: blog.cocktailsNames,
         });
-       console.log(cocktails)
     }
+
     return (
         <article className="mt-12 flex flex-col  justify-end relative w-full">
             <div className="md:grid md:grid-cols-8 md:grid-flow-col md:gap-6 w-full flex flex-col">
@@ -35,21 +31,10 @@ const BlogLayout = async ({ blog }) => {
                         title={blog.title}
                     />
                     <div className="p-2 flex justify-between items-center ">
-                        <div className="flex items-center justify-start py-2">
-                            <p className="text-sm ">Posted by:</p>
-                            <a href="#" className="pl-2">
-                                <Image
-                                    src="https://res.cloudinary.com/dzyllqqxi/image/upload/v1692975511/avataaars_hrw2td.png"
-                                    width={25}
-                                    height={80}
-                                    alt="avatar animado de un hombre con buzo gris con lentes y sonriendo  mirando la camara, con fondo celeste"
-                                    className="rounded-full ring-2 ring-gray-300 w-auto h-auto"
-                                ></Image>
-                            </a>
-                            <p className="text-sm pl-2"> {date}</p>
-                        </div>
+                        <PostedBy time={blog.createdAt}></PostedBy>
+
                         <span className="font-normal text-sm ">
-                            categoria:
+                            Categoria:
                             <span className="bg-pink-50 text-primary text-xs mr-2 px-2.5 ml-0.5 py-0.5 rounded-full">
                                 {blog.blogCategory}
                             </span>
@@ -73,14 +58,16 @@ const BlogLayout = async ({ blog }) => {
                                 {blog?.title_desc}
                             </h2>
                             {/* <p className="">{blog?.description}</p> */}
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: blog?.description,
-                                }}
-                            ></p>
+                            {blog?.description && (
+                                <p
+                                    dangerouslySetInnerHTML={{
+                                        __html: blog?.description,
+                                    }}
+                                ></p>
+                            )}
                         </div>
 
-                        {cocktails.length > 0 ? (
+                        {cocktails && cocktails.length > 0 ? (
                             <div>
                                 <h2 className="text-2xl font-medium text-gray-900 pb-2">
                                     {blog?.title_posts}
@@ -90,12 +77,11 @@ const BlogLayout = async ({ blog }) => {
                                 ></PostContainer>
                             </div>
                         ) : (
-                            // blog con datos si la lista posts no existe
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: blog?.extra,
-                                }}
-                            ></p>
+                            blog.articles && (
+                                <ArticleLayout
+                                    articles={blog?.articles}
+                                ></ArticleLayout>
+                            )
                         )}
                         {blog?.extra && (
                             <div className="py-8">
@@ -112,15 +98,18 @@ const BlogLayout = async ({ blog }) => {
                                 </p>
                             </div>
                         )}
-                        {blog?.tips && (
-                            <ul className="list-disc list-inside">
+                        {blog?.tips.length > 0 ? (
+                            <div>
                                 <h3 className="font-medium pb-2 text-gray-900">
                                     recomendaciones
                                 </h3>
-                                {blog.tips &&
-                                    blog?.tips.map((tip) => <li>{tip}</li>)}
-                            </ul>
-                        )}
+                                <ul className="list-disc list-inside">
+                                    {blog?.tips.map((tip) => (
+                                        <li>{tip}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ) : null}
                     </div>
                     {/* <div>articulo</div> */}
                 </div>

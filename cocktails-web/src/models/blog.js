@@ -31,6 +31,12 @@ const BlogSchema = new Schema(
         },
         tips: [String],
         extra: String,
+        articles:[{
+            title:String,
+            description:String,
+            image_url:String,
+            alt:String
+        }]
     },
     {
         timestamps: true,

@@ -2,8 +2,6 @@ import fetchBlogs from '@/utils/fetchBlogs';
 import BlogCard from '@/components/UiComps/BlogCard';
 import BackButton from '@/components/UiComps/BackButton';
 import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
-import CategoryButtons from '@/components/UiComps/CategoryButtons';
-import RecommendedCards from '@/components/layoutComps/RecommendedCards/RecommendedCardsContainer';
 import Jumbotron from '@/components/layoutComps/Jumbotron/Jumbotron';
 const Page = async () => {
     const blogs = await fetchBlogs(null);
@@ -14,12 +12,13 @@ const Page = async () => {
                     <BackButton></BackButton>
                 </div>
                 <Jumbotron
-                    title={'titulo del blog'}
+                    title={
+                        'Blog de cocteleria clasica y recetas de tragos'
+                    }
                     description={
-                        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate eius provident enim! Delectus eos consequatur fugiat modi exercitationem esse voluptates soluta repellendus impedit laborum assumenda, error laudantium, atque ullam'
+                        'Encuentre aquí todas nuestras recetas de tragos, desde los más clásicos hasta innovadores cocktails, populares y a la moda. Publicaciones sobre coctelería clasica y trucos para que tus cocteles estén a la altura'
                     }
                 />
-               
             </div>
             <div className="">
                 {blogs ? (
@@ -35,9 +34,9 @@ const Page = async () => {
                 )}
             </div>
             {/* <h2 className="text-3xl text-center mt-20 mb-12  font-medium ">
-                Articulos Destacados
-            </h2>
-            <RecommendedCards quantity={4} field={null} /> */}
+                    Articulos Destacados
+                </h2>
+                <RecommendedCards quantity={4} field={null} /> */}
         </div>
     );
 };

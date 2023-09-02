@@ -1,12 +1,11 @@
 import connectDB from '@/libs/mongodb';
-import Recommended from '@/models/recommended';
 import Blog from '@/models/blog';
 
 const fetchRecommendedPosts = async (quantity, field) => {
     try {
         
         connectDB();
-        if (field && field !== undefined) {
+        if (field && field !== undefined && field.length > 0) {
             const resp = await Blog.find(
                 { title: field },
                 'title brief_desc small_image_url blogCategory categoryId'

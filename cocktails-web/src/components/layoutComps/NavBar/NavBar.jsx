@@ -16,7 +16,7 @@ const NavBar = () => {
         <Navbar
             fluid
             rounded
-            className="bg-bg-white border-b border-gray-300 fixed w-full z-50"
+            className="bg-bg-white border-b border-gray-300 fixed w-full z-50 py-4"
         >
             {/* <Navbar.Brand href="https://flowbite-react.com">
                     <img
@@ -28,11 +28,13 @@ const NavBar = () => {
                         Flowbite React
                     </span>
                 </Navbar.Brand> */}
-            <span className="self-center whitespace-nowrap text-xl font-semibold  text-grad-main">
-                QTH-Blog
-            </span>
+            <Link href="/">
+                <span className="self-center whitespace-nowrap text-xl font-semibold  text-grad-main">
+                    QTH-Blog
+                </span>
+            </Link>
             <div className="flex md:order-2">
-                <Link href="/app">
+                {/* <Link href="/app">
                     <Button
                         pill
                         className="font-semibold mr-2 group"
@@ -42,7 +44,7 @@ const NavBar = () => {
                     >
                         <p className="group-hover:text-white">Usar Buscador</p>
                     </Button>
-                </Link>
+                </Link> */}
                 <Navbar.Toggle />
             </div>
             <Navbar.Collapse className=" text-gray-900 ">

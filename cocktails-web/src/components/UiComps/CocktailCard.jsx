@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
-const PostCard = ({ cocktail, index, cocktailLength }) => {
+const CocktailCard = ({ cocktail, index, cocktailLength }) => {
     return (
         <div
             key={cocktail._id}
@@ -104,4 +103,4 @@ const PostCard = ({ cocktail, index, cocktailLength }) => {
     );
 };
 
-export default PostCard;
+export default CocktailCard;

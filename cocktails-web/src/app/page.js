@@ -58,7 +58,7 @@ export default function Home() {
                 <div className="pb-4 mx-auto max-w-screen-xl lg:pb-4">
                     <HomeBlogCards />
 
-                    <h2 className="text-black  text-3xl md:text-5xl  mb-12 mt-16 text-center border-b pb-8">
+                    <h2 className="text-black  text-3xl md:text-5xl  mb-24 mt-16 text-center border-b pb-8">
                         <span className="text-grad-main font-medium">
                             "¿Qué trago hacer?"
                         </span>
@@ -79,7 +79,7 @@ export default function Home() {
                         </p>
                         <div>
                             <ol className="grid md:grid-cols-2 list-decimal list-inside text-gray-500 gap-6">
-                                <div className="my-6 p-2 bg-grad-3 rounded-xl shadow-lg">
+                                <div className="my-6 p-1 bg-grad-3 rounded-xl shadow-lg">
                                     <li className="border border-gray-200 rounded-lg p-4 text-xl bg-gray-50 font-medium text-gray-700">
                                         Practica medidas precisas
                                         <p className="text-lg font-normal pt-4">
@@ -89,7 +89,7 @@ export default function Home() {
                                         </p>
                                     </li>
                                 </div>
-                                <div className="my-6 p-2 bg-grad-3 rounded-xl shadow-lg">
+                                <div className="my-6 p-1 bg-grad-3 rounded-xl shadow-lg">
                                     <li className="border botder-gray-200 rounded-lg p-4 text-xl bg-gray-50  font-medium text-gray-700">
                                         Hielo, hielo y más hielo
                                         <p className="text-lg font-normal pt-4 ">
@@ -99,7 +99,7 @@ export default function Home() {
                                         </p>
                                     </li>
                                 </div>
-                                <div className="my-6 p-2 bg-grad-3 rounded-xl shadow-lg">
+                                <div className="my-6 p-1 bg-grad-3 rounded-xl shadow-lg">
                                     <li className="border botder-gray-200 rounded-lg  p-4 text-xl  bg-gray-50 font-medium text-gray-700">
                                         Usa los utensilios básicos
                                         <p className="text-lg font-normal pt-4">
@@ -109,7 +109,7 @@ export default function Home() {
                                         </p>
                                     </li>
                                 </div>
-                                <div className="my-6 p-2 bg-grad-3 rounded-xl shadow-lg">
+                                <div className="my-6 p-1 bg-grad-3 rounded-xl shadow-lg">
                                     <li className="border border-gray-200 rounded-lg p-4 text-lg  bg-gray-50 font-medium text-gray-700">
                                         Prueba diferentes tragos
                                         <p className="text-lg font-normal pt-4">
