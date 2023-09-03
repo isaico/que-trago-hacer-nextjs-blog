@@ -10,8 +10,11 @@ export async function GET() {
 }
 export async function POST(request) {
     await connectDB();
-    const body = await request.json();
-    const cocktail = new Cocktail(body);
-    const resp = await cocktail.save();
+    const {data} = await request.json();
+    console.log(data);
+    const resp = await Cocktail.insertMany(data);
+    console.log(resp)
+    // const cocktail = new Cocktail(body);
+    // const resp = await cocktail.save();
     return NextResponse.json(resp, { status: 201 });
 }

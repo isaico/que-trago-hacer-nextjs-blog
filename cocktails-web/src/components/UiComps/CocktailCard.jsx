@@ -6,7 +6,7 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
             key={cocktail._id}
             className="my-6 p-0.5 bg-grad-3 rounded-xl shadow-lg"
         >
-            <div className="bg-gray-50 p-6 py-8 rounded-xl flex flex-col">
+            <div className="bg-bg-white p-6 py-8 rounded-xl flex flex-col">
                 <h3 className="text-3xl font-medium  pb-8 text-gray-900">
                     <span className="font-medium text-gray-900">
                         #{cocktailLength - index}
@@ -18,9 +18,9 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                         loading="lazy"
                         src={cocktail.image_url}
                         alt={cocktail.alt}
-                        width={250}
-                        height={200}
-                        className="float-left mr-8 rounded-md w-auto h-auto"
+                        width={350}
+                        height={350}
+                        className="float-left mr-8 mb-8 rounded-md w-auto h-auto"
                     ></Image>
                     {cocktail?.description && (
                         <p
@@ -53,24 +53,31 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                         ))}
                     </ul>
                 </div>
-                <div>
+                <div className='mb-6'>
                     <h4 className="text-2xl font-medium mb-4">Receta: </h4>
-                    <p>{cocktail?.recepy}</p>
+                    <p dangerouslySetInnerHTML={{
+                                __html: cocktail?.recepy,
+                            }}></p>
                 </div>
-                {cocktail?.tips && (
-                    <div>
-                        <h4 className="text-2xl font-medium mb-4">
-                            Tip del bartender:{' '}
-                        </h4>
-                        <p>{cocktail?.tip}</p>
-                    </div>
-                )}
+                {cocktail.tips && cocktail.tips.length > 0 ?
+                    (
+                        <div className='mb-6'>
+                            <h4 className="text-xl font-base italic mb-4">
+                                Tips del bartender:{' '}
+                            </h4>
+                            <ul className='list-disc list-inside text-lg'>
+                                {cocktail.tips.map((tip, i) => (
+                                    <li key={i}>{tip}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ):null}
                 {cocktail?.optional && (
-                    <div>
-                        <h4 className="text-2xl font-medium mb-4">
-                            Opcional:{' '}
+                    <div className='mb-6'>
+                        <h4 className="text-xl font-base italic mb-4">
+                            Opcional:
                         </h4>
-                        <p>{cocktail?.optional}</p>
+                        <p className='text-lg'>{cocktail?.optional}</p>
                     </div>
                 )}
 

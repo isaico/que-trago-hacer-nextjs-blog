@@ -8,8 +8,9 @@ export const cocktailSchema = new Schema({
     ingredients: [String],
     recepy: String,
     optional: String,
-    tip: String,
+    tips: [String],
     category: String,
+    difficulty:Number
     
 });
 
