@@ -1,15 +1,16 @@
 import Image from 'next/image';
 import React from 'react';
+import ArticleTitle from '@/components/UiComps/ArticleTitle';
 
 const ArticleLayout = ({ articles }) => {
     return (
         <>
             {articles.map((article) => (
                 <div className="mb-8">
-                    <h2 className="text-2xl font-medium text-gray-900 pb-2">
-                        {article.title}
-                    </h2>
-                    <p className='mb-4'
+                    <ArticleTitle>{article.title}</ArticleTitle>
+
+                    <p
+                        className="mb-4"
                         dangerouslySetInnerHTML={{
                             __html: article.description,
                         }}

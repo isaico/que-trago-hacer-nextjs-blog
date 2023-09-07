@@ -13,7 +13,7 @@ const Page = async () => {
                 </div>
                 <Jumbotron
                     title={
-                        'Blog de cocteleria clasica y recetas de tragos'
+                        'Blog de cocteleria clásica y recetas de tragos'
                     }
                     description={
                         'Encuentre aquí todas nuestras recetas de tragos, desde los más clásicos hasta innovadores cocktails, populares y a la moda. Publicaciones sobre coctelería clasica y trucos para que tus cocteles estén a la altura'

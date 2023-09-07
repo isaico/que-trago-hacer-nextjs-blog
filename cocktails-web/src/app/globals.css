@@ -52,8 +52,8 @@ body {
         radial-gradient(at 46% 58%, rgb(75, 85, 99) 0, transparent 51%),
         radial-gradient(at 68% 90%, rgb(244, 114, 182) 0, transparent 37%);
 }
-.bg-grad-3{
-    @apply bg-gradient-to-br from-pink-500 via-purple-500 to-red-500
+.bg-grad-3 {
+    @apply bg-gradient-to-br from-pink-500 via-purple-500 to-red-500;
 }
 
 .bg-grad-main {
@@ -62,8 +62,10 @@ body {
 .bg-dot {
     background-image: radial-gradient(#9999995e 5%, transparent 0);
     background-size: 20px 20px;
-   
 }
-.text-grad-main{
-    @apply bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent
+.text-grad-main {
+    @apply bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent;
+}
+.text-grad-2 {
+    @apply bg-gradient-to-br from-pink-500 via-purple-500 to-red-500 bg-clip-text text-transparent;
 }

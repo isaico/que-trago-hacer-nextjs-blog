@@ -4,25 +4,14 @@ const BlogSchema = new Schema(
     {
         title: { type: String, required: true, unique: true },
         brief_desc: String,
-        title_desc:String,
+        title_desc: String,
         description: String,
         image_url: String,
-        small_image_url:String,
+        small_image_url: String,
         alt: String,
-        recommendedPosts:[String],
-        getCocktails:Boolean,
-        cocktailsNames:[String],
-        posts: [
-            {
-                title: String,
-                description: String,
-                ingredients: [String],
-                recepy:String,
-                image_url: String,
-                alt: String,
-                category: String,
-            },
-        ],
+        recommendedPosts: [String],
+        getCocktails: Boolean,
+        cocktailsNames: [String],
         blogCategory: String,
         categoryId: {
             type: String,
@@ -30,13 +19,15 @@ const BlogSchema = new Schema(
             unique: true,
         },
         tips: [String],
-        extra: String,
-        articles:[{
-            title:String,
-            description:String,
-            image_url:String,
-            alt:String
-        }]
+        tools: String,
+        articles: [
+            {
+                title: String,
+                description: String,
+                image_url: String,
+                alt: String,
+            },
+        ],
     },
     {
         timestamps: true,
@@ -45,4 +36,3 @@ const BlogSchema = new Schema(
 const Blog = models.Blog || model('Blog', BlogSchema);
 
 export default Blog;
-

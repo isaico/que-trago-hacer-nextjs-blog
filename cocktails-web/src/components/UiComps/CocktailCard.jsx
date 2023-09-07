@@ -1,5 +1,6 @@
 import Image from 'next/image';
-
+import Rating from '@/components/UiComps/Rating';
+import { merriweather } from '@/utils/fonts';
 const CocktailCard = ({ cocktail, index, cocktailLength }) => {
     return (
         <div
@@ -7,13 +8,19 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
             className="my-6 p-0.5 bg-grad-3 rounded-xl shadow-lg"
         >
             <div className="bg-bg-white p-6 py-8 rounded-xl flex flex-col">
-                <h3 className="text-3xl font-medium  pb-8 text-gray-900">
-                    <span className="font-medium text-gray-900">
-                        #{cocktailLength - index}
-                    </span>{' '}
-                    {cocktail?.name}
-                </h3>
-                <div className="container">
+                <div className="flex  justify-between items-center align-middle pb-12">
+                    <h3 className={`text-3xl font-normal  text-primary ${merriweather.className}`}>
+                        <span className="font-semibold text-gray-900">
+                            #{cocktailLength - index}
+                        </span>{' '}
+                        {cocktail?.name}
+                    </h3>
+                    <div className="flex">
+                        <h4 className="mx-2">Dificultad:</h4>
+                        <Rating difficulty={cocktail.difficulty}></Rating>
+                    </div>
+                </div>
+                <div className="">
                     <Image
                         loading="lazy"
                         src={cocktail.image_url}
@@ -23,13 +30,27 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                         className="float-left mr-8 mb-8 rounded-md w-auto h-auto"
                     ></Image>
                     {cocktail?.description && (
-                        <p
-                            dangerouslySetInnerHTML={{
-                                __html: cocktail?.description,
-                            }}
-                        >
-                            {}
-                        </p>
+                        <div>
+                            <h4 className="mb-4 font-medium">
+                                Descripción del trago:
+                            </h4>
+                            <p
+                                // dangerouslySetInnerHTML={{
+                                //     __html: cocktail?.description,
+                                // }}
+                                className="text-lg"
+                            >
+                                {cocktail?.description}
+                            </p>
+                        </div>
+                    )}
+                    {cocktail?.history && (
+                        <div>
+                            <h4 className="mb-4 mt-8 font-medium">
+                                Su origen e historia:
+                            </h4>
+                            <p className="text-lg">{cocktail?.history}</p>
+                        </div>
                     )}
                 </div>
                 <div className="my-6">
@@ -53,33 +74,55 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                         ))}
                     </ul>
                 </div>
-                <div className='mb-6'>
+                <div className="mb-6">
                     <h4 className="text-2xl font-medium mb-4">Receta: </h4>
-                    <p dangerouslySetInnerHTML={{
-                                __html: cocktail?.recepy,
-                            }}></p>
+                    <p>{cocktail?.recepy}</p>
                 </div>
-                {cocktail.tips && cocktail.tips.length > 0 ?
-                    (
-                        <div className='mb-6'>
-                            <h4 className="text-xl font-base italic mb-4">
-                                Tips del bartender:{' '}
-                            </h4>
-                            <ul className='list-disc list-inside text-lg'>
-                                {cocktail.tips.map((tip, i) => (
-                                    <li key={i}>{tip}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    ):null}
+                {cocktail.tips && cocktail.tips.length > 0 ? (
+                    <div className="mb-6">
+                        <h4 className="text-xl font-base italic mb-4">
+                            Tips del bartender:{' '}
+                        </h4>
+                        <ul className="list-disc list-inside text-lg">
+                            {cocktail.tips.map((tip, i) => (
+                                <li key={i}>{tip}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ) : null}
                 {cocktail?.optional && (
-                    <div className='mb-6'>
+                    <div className="mb-6">
                         <h4 className="text-xl font-base italic mb-4">
                             Opcional:
                         </h4>
-                        <p className='text-lg'>{cocktail?.optional}</p>
+                        <p className="text-lg">{cocktail?.optional}</p>
                     </div>
                 )}
+                {cocktail?.links && cocktail.links.length > 0 ? (
+                    <div className="mb-6">
+                        <h4 className="text-xl font-base mb-4">
+                            Conceptos que vas a necesitar:
+                        </h4>
+                        <ol className="flex flex-wrap ">
+                            {cocktail.links.map((link) => (
+                                <li className="bg-purple-50 border-2 border-purple-500 text-purple-800 text-lg font-medium mr-2 px-2.5 py-0.5 rounded-lg dark:bg-purple-900 dark:text-purple-300 flex items-center hover:cursor-pointer hover:scale-105 ">
+                                    {link}
+                                    <svg
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        viewBox="0 0 24 24"
+                                        className="ml-2 w-6"
+                                    >
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                                    </svg>
+                                </li>
+                            ))}
+                        </ol>
+                    </div>
+                ) : null}
 
                 {/* <button className="w-full border-2 border-gray-900 flex items-center justify-center py-3 mt-4 hover:bg-primary-light hover:shadow-lg hover:translate-y-1 ease-in-out duration-100 text-gray-800 font-medium rounded-lg  bg-bg-white">
                     <Link

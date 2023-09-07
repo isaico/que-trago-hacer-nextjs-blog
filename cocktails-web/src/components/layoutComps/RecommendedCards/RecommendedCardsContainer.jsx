@@ -3,7 +3,6 @@ import RecommendedCard from '../../UiComps/RecommendedCard';
 import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
 const RecommendedCards = async ({ quantity, field }) => {
     const recommendedArticles = await fetchRecommendedPosts(quantity, field);
-    console.log(field)
     return (
         <>
             <div className="flex  justify-between flex-wrap  rounded-lg  md:my-12 ">

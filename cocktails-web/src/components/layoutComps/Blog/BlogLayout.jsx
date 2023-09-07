@@ -6,6 +6,14 @@ import RecommendedCards from '../RecommendedCards/RecommendedCardsContainer';
 import PostedBy from '@/components/UiComps/PostedBy';
 import fetchCocktails from '@/utils/fetchCocktails';
 import ArticleLayout from './ArticleLayout';
+import { merriweather } from '@/utils/fonts';
+import ArticleTitle from '@/components/UiComps/ArticleTitle';
+// import { Merriweather } from 'next/font/google';
+// const merriweather = Merriweather({
+//     subsets: ['latin'],
+//     weight: ['400', '700'],
+//     style: ['normal'],
+// });
 
 const BlogLayout = async ({ blog }) => {
     let cocktails = [];
@@ -34,17 +42,21 @@ const BlogLayout = async ({ blog }) => {
                         <PostedBy time={blog.createdAt}></PostedBy>
 
                         <span className="font-normal text-sm ">
-                            Categoria:
+                            Categoría:
                             <span className="bg-pink-50 text-primary text-xs mr-2 px-2.5 ml-0.5 py-0.5 rounded-full">
                                 {blog.blogCategory}
                             </span>
                         </span>
                     </div>
                     <div className="text-xl leading-8 font-normal text-gray-700">
-                        <h1 className="lg:text-6xl text-2xl py-8 font-semibold text-grad-main text-center">
+                        <h1
+                            className={`lg:text-6xl text-2xl py-8 font-semibold text-grad-main text-center ${merriweather.className}`}
+                        >
                             {blog?.title}
                         </h1>
-                        <p className="pb-6">{blog?.brief_desc}</p>
+                        <p className="pb-8 text-center leading-9">
+                            {blog?.brief_desc}
+                        </p>
 
                         <Image
                             src={blog?.image_url}
@@ -53,36 +65,33 @@ const BlogLayout = async ({ blog }) => {
                             alt={blog?.alt}
                             className=" w-auto h-auto"
                         />
-                        <div className="pt-8 pb-12">
-                            <h2 className="text-2xl font-medium text-gray-900 pb-4">
-                                {blog?.title_desc}
-                            </h2>
-                            {/* <p className="">{blog?.description}</p> */}
+                        <div className="pt-16 pb-12">
+                            <ArticleTitle>{blog?.title_desc}</ArticleTitle>
+
                             {blog?.description && (
                                 <p
                                     dangerouslySetInnerHTML={{
                                         __html: blog?.description,
                                     }}
+                                    className="leading-9"
                                 ></p>
                             )}
                         </div>
 
                         {cocktails && cocktails.length > 0 ? (
                             <div>
-                                <h2 className="text-2xl font-medium text-gray-900 pb-2">
-                                    {blog?.title_posts}
-                                </h2>
+                                <ArticleTitle>{blog?.title_posts}</ArticleTitle>
+
                                 <PostContainer
                                     cocktails={cocktails}
                                 ></PostContainer>
                             </div>
-                        ) : (
-                            blog.articles && (
-                                <ArticleLayout
-                                    articles={blog?.articles}
-                                ></ArticleLayout>
-                            )
-                        )}
+                        ) : null}
+                        {blog.articles && blog.articles > 0 ? (
+                            <ArticleLayout
+                                articles={blog?.articles}
+                            ></ArticleLayout>
+                        ) : null}
                         {blog?.extra && (
                             <div className="py-8">
                                 <h3 className="font-medium pb-2  text-gray-900">
@@ -93,9 +102,7 @@ const BlogLayout = async ({ blog }) => {
                                     dangerouslySetInnerHTML={{
                                         __html: blog.extra,
                                     }}
-                                >
-                                    {/* {blog.extra && blog.extra} */}
-                                </p>
+                                ></p>
                             </div>
                         )}
                         {blog?.tips.length > 0 ? (
@@ -125,11 +132,9 @@ const BlogLayout = async ({ blog }) => {
             </div>
 
             <h3 className="text-2xl text-center my-20 mb-4">
-                Articulos relacionados
+                Artículos relacionados
             </h3>
             <RecommendedCards quantity={4} field={blog.recommendedPosts} />
-
-            {/* <DefaultCarousel></DefaultCarousel> */}
         </article>
     );
 };

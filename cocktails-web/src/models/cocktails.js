@@ -10,8 +10,9 @@ export const cocktailSchema = new Schema({
     optional: String,
     tips: [String],
     category: String,
-    difficulty:Number
-    
+    difficulty:Number,
+    links:[String],
+    history:String
 });
 
 const Cocktail = models.Cocktail || model('Cocktail', cocktailSchema);
