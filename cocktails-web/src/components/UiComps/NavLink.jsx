@@ -7,7 +7,7 @@ const NavLink = ({ src, children, category, id }) => {
         <Link
             href={{
                 pathname: src,
-                query: { category: category, id: id },
+                // query: { category: category, id: id },
             }}
             className={`${pathname ===  src ? 'active' : ''} hover:text-primary hover:underline`}
         >

@@ -2,7 +2,6 @@ import Image from 'next/image';
 import ArticleTitle from '@/components/UiComps/ArticleTitle';
 
 const ArticleLayout = ({ articles }) => {
-    console.log(articles)
     return (
         <>
             {articles.map((article,i) => (
@@ -18,8 +17,8 @@ const ArticleLayout = ({ articles }) => {
                     {article.image_url && (
                         <Image
                             src={article.image_url}
-                            height={800}
-                            width={800}
+                            height={1000}
+                            width={1000}
                             alt={article.alt}
                         ></Image>
                     )}

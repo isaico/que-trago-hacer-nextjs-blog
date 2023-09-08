@@ -7,15 +7,15 @@ const BlogCard = ({ blog }) => {
     if (blog.blog_category == 'posts') {
         route = stringToRoute(blog.title);
     }
-
+    console.log(blog)
     return (
         <>
             <Link
                 href={
                     blog.blog_category == 'posts'
                         ? {
-                              pathname: `/blog/${blog.blog_category}/${route}`,
-                              query: { id: blog.title.trim() },
+                              pathname: `/blog/${blog.blog_category}/${blog.category_id}`,
+                            //   query: { id:  },
                           }
                         : {
                               pathname: `/blog/${blog.blog_category}/${blog.category_id}`,

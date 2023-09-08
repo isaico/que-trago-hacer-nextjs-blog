@@ -30,7 +30,8 @@ export const categoryTragos = [
 ];
 export const categoryPosts = [
     {
-        path: '/blog/posts/top-10-tragos',
+        //matchear el category_id del blog con el final del path
+        path: '/blog/posts/Top-10-tragos',
         text: 'Top 10 tragos',
         key: 101,
         category: 'posts',

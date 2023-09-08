@@ -26,7 +26,7 @@ const BlogSchema = new Schema(
             },
         ],
         cocktails_names: [String],
-        tips: [String],
+        tips: [{ title: String, content: String }],
         tools: [String],
         recommended_posts: [String],
     },

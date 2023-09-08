@@ -11,6 +11,7 @@ import ArticleTitle from '@/components/UiComps/ArticleTitle';
 import Affiliations from '../Affiliations/Affiliations';
 import SideIndexNav from '../SideIndexNav/SideIndexNav';
 import { buildIds } from '@/utils/buildIds';
+import DefaultAccordion from '../Accordion/Accordion';
 const BlogLayout = async ({ blog }) => {
     let cocktails = [];
     let ids = buildIds({ blog });
@@ -90,21 +91,17 @@ const BlogLayout = async ({ blog }) => {
                                 ></CocktailsContainer>
                             </div>
                         ) : null}
-                        <h2>aca va articles</h2>
                         {blog?.articles && blog?.articles.length > 0 ? (
                             <ArticleLayout articles={blog?.articles} />
                         ) : null}
-
-                        {blog?.tips.length > 0 ? (
+                        {blog?.tips && blog?.tips.length > 0 ? (
                             <div id="tips">
-                                <h3 className="font-medium pb-2 text-gray-900">
-                                    Recomendaciones
-                                </h3>
-                                <ul className="list-disc list-inside">
-                                    {blog?.tips.map((tip) => (
-                                        <li>{tip}</li>
-                                    ))}
-                                </ul>
+                                <ArticleTitle size="text-2xl">
+                                    Recomendaciones:
+                                </ArticleTitle>
+                                <DefaultAccordion
+                                    tips={blog.tips}
+                                ></DefaultAccordion>
                             </div>
                         ) : null}
                     </div>
@@ -122,11 +119,8 @@ const BlogLayout = async ({ blog }) => {
 
             <Affiliations indexes={[]} />
 
-            <div id="recommended">
-                <h3 className="text-2xl text-center my-20 mb-4">
-                    Artículos relacionados
-                </h3>
-
+            <div id="recommended" className='text-center'>
+                <ArticleTitle>Publicaciones relacionadas</ArticleTitle>
                 <RecommendedCards quantity={4} field={blog.recommended_posts} />
             </div>
         </article>

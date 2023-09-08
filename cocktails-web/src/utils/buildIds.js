@@ -1,19 +1,20 @@
 export function buildIds({ blog }) {
-   let ids = []
-    if (blog.title) {
+    console.log(blog);
+    let ids = [];
+    if (blog.title && blog.title !== undefined) {
         ids.push({
             id: 'title',
-            text: 'Ir al principio',
+            text: 'Encabezado',
         });
     }
-    if (blog.description) {
+    if (blog.description && blog.description !== undefined) {
         ids.push({
             id: 'description',
-            text: 'Descripción del blog',
+            text: 'Descripción del post',
         });
     }
-  
-    if (blog.tips) {
+
+    if (blog.tips && blog.tips.length > 0) {
         ids.push({
             id: 'tips',
             text: 'Recomendaciones',
@@ -22,7 +23,7 @@ export function buildIds({ blog }) {
 
     ids.push({
         id: 'recommended',
-        text: 'Artículos relacionados',
+        text: 'Publicaciones relacionadas',
     });
-    return ids
+    return ids;
 }
