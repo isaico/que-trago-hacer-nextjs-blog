@@ -1,9 +1,10 @@
 'use client';
 import React from 'react';
-import { Navbar, Button, Dropdown } from 'flowbite-react';
+import { Navbar, Dropdown } from 'flowbite-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import NavLink from '@/components/UiComps/NavLink';
+import { useRouter } from 'next/navigation';
 import {
     categoryTragos,
     categoryPosts,
@@ -11,12 +12,11 @@ import {
 } from '@/utils/paths';
 const NavBar = () => {
     const pathname = usePathname();
-
     return (
         <Navbar
             fluid
             rounded
-            className="bg-bg-white border-b border-gray-300 fixed w-full z-50 py-4"
+            className="bg-bg-white border-b border-gray-300 fixed w-full z-50 py-4 shadow-md"
         >
             {/* <Navbar.Brand href="https://flowbite-react.com">
                     <img
@@ -58,7 +58,11 @@ const NavBar = () => {
                 </Link>
 
                 <li className="p-2 pl-3 md:p-0  border-gray-100 border-b md:border-none text-lg font-normal">
-                    <Dropdown label="Tragos" inline onClick={() => placement="top"}>
+                    <Dropdown
+                        label="Tragos"
+                        inline
+                        onClick={() => (placement = 'top')}
+                    >
                         {categoryTragos.map((item) => (
                             <Dropdown.Item
                                 className="px-6 py-3 text-base hover:cursor-default"
@@ -118,14 +122,20 @@ const NavBar = () => {
                     </Dropdown>
                 </li>
 
-                <Link href="/blog"   className={`${
+                <Link
+                    href="/blog"
+                    className={`${
                         pathname == '/blog' ? 'active' : ''
-                    } text-lg font-normal`}>
+                    } text-lg font-normal`}
+                >
                     Blog
                 </Link>
-                <Link href="/contacto" className={`${
+                <Link
+                    href="/contacto"
+                    className={`${
                         pathname == '/contacto' ? 'active' : ''
-                    } text-lg font-normal`}>
+                    } text-lg font-normal`}
+                >
                     Contacto
                 </Link>
             </Navbar.Collapse>

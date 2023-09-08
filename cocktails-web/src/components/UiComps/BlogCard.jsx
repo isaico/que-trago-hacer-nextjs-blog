@@ -4,29 +4,29 @@ import PostedBy from './PostedBy';
 import { stringToRoute } from '@/utils/stringToRoute';
 const BlogCard = ({ blog }) => {
     let route = '';
-    if (blog.blogCategory == 'posts') {
-        route = stringToRoute(blog.title)
+    if (blog.blog_category == 'posts') {
+        route = stringToRoute(blog.title);
     }
-   
+
     return (
         <>
             <Link
                 href={
-                    blog.blogCategory == 'posts'
+                    blog.blog_category == 'posts'
                         ? {
-                              pathname: `/blog/${blog.blogCategory}/${route}`,
+                              pathname: `/blog/${blog.blog_category}/${route}`,
                               query: { id: blog.title.trim() },
                           }
                         : {
-                              pathname: `/blog/${blog.blogCategory}/${blog.categoryId}`,
-                              // query:{id:blog.categoryId}
+                              pathname: `/blog/${blog.blog_category}/${blog.category_id}`,
+                              // query:{id:blog.category_id}
                           }
                 }
                 className="hover:-translate-y-1 ease-in-out duration-100 group"
             >
                 {blog ? (
                     <div className="flex relative max-w-3xl justify-center border rounded-xl bg-gray-50 border-gray-200  shadow-lg group-hover:shadow-xl group-hover:border-primary ">
-                        {blog.blogCategory === 'posts' ? (
+                        {blog.blog_category === 'posts' ? (
                             <span className="bg-pink-200 text-xs font-medium text-pink-900 text-center p-0.5 leading-none rounded-full px-2 dark:bg-blue-900 dark:text-blue-200 absolute -translate-y-1/2 translate-x-1/2 left-auto top-0 right-2">
                                 Recomendado
                             </span>
@@ -42,18 +42,20 @@ const BlogCard = ({ blog }) => {
                             <div>
                                 <PostedBy time={blog.createdAt}></PostedBy>
                                 <span className="text-sm text-gray-500">
-                                    Categoria: {blog.blogCategory}
+                                    Categoría: {blog.blog_category}
                                 </span>
                                 <span></span>
                             </div>
                             <h3 className="text-2xl font-medium pb-2">
                                 {blog.title}
                             </h3>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: blog?.description,
-                                }}
-                            ></p>
+                            {blog.brief_desc && (
+                                <p
+                                    dangerouslySetInnerHTML={{
+                                        __html: blog?.brief_desc,
+                                    }}
+                                ></p>
+                            )}
                         </div>
                     </div>
                 ) : (

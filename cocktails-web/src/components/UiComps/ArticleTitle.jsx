@@ -1,10 +1,16 @@
 import React from 'react';
 import { merriweather } from '@/utils/fonts';
 
-const ArticleTitle = ({children}) => {
+const ArticleTitle = ({
+    children,
+    size = 'text-3xl',
+    color = 'text-gray-900',
+    id,
+}) => {
     return (
         <h2
-            className={`text-3xl font-normal text-gray-900 pb-4 ${merriweather.className}`}
+            className={`${size} font-normal ${color} pb-4 ${merriweather.className}`}
+            id={id}
         >
             {children}
         </h2>

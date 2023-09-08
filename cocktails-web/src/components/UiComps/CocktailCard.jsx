@@ -1,15 +1,19 @@
 import Image from 'next/image';
 import Rating from '@/components/UiComps/Rating';
 import { merriweather } from '@/utils/fonts';
+import Link from 'next/link';
 const CocktailCard = ({ cocktail, index, cocktailLength }) => {
     return (
         <div
             key={cocktail._id}
             className="my-6 p-0.5 bg-grad-3 rounded-xl shadow-lg"
+            id={index}
         >
             <div className="bg-bg-white p-6 py-8 rounded-xl flex flex-col">
                 <div className="flex  justify-between items-center align-middle pb-12">
-                    <h3 className={`text-3xl font-normal  text-primary ${merriweather.className}`}>
+                    <h3
+                        className={`text-3xl font-normal  text-primary ${merriweather.className}`}
+                    >
                         <span className="font-semibold text-gray-900">
                             #{cocktailLength - index}
                         </span>{' '}
@@ -80,9 +84,7 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                 </div>
                 {cocktail.tips && cocktail.tips.length > 0 ? (
                     <div className="mb-6">
-                        <h4 className="text-xl font-base italic mb-4">
-                            Tips del bartender:{' '}
-                        </h4>
+                        <h4 className="mb-4 font-medium">Tips del bartender</h4>
                         <ul className="list-disc list-inside text-lg">
                             {cocktail.tips.map((tip, i) => (
                                 <li key={i}>{tip}</li>
@@ -92,9 +94,7 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                 ) : null}
                 {cocktail?.optional && (
                     <div className="mb-6">
-                        <h4 className="text-xl font-base italic mb-4">
-                            Opcional:
-                        </h4>
+                        <h4 className="mb-4 font-medium">Opcional</h4>
                         <p className="text-lg">{cocktail?.optional}</p>
                     </div>
                 )}

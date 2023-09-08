@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import React from 'react';
 import ArticleTitle from '@/components/UiComps/ArticleTitle';
 
 const ArticleLayout = ({ articles }) => {
+    console.log(articles)
     return (
         <>
-            {articles.map((article) => (
-                <div className="mb-8">
+            {articles.map((article,i) => (
+                <div className="mb-8" key={i} id={article._id}>
                     <ArticleTitle>{article.title}</ArticleTitle>
 
                     <p

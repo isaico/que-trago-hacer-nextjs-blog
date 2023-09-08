@@ -1,41 +1,37 @@
 import Image from 'next/image';
-import PostContainer from '../CocktailsContainer/CocktailsContainer';
+import CocktailsContainer from '../CocktailsContainer/CocktailsContainer';
 import BackButton from '@/components/UiComps/BackButton';
 import DefaultBreadcrumb from '@/components/UiComps/BreadCrumb';
 import RecommendedCards from '../RecommendedCards/RecommendedCardsContainer';
 import PostedBy from '@/components/UiComps/PostedBy';
 import fetchCocktails from '@/utils/fetchCocktails';
-import ArticleLayout from './ArticleLayout';
+import ArticleLayout from '@/components/layoutComps/Article/ArticleLayout';
 import { merriweather } from '@/utils/fonts';
 import ArticleTitle from '@/components/UiComps/ArticleTitle';
-// import { Merriweather } from 'next/font/google';
-// const merriweather = Merriweather({
-//     subsets: ['latin'],
-//     weight: ['400', '700'],
-//     style: ['normal'],
-// });
-
+import Affiliations from '../Affiliations/Affiliations';
+import SideIndexNav from '../SideIndexNav/SideIndexNav';
+import { buildIds } from '@/utils/buildIds';
 const BlogLayout = async ({ blog }) => {
     let cocktails = [];
-    //chequeo que el blog pida un array de cockteles
+    let ids = buildIds({ blog });
+    //chequeo que el blog pida un array de cócteles
     if (blog.getCocktails) {
-        //dentro de la funcion hay un switch que devolvera un array en cada caso dependiendo de la categoria
+        //dentro de la función hay un switch que devolverá un array en cada caso dependiendo de la categoría
         cocktails = await fetchCocktails({
-            blogCategory: blog.blogCategory,
-            categoryId: blog.categoryId,
-            cocktailsNames: blog.cocktailsNames,
+            blogCategory: blog.blog_category,
+            categoryId: blog.category_id,
+            cocktailsNames: blog.cocktails_names,
         });
     }
-
     return (
-        <article className="mt-12 flex flex-col  justify-end relative w-full">
-            <div className="md:grid md:grid-cols-8 md:grid-flow-col md:gap-6 w-full flex flex-col">
-                <div className=" flex flex-col justify-center justify-self-center mx-auto col-span-4 col-start-3">
+        <article className="mt-12 flex flex-col  justify-end  w-full scroll-smooth">
+            <div className="md:grid md:grid-cols-8 md:grid-flow-col md:gap-6 w-full flex flex-col ">
+                <div className=" flex flex-col justify-center justify-self-center mx-auto col-span-4 col-start-3 max-w-4xl ">
                     <div className="absolute left-0 top-0">
                         <BackButton></BackButton>
                     </div>
                     <DefaultBreadcrumb
-                        category={blog.blogCategory}
+                        category={blog.blog_category}
                         title={blog.title}
                     />
                     <div className="p-2 flex justify-between items-center ">
@@ -44,71 +40,65 @@ const BlogLayout = async ({ blog }) => {
                         <span className="font-normal text-sm ">
                             Categoría:
                             <span className="bg-pink-50 text-primary text-xs mr-2 px-2.5 ml-0.5 py-0.5 rounded-full">
-                                {blog.blogCategory}
+                                {blog.blog_category}
                             </span>
                         </span>
                     </div>
                     <div className="text-xl leading-8 font-normal text-gray-700">
-                        <h1
-                            className={`lg:text-6xl text-2xl py-8 font-semibold text-grad-main text-center ${merriweather.className}`}
-                        >
-                            {blog?.title}
-                        </h1>
-                        <p className="pb-8 text-center leading-9">
-                            {blog?.brief_desc}
-                        </p>
+                        {blog.title && (
+                            <div id="title">
+                                <h1
+                                    className={`lg:text-6xl text-2xl py-8 font-semibold text-grad-main text-center ${merriweather.className}`}
+                                >
+                                    {blog?.title}
+                                </h1>
+                                <p className="pb-8 text-center leading-9">
+                                    {blog?.brief_desc}
+                                </p>
+                            </div>
+                        )}
 
                         <Image
                             src={blog?.image_url}
-                            height={800}
-                            width={800}
+                            height={1000}
+                            width={1000}
                             alt={blog?.alt}
                             className=" w-auto h-auto"
                         />
-                        <div className="pt-16 pb-12">
-                            <ArticleTitle>{blog?.title_desc}</ArticleTitle>
-
-                            {blog?.description && (
+                        {blog?.description && (
+                            <div className="pt-16 pb-12" id="description">
+                                <ArticleTitle id={'blog-desc'}>
+                                    {blog?.title_desc}
+                                </ArticleTitle>
                                 <p
                                     dangerouslySetInnerHTML={{
                                         __html: blog?.description,
                                     }}
                                     className="leading-9"
                                 ></p>
-                            )}
-                        </div>
+                            </div>
+                        )}
 
                         {cocktails && cocktails.length > 0 ? (
                             <div>
-                                <ArticleTitle>{blog?.title_posts}</ArticleTitle>
+                                <ArticleTitle id="list_title">
+                                    {blog?.list_title}
+                                </ArticleTitle>
 
-                                <PostContainer
+                                <CocktailsContainer
                                     cocktails={cocktails}
-                                ></PostContainer>
+                                ></CocktailsContainer>
                             </div>
                         ) : null}
-                        {blog.articles && blog.articles > 0 ? (
-                            <ArticleLayout
-                                articles={blog?.articles}
-                            ></ArticleLayout>
+                        <h2>aca va articles</h2>
+                        {blog?.articles && blog?.articles.length > 0 ? (
+                            <ArticleLayout articles={blog?.articles} />
                         ) : null}
-                        {blog?.extra && (
-                            <div className="py-8">
-                                <h3 className="font-medium pb-2  text-gray-900">
-                                    Extra
-                                </h3>
-                                <p
-                                    className=""
-                                    dangerouslySetInnerHTML={{
-                                        __html: blog.extra,
-                                    }}
-                                ></p>
-                            </div>
-                        )}
+
                         {blog?.tips.length > 0 ? (
-                            <div>
+                            <div id="tips">
                                 <h3 className="font-medium pb-2 text-gray-900">
-                                    recomendaciones
+                                    Recomendaciones
                                 </h3>
                                 <ul className="list-disc list-inside">
                                     {blog?.tips.map((tip) => (
@@ -118,23 +108,27 @@ const BlogLayout = async ({ blog }) => {
                             </div>
                         ) : null}
                     </div>
-                    {/* <div>articulo</div> */}
                 </div>
-                {/* <aside className="border-l-2 col-span-2  ">
-                    <div className="h-[300px] bg-blue-400">algo</div>
-                    <div className="flex justify-center items-center sticky top-16  ">
-                        <div className="justify-center w-full text-center h-[500px] bg-red-400">
-                            <h3 className="">Ultimos Articulos</h3>
-                        </div>
-                    </div>
-                </aside> */}
+                <aside className=" col-span-2 col-start-7 ">
+                    <div className="h-[300px] bg-blue-400">topics</div>
+                    <SideIndexNav
+                        cocktails={cocktails}
+                        articles={blog.articles}
+                        ids={ids}
+                    ></SideIndexNav>
+                </aside>
                 {/* <aside className="col-span-2 col-start-1">otro aside</aside> */}
             </div>
 
-            <h3 className="text-2xl text-center my-20 mb-4">
-                Artículos relacionados
-            </h3>
-            <RecommendedCards quantity={4} field={blog.recommendedPosts} />
+            <Affiliations indexes={[]} />
+
+            <div id="recommended">
+                <h3 className="text-2xl text-center my-20 mb-4">
+                    Artículos relacionados
+                </h3>
+
+                <RecommendedCards quantity={4} field={blog.recommended_posts} />
+            </div>
         </article>
     );
 };

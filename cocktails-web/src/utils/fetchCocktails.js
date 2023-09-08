@@ -2,7 +2,6 @@ import connectDB from '@/libs/mongodb';
 import Cocktail from '@/models/cocktails';
 
 const fetchCocktails = async ({ blogCategory, categoryId, cocktailsNames }) => {
-    console.log(categoryId);
     switch (blogCategory) {
         case 'preparacion':
             try {
@@ -24,9 +23,7 @@ const fetchCocktails = async ({ blogCategory, categoryId, cocktailsNames }) => {
                         index: "default",
                         text: {
                           query: categoryId,
-                          path: {
-                            wildcard: "*"
-                          }
+                          path: "ingredients"
                         }
                       }
                     }
