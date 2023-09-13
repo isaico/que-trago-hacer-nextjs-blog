@@ -5,14 +5,14 @@ import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
 const Tragos = async ({ params }) => {
     const blog = await fetchBlog(params.bebida);
     return (
-        <div>
+        <>
             {blog ? (
                 <BlogLayout blog={blog}></BlogLayout>
             ) : (
                 <ErrorFetchData></ErrorFetchData>
             )}
             
-        </div>
+        </>
     );
 };
 

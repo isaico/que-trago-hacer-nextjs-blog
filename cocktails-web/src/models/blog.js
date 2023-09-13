@@ -28,6 +28,7 @@ const BlogSchema = new Schema(
         cocktails_names: [String],
         tips: [{ title: String, content: String }],
         tools: [String],
+        pilar:Boolean,
         recommended_posts: [String],
     },
     {

@@ -1,5 +1,4 @@
 export function buildIds({ blog }) {
-    console.log(blog);
     let ids = [];
     if (blog.title && blog.title !== undefined) {
         ids.push({

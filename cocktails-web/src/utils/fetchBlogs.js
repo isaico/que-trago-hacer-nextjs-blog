@@ -5,8 +5,11 @@ import { NextResponse } from 'next/server';
 const fetchBlogs = async (field) => {
     try {
         connectDB();
-        if (field && field.field !== undefined) {
-            const resp = await Blog.find({field});
+        if (field && field.length > 0 !== undefined) {
+            const resp = await Blog.find(
+                { title: field },
+                'title brief_desc small_image_url alt blog_category category_id createdAt pilar'
+            );
             const data = JSON.parse(JSON.stringify(resp));
             return data;
         } else {

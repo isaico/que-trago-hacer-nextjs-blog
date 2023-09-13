@@ -27,15 +27,15 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
     };
 
     return (
-        <div className="flex justify-center items-center sticky top-[61px]  ">
-            <div className="grid justify-center w-full text-start ">
+        <div className="flex justify-center items-center sticky top-[61px]  mx-12 ">
+            <div className="grid justify-center w-full text-start break-all ">
                 <h3 className="text-xl mb-4 font-medium">Tabla de contenido</h3>
                 <div>
-                    <ul className="list-disc text-lg ">
+                    <ul className="list-disc text-base  ">
                         {ids?.map((item, i) => (
                             <li
                                 key={i}
-                                className=" hover:bg-gray-100 rounded-lg"
+                                className=" hover:bg-gray-100 hover:text-primary rounded-lg py-0.5 "
                             >
                                 <Link
                                     href={`#${item.id}`}
@@ -46,9 +46,8 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
                                 </Link>
                             </li>
                         ))}
-
                         {cocktailsNames && cocktailsNames.length > 0 ? (
-                            <li>
+                            <li className="py-0.5 mt-2 border-t-2 border-primary-light">
                                 <ol className="list-decimal list-inside">
                                     <h5 className="font-medium">
                                         Lista de tragos:
@@ -56,7 +55,7 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
                                     {cocktailsNames.map((item, i) => (
                                         <li
                                             key={item}
-                                            className="hover:bg-gray-100 rounded-lg"
+                                            className="hover:bg-gray-100 rounded-lg  hover:text-primary "
                                         >
                                             <Link
                                                 href={`#${i}`}
@@ -70,15 +69,16 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
                                 </ol>
                             </li>
                         ) : null}
+
                         {articlesNames && articlesNames.length > 0 ? (
-                            <li>
-                                <ul className="list-[circle] list-inside">
-                                    <h5 className="font-medium"> Artículos:</h5>
+                            <li className="py-0.5">
+                                <ul className="list-[circle] list-inside ">
+                                    <h5 className="font-medium">Lista de artículos:</h5>
                                     {/* <h5>Artículos: </h5> */}
                                     {articlesNames.map((article, i) => (
                                         <li
                                             key={i}
-                                            className="hover:bg-gray-100 rounded-lg"
+                                            className="hover:bg-gray-100  hover:text-primary rounded-lg"
                                         >
                                             <Link
                                                 href={`#${article._id}`}

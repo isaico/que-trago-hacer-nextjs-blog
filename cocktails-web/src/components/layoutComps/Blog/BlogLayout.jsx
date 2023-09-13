@@ -11,10 +11,12 @@ import ArticleTitle from '@/components/UiComps/ArticleTitle';
 import Affiliations from '../Affiliations/Affiliations';
 import SideIndexNav from '../SideIndexNav/SideIndexNav';
 import { buildIds } from '@/utils/buildIds';
-import DefaultAccordion from '../Accordion/Accordion';
+import SideTopics from '../SideTopics/SideTopics';
+
 const BlogLayout = async ({ blog }) => {
+
     let cocktails = [];
-    let ids = buildIds({ blog });
+    let ids = buildIds({ blog }); //obtengo los ids para el sidenav
     //chequeo que el blog pida un array de cócteles
     if (blog.getCocktails) {
         //dentro de la función hay un switch que devolverá un array en cada caso dependiendo de la categoría
@@ -25,12 +27,10 @@ const BlogLayout = async ({ blog }) => {
         });
     }
     return (
-        <article className="mt-12 flex flex-col  justify-end  w-full scroll-smooth">
+        <article className="mt-12 flex flex-col  justify-end  w-full scroll-smooth relative">
             <div className="md:grid md:grid-cols-8 md:grid-flow-col md:gap-6 w-full flex flex-col ">
                 <div className=" flex flex-col justify-center justify-self-center mx-auto col-span-4 col-start-3 max-w-4xl ">
-                    <div className="absolute left-0 top-0">
-                        <BackButton></BackButton>
-                    </div>
+                   
                     <DefaultBreadcrumb
                         category={blog.blog_category}
                         title={blog.title}
@@ -53,7 +53,7 @@ const BlogLayout = async ({ blog }) => {
                                 >
                                     {blog?.title}
                                 </h1>
-                                <p className="pb-8 text-center leading-9">
+                                <p className="pb-8 text-center leading-8">
                                     {blog?.brief_desc}
                                 </p>
                             </div>
@@ -75,7 +75,7 @@ const BlogLayout = async ({ blog }) => {
                                     dangerouslySetInnerHTML={{
                                         __html: blog?.description,
                                     }}
-                                    className="leading-9"
+                                    className="leading-8 whitespace-pre-line mt-8"
                                 ></p>
                             </div>
                         )}
@@ -95,33 +95,35 @@ const BlogLayout = async ({ blog }) => {
                             <ArticleLayout articles={blog?.articles} />
                         ) : null}
                         {blog?.tips && blog?.tips.length > 0 ? (
-                            <div id="tips">
-                                <ArticleTitle size="text-2xl">
+                            <div id="tips" className='my-8'>
+                                <ArticleTitle>
                                     Recomendaciones:
                                 </ArticleTitle>
-                                <DefaultAccordion
+                                {/* <DefaultAccordion
                                     tips={blog.tips}
-                                ></DefaultAccordion>
+                                ></DefaultAccordion> */}
                             </div>
                         ) : null}
                     </div>
                 </div>
                 <aside className=" col-span-2 col-start-7 ">
-                    <div className="h-[300px] bg-blue-400">topics</div>
                     <SideIndexNav
                         cocktails={cocktails}
                         articles={blog.articles}
                         ids={ids}
                     ></SideIndexNav>
                 </aside>
-                {/* <aside className="col-span-2 col-start-1">otro aside</aside> */}
+                <aside className="col-span-2 col-start-1">
+                   <div className='flex justify-center mb-12'> <BackButton color="gray"></BackButton></div>
+                    <SideTopics></SideTopics>
+                </aside>
             </div>
 
             <Affiliations indexes={[]} />
 
-            <div id="recommended" className='text-center'>
+            <div id="recommended" className="text-center ">
                 <ArticleTitle>Publicaciones relacionadas</ArticleTitle>
-                <RecommendedCards quantity={4} field={blog.recommended_posts} />
+                <RecommendedCards  field={blog.recommended_posts} />
             </div>
         </article>
     );

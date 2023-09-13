@@ -25,7 +25,7 @@ export default function Rating({ difficulty }) {
     for (let i = difficulty + 1; i <= 5; i++) {
         stars.push(
             // <svg
-            //     class="w-4 h-4 text-gray-300 dark:text-gray-500"
+            //     className="w-4 h-4 text-gray-300 dark:text-gray-500"
             //     aria-hidden="true"
             //     xmlns="http://www.w3.org/2000/svg"
             //     fill="currentColor"
@@ -45,8 +45,8 @@ export default function Rating({ difficulty }) {
     }
     return (
         <ul className="flex items-center space-x-1">
-            {stars.map((star) => (
-                <li>{star}</li>
+            {stars.map((star,i) => (
+                <li key={i}>{star}</li>
             ))}
         </ul>
     );

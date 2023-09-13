@@ -6,10 +6,10 @@ import Jumbotron from '@/components/layoutComps/Jumbotron/Jumbotron';
 const Page = async () => {
     const blogs = await fetchBlogs(null);
     return (
-        <div className="pb-4 ">
+        <div className="mb-28 ">
             <div className="grid mt-12">
                 <div className="z-10">
-                    <BackButton></BackButton>
+                    <BackButton color="dark"></BackButton>
                 </div>
                 <Jumbotron
                     title={
@@ -20,12 +20,12 @@ const Page = async () => {
                     }
                 />
             </div>
-            <div className="">
+            <div className=" max-w-screen-xl">
                 {blogs ? (
                     <div className="">
                         <div className="grid  md:grid-cols-2 gap-8 gap-x-14 w-full">
                             {blogs.map((blog) => (
-                                <BlogCard blog={blog}></BlogCard>
+                               <div key={blog._id}> <BlogCard blog={blog}></BlogCard></div>
                             ))}
                         </div>
                     </div>
@@ -33,10 +33,7 @@ const Page = async () => {
                     <ErrorFetchData />
                 )}
             </div>
-            {/* <h2 className="text-3xl text-center mt-20 mb-12  font-medium ">
-                    Articulos Destacados
-                </h2>
-                <RecommendedCards quantity={4} field={null} /> */}
+          
         </div>
     );
 };

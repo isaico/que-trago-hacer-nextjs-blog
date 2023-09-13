@@ -17,14 +17,14 @@ const Affiliations = () => {
                     <a
                         href="https://go.hotmart.com/E86543328A?ap=81f3"
                         target="_blank"
-                        className="text-gray-200 border-2 text-lg border-primary-light focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg  px-5 py-2.5 text-center mb-2  "
+                        className="text-gray-200 border-2 text-lg border-primary-light focus:ring-4 focus:outline-none focus:ring-purple-200 font-medium rounded-lg  px-5 py-2.5 text-center mb-2  hover:scale-105"
                     >
                         SABER MAS
                     </a>
                     <a
                         href="https://go.hotmart.com/E86543328A?ap=8d23"
                         target="_blank"
-                        className="text-gray-100 border-2 border-primary-light bg-primary-light text-lg focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg  px-5 py-2.5 text-center mr-2 mb-2 basis-1/2"
+                        className="text-gray-100 border-2 border-primary-light bg-primary-light text-lg focus:ring-4 focus:outline-none focus:ring-purple-200 font-medium rounded-lg  px-5 py-2.5 text-center mr-2 mb-2 basis-1/2 hover:scale-105"
                     >
                         OBTENER AHORA!
                     </a>

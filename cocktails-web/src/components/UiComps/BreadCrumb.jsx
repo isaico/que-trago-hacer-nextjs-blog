@@ -7,12 +7,12 @@ export default function DefaultBreadcrumb({ category, title }) {
     return (
         <Breadcrumb aria-label="Default breadcrumb example">
             <Breadcrumb.Item icon={HiHome}>
-                <Link href="/" className="text-sm font-normal hover:underline">
+                <Link href="/" className="text-sm font-normal underline hover:text-primary">
                     Inicio
                 </Link>
             </Breadcrumb.Item>
             <Breadcrumb.Item>
-                <Link href="/blog" className="text-sm font-normal hover:underline">
+                <Link href="/blog" className="text-sm font-normal underline hover:text-primary">
                     Blog
                 </Link>
             </Breadcrumb.Item>

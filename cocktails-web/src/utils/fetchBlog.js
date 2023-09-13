@@ -7,7 +7,6 @@ const fetchBlog = async (id) => {
     try {
         connectDB();
         // llamare a la coll "blog" y pedire un item segun su categoria
-        console.log(id)
         const resp = await Blog.findOne({ category_id: id });
         const data =  JSON.parse(JSON.stringify(resp))
         return data;

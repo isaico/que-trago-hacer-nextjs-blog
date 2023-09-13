@@ -16,7 +16,7 @@ const NavBar = () => {
         <Navbar
             fluid
             rounded
-            className="bg-bg-white border-b border-gray-300 fixed w-full z-50 py-4 shadow-md"
+            className="bg-bg-white border-b  border-gray-200 fixed w-full z-50 py-4 "
         >
             {/* <Navbar.Brand href="https://flowbite-react.com">
                     <img

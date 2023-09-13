@@ -5,9 +5,8 @@ import Link from 'next/link';
 const CocktailCard = ({ cocktail, index, cocktailLength }) => {
     return (
         <div
-            key={cocktail._id}
-            className="my-6 p-0.5 bg-grad-3 rounded-xl shadow-lg"
-            id={index}
+        className="my-6 p-0.5 bg-grad-3 rounded-xl shadow-lg"
+        id={index}
         >
             <div className="bg-bg-white p-6 py-8 rounded-xl flex flex-col">
                 <div className="flex  justify-between items-center align-middle pb-12">
@@ -42,7 +41,7 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                                 // dangerouslySetInnerHTML={{
                                 //     __html: cocktail?.description,
                                 // }}
-                                className="text-lg"
+                                className="text-lg  whitespace-pre-line indent-6 "
                             >
                                 {cocktail?.description}
                             </p>
@@ -50,10 +49,10 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                     )}
                     {cocktail?.history && (
                         <div>
-                            <h4 className="mb-4 mt-8 font-medium">
+                            <h4 className="mb-4 mt-8 font-medium ">
                                 Su origen e historia:
                             </h4>
-                            <p className="text-lg">{cocktail?.history}</p>
+                            <p className="text-lg whitespace-pre-line indent-6">{cocktail?.history}</p>
                         </div>
                     )}
                 </div>
@@ -61,9 +60,9 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                     <h4 className="text-2xl font-medium mb-4">
                         Ingredientes:{' '}
                     </h4>
-                    <ul className="">
-                        {cocktail?.ingredients.map((ing) => (
-                            <li className="flex items-center mb-2">
+                    <ul>
+                        {cocktail?.ingredients.map((ing, i) => (
+                            <li className="flex items-center mb-2" key={i+100}>
                                 <svg
                                     className="flex-shrink-0 w-3.5 h-3.5 text-primary-light mr-2"
                                     aria-hidden="true"
@@ -87,7 +86,8 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                         <h4 className="mb-4 font-medium">Tips del bartender</h4>
                         <ul className="list-disc list-inside text-lg">
                             {cocktail.tips.map((tip, i) => (
-                                <li key={i}>{tip}</li>
+                                
+                                <li key={i+1000}>{tip} </li>
                             ))}
                         </ul>
                     </div>
@@ -104,8 +104,11 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                             Conceptos que vas a necesitar:
                         </h4>
                         <ol className="flex flex-wrap ">
-                            {cocktail.links.map((link) => (
-                                <li className="bg-purple-50 border-2 border-purple-500 text-purple-800 text-lg font-medium mr-2 px-2.5 py-0.5 rounded-lg dark:bg-purple-900 dark:text-purple-300 flex items-center hover:cursor-pointer hover:scale-105 ">
+                            {cocktail.links.map((link, i) => (
+                                <li
+                                    className="bg-purple-50 border-2 border-purple-500 text-purple-800 text-base font-medium mr-2 px-2.5 py-0.5 rounded-lg dark:bg-purple-900 dark:text-purple-300 flex items-center hover:cursor-pointer hover:scale-105"
+                                    key={i+2000}
+                                >
                                     {link}
                                     <svg
                                         fill="none"
@@ -124,30 +127,7 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                     </div>
                 ) : null}
 
-                {/* <button className="w-full border-2 border-gray-900 flex items-center justify-center py-3 mt-4 hover:bg-primary-light hover:shadow-lg hover:translate-y-1 ease-in-out duration-100 text-gray-800 font-medium rounded-lg  bg-bg-white">
-                    <Link
-                        href={{
-                            pathname: `/app/${cocktail.name}`,
-                            query: { title: cocktail.name },
-                        }}
-                    >
-                        <p className="flex items-center ">
-                            Tips del bartender: {cocktail.name}
-                            <svg
-                                fill="none"
-                                viewBox="0 0 15 15"
-                                height="1em"
-                                width="1em"
-                                className="ml-2"
-                            >
-                                <path
-                                    stroke="currentColor"
-                                    d="M5.5 10V8.5m0 0v-5a1 1 0 012 0v4h3.353c.91 0 1.647.737 1.647 1.647V10A4.5 4.5 0 018 14.5h-.5a4 4 0 01-4-4 2 2 0 012-2zm3.5-3h2a2.5 2.5 0 000-5H4a2.5 2.5 0 000 5"
-                                />
-                            </svg>
-                        </p>
-                    </Link>
-                </button> */}
+              
             </div>
         </div>
     );

@@ -4,16 +4,13 @@ import ArticleTitle from '@/components/UiComps/ArticleTitle';
 const ArticleLayout = ({ articles }) => {
     return (
         <>
-            {articles.map((article,i) => (
-                <div className="mb-8" key={i} id={article._id}>
+            {articles.map((article, i) => (
+                <div className="my-8" key={i} id={article._id}>
                     <ArticleTitle>{article.title}</ArticleTitle>
 
-                    <p
-                        className="mb-4"
-                        dangerouslySetInnerHTML={{
-                            __html: article.description,
-                        }}
-                    ></p>
+                    <p className="mb-4 whitespace-pre-line">
+                        {article.description}
+                    </p>
                     {article.image_url && (
                         <Image
                             src={article.image_url}

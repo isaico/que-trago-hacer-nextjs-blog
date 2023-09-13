@@ -1,6 +1,11 @@
 import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import Image from 'next/image';
 
 export default function Footer() {
+    const dateToString = new Date().toLocaleString('es-AR', {
+        timeZone: 'UTC',
+        year: 'numeric',
+    });
     return (
         <footer className="bg-white w-full border-t">
             <div className=" w-full p-4 py-6 lg:py-8">
@@ -88,17 +93,25 @@ export default function Footer() {
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                        © 2023{' '}
-                        <a
-                            href="https://flowbite.com/"
-                            className="hover:underline"
-                        >
-                            Flowbite™
+                    <div className="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex gap-2">
+                        <p>
+                            © Copyright {dateToString} . Todos los derechos
+                            reservados. | Hecho con 💙 por
+                        </p>
+                        <a href="#" target="_blank" className="flex ">
+                            <Image
+                                src="https://res.cloudinary.com/dzyllqqxi/image/upload/v1692975511/avataaars_hrw2td.png"
+                                width={20}
+                                height={20}
+                                alt="avatar animado de un hombre con buzo gris con lentes y sonriendo  mirando la cámara, con fondo celeste"
+                                className="rounded-full ring-2 ring-gray-30 w-auto h-auto0"
+                            ></Image>
+                            <p className="underline ml-1">
+                                Isaias Garcia - Full stack dev
+                            </p>
                         </a>
-                        . All Rights Reserved.
-                    </span>
-                    <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                    </div>
+                    {/* <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                         <a
                             href="#"
                             className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
@@ -190,7 +203,7 @@ export default function Footer() {
                             </svg>
                             <span className="sr-only">Dribbble account</span>
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </footer>

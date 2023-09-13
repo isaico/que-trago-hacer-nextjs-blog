@@ -1,15 +1,14 @@
 import fetchRecommendedPosts from '@/utils/fetchRecommendedPosts';
 import RecommendedCard from '../../UiComps/RecommendedCard';
 import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
-const RecommendedCards = async ({ quantity, field }) => {
-    const recommendedArticles = await fetchRecommendedPosts(quantity, field);
-    console.log(field)
-    console.log(recommendedArticles)
+const RecommendedCards = async ({ field }) => {
+    const recommendedArticles = await fetchRecommendedPosts(field);
+
     return (
         <div className="flex justify-evenly flex-wrap  rounded-lg  md:my-12  ">
             {recommendedArticles ? (
                 recommendedArticles.map((article) => (
-                    <RecommendedCard article={article}></RecommendedCard>
+                    <div key={article._id}><RecommendedCard article={article}></RecommendedCard></div>
                 ))
             ) : (
                 <ErrorFetchData></ErrorFetchData>
