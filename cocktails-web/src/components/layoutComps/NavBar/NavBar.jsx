@@ -135,6 +135,7 @@ const NavBar = () => {
                     className={`${
                         pathname == '/contacto' ? 'active' : ''
                     } text-lg font-normal`}
+                    prefetch={false}
                 >
                     Contacto
                 </Link>

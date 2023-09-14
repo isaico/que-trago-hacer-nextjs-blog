@@ -15,8 +15,8 @@ export function buildIds({ blog }) {
 
     if (blog.tips && blog.tips.length > 0) {
         ids.push({
-            id: 'tips',
-            text: 'Recomendaciones',
+            id: 'conclusion',
+            text: 'Fin del post',
         });
     }
 

@@ -21,14 +21,19 @@ const BlogSchema = new Schema(
             {
                 title: String,
                 description: String,
+                list: [String],
                 image_url: String,
                 alt: String,
             },
         ],
         cocktails_names: [String],
-        tips: [{ title: String, content: String }],
+        conclusion: {
+            title: String,
+            description: String,
+            list: [String],
+        },
         tools: [String],
-        pilar:Boolean,
+        pilar: Boolean,
         recommended_posts: [String],
     },
     {

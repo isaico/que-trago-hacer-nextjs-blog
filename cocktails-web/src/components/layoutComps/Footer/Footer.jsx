@@ -98,15 +98,8 @@ export default function Footer() {
                             © Copyright {dateToString} . Todos los derechos
                             reservados. | Hecho con 💙 por
                         </p>
-                        <a href="#" target="_blank" className="flex ">
-                            <Image
-                                src="https://res.cloudinary.com/dzyllqqxi/image/upload/v1692975511/avataaars_hrw2td.png"
-                                width={20}
-                                height={20}
-                                alt="avatar animado de un hombre con buzo gris con lentes y sonriendo  mirando la cámara, con fondo celeste"
-                                className="rounded-full ring-2 ring-gray-30 w-auto h-auto0"
-                            ></Image>
-                            <p className="underline ml-1">
+                        <a href="#" target="_blank">
+                            <p className="underline decoration-blue-400 ml-1">
                                 Isaias Garcia - Full stack dev
                             </p>
                         </a>

@@ -1,140 +1,160 @@
-import React from 'react';
-import Image from 'next/image';
-const page = () => {
+'use client';
+import { useState, useRef } from 'react';
+import { Button } from 'flowbite-react';
+import DefaultToast from '@/components/UiComps/Toast';
+const contact = async () => {
+    const [showToast, setShowToast] = useState({
+        ok: false,
+        alert: 'empty',
+        status: 0,
+    });
+    const [loading, setLoading] = useState(false);
+    const input = useRef();
+
+    // const resend = new Resend(process.env.RESEND_API_KEY);
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setLoading(true);
+        const formData = new FormData(event.currentTarget);
+        const data = JSON.stringify({
+            email: formData.get('email'),
+            name: formData.get('name'),
+            subject: formData.get('subject'),
+            message: formData.get('message'),
+        });
+        try {
+            const resp = await fetch('/api/send', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: data,
+            });
+            console.log(resp);
+            if (resp.status == 200) {
+                setShowToast({
+                    ok: true,
+                    alert: 'Mensaje enviado',
+                    status: 200,
+                });
+                setLoading(false);
+            } else {
+                setShowToast({
+                    ok: true,
+                    alert: 'Error al enviar, intente nuevamente!',
+                    status: 500,
+                });
+                setLoading(false);
+            }
+            // console.log(resp);
+        } catch (error) {
+            throw new Error(error);
+        }
+        input.current.value = '';
+    };
+
     return (
-        <div className="w-screen h-screen bg-bg-dark">
+        <div className=" ">
             <div className="flex">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="relative z-0 w-full mb-6 group">
                         <input
                             type="email"
-                            name="floating_email"
-                            id="floating_email"
+                            name="email"
+                            id="email"
                             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" "
                             required
+                            ref={input}
                         />
                         <label
                             htmlFor="floating_email"
                             className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                         >
-                            correo
+                            Email
                         </label>
                     </div>
-                    <div className="relative z-0 w-full mb-6 group">
-                        <input
-                            type="password"
-                            name="floating_password"
-                            id="floating_password"
-                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" "
-                            required
-                        />
-                        <label
-                            htmlFor="floating_password"
-                            className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                        >
-                            Password
-                        </label>
-                    </div>
-                    <div className="relative z-0 w-full mb-6 group">
-                        <input
-                            type="password"
-                            name="repeat_password"
-                            id="floating_repeat_password"
-                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" "
-                            required
-                        />
-                        <label
-                            htmlFor="floating_repeat_password"
-                            className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                        >
-                            Confirm password
-                        </label>
-                    </div>
+
                     <div className="grid md:grid-cols-2 md:gap-6">
                         <div className="relative z-0 w-full mb-6 group">
                             <input
                                 type="text"
-                                name="floating_first_name"
-                                id="floating_first_name"
+                                name="name"
+                                id="name"
                                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" "
                                 required
+                                ref={input}
                             />
                             <label
                                 htmlFor="floating_first_name"
                                 className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                             >
-                                First name
+                                Nombre
                             </label>
                         </div>
                         <div className="relative z-0 w-full mb-6 group">
                             <input
                                 type="text"
-                                name="floating_last_name"
-                                id="floating_last_name"
+                                name="subject"
+                                id="asunto"
                                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" "
                                 required
+                                ref={input}
                             />
                             <label
                                 htmlFor="floating_last_name"
                                 className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                             >
-                                Last name
+                                Asunto
                             </label>
                         </div>
                     </div>
                     <div className="grid md:grid-cols-2 md:gap-6">
                         <div className="relative z-0 w-full mb-6 group">
                             <input
-                                type="tel"
-                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                name="floating_phone"
-                                id="floating_phone"
+                                type="textarea"
+                                name="message"
+                                id="message"
                                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" "
                                 required
+                                ref={input}
                             />
                             <label
                                 htmlFor="floating_phone"
                                 className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                             >
-                                Phone number (123-456-7890)
+                                Mensaje
                             </label>
                         </div>
-                        <div className="relative z-0 w-full mb-6 group">
-                            <input
-                                type="text"
-                                name="floating_company"
-                                id="floating_company"
-                                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" "
-                                required
-                            />
-                            <label
-                                htmlFor="floating_company"
-                                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                            >
-                                Company (Ex. Google)
-                            </label>
-                        </div>
+                       
                     </div>
-                    <button
-                        type="submit"
-                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    >
-                        Submit
-                    </button>
+                    {loading ? (
+                        <Button
+                            isProcessing
+                            gradientDuoTone="purpleToPink"
+                            size="xs"
+                            type="submit"
+                        >
+                            <p>Enviar!</p>
+                        </Button>
+                    ) : (
+                        <Button gradientDuoTone="purpleToPink" size="xs" type="submit">
+                            <p>Enviar!</p>
+                        </Button>
+                    )}
                 </form>
-                <div>
-                  <Image></Image>
-                </div>
             </div>
+            {showToast.ok ? (
+                <DefaultToast
+                    alert={showToast.alert}
+                    status={showToast.status}
+                ></DefaultToast>
+            ) : null}
         </div>
     );
 };
 
-export default page;
+export default contact;
