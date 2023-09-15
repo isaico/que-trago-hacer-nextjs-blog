@@ -9,20 +9,7 @@ const BlogCard = ({ blog }) => {
     }
     return (
         <>
-            {/* <Link
-                href={
-                    blog.blog_category == 'posts'
-                        ? {
-                              pathname: `/blog/${blog.blog_category}/${blogRoute}`,
-                            //   query: { id:  },
-                          }
-                        : {
-                              pathname: `/blog/${blog.blog_category}/${blog.category_id}`,
-                              // query:{id:blog.category_id}
-                          }
-                }
-                className="hover:-translate-y-1 ease-in-out duration-100 group"
-            > */}
+            
             {blog ? (
                 <div className="flex relative justify-center border rounded-xl bg-gray-50 border-gray-200  shadow-lg group-hover:shadow-xl hover:border-primary ease duration-150  max-h-[350px]">
                     {blog.pilar === true ? (

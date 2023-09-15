@@ -1,302 +1,301 @@
 {
     "data": [
-        // {
-        //     "name": "Caipiriña",
-        //     "description": "La caipiriña es un cóctel tradicional brasileño hecho con cachaza, limón, azúcar y hielo. Es el cóctel nacional de Brasil y uno de los más populares del mundo. La cachaza es un licor destilado de jugo de caña de azúcar. Tiene un sabor fuerte y afrutado, que se combina bien con el limón y el azúcar. La caipiriña se suele servir en un vaso alto con hielo y una rodaja de limón. Es un cóctel perfecto para disfrutar en un día caluroso, ya que es refrescante y ligero.",
-        //     "history": "La Caipiriña se originó en Brasil y es una variante de la caipirinha, un cóctel que ha sido parte de la cultura brasileña durante más de un siglo. El término 'caipirinha' proviene de la palabra 'caipira', que es un término brasileño que se refiere a los habitantes rurales o campesinos. La bebida se asoció inicialmente con las zonas rurales de Brasil antes de convertirse en una bebida popular en todo el país.",
-        //     "ingredients": ["Lima 4 gajos", "Azúcar", "Cachaza 60 ml"],
-        //     "recepy": "En la coctelera, macerar 4 gajos de lima con 4 cucharadas de azúcar, llenar el vaso con hielo roto e incorporarlo a la coctelera, luego agregar 'cachaza/cachaça' y batir arduamente",
-        //     "optional": "Al aplastar podemos incorporar alguna fruta a gusto, como frutos rojos, o frutilla (fresa) se puede agregar más o menos azúcar, dependiendo de la preferencia personal. Y Además, la caipiriña se puede preparar con otros tipos de alcohol, como vodka o ron blanco. En este caso, la bebida se llama caipiroska o caipirissima, respectivamente.",
-        //     "tips": [
-        //         "Utilizar hielo bien picado para mejor dilución",
-        //         "Suele ser un trago bastante potente por lo que hay que tener cuidado de cuanto alcohol incorporamos, utilizar un Jigger"
-        //     ],
-        //     "category": "batidos",
-        //     "links": ["Jigger", "Macerar"],
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693668379/pexels-marcelo-verfe-13059626_ntpso0.jpg",
-        //     "alt": "Caipiriña en una vaso, sobre una mesada y rodeado de limas",
-        //     "difficulty": 3
-        // },
-        // {
-        //     "name": "Julep de Cynar",
-        //     "description": "El julep de Cynar es un cóctel refrescante y amargo, con un sabor complejo y equilibrado, que combina el amargor del Cynar con el dulzor del azúcar y la menta, similar al mojito. Es una bebida perfecta para disfrutar en un día caluroso, ya que es ligera y refrescante. El Cynar es un aperitivo italiano elaborado con alcachofas y otras hierbas amargas. Tiene un sabor amargo y afrutado, que se combina bien con el limón y el azúcar. ",
-        //     "history": "El cóctel Julep es una bebida clásica que se remonta al siglo XVIII y es conocida por ser una de las primeras bebidas alcohólicas mezcladas en la historia de los cócteles. Su origen se atribuye a la región sureña de Estados Unidos, donde se mezclaba con bourbon, azúcar y hierbabuena fresca. El Julep se convirtió en una bebida icónica de Kentucky y se asocia con la cultura del julepe de menta, especialmente en el famoso Derby de Kentucky.La variante del Julep de Cynar se inspira en esta tradición y agrega un giro italiano al cóctel al incorporar Cynar, un licor amargo a base de alcachofa. Esta combinación crea una bebida única que combina la herencia sureña con los sabores amargos y herbales de Italia.",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693920063/26170053_1757260934345337_2262978995952262536_o.jpg_t0lqao.jpg",
-        //     "alt": "un vaso con un trago rojizo y con menta en un fondo negro",
-        //     "ingredients": [
-        //         "Limón 45 ml",
-        //         "Azúcar 4 cdas",
-        //         "Cynar 90 ml",
-        //         "Menta",
-        //         "Pomelo"
-        //     ],
-        //     "recepy": "En el vaso, macerar 4 rodajas de limón o exprimir (45ml), integrar  con 4 cucharadas de azúcar o utilizar 45ml de almíbar, luego agregar 2 ramas de menta previamente lavadas y aplastarlas levemente sin romperlas, agregar 90ml de Cynar y hielo partido hasta arriba, revolver y terminar con juego de pomelo.",
-        //     "optional": "Podemos remplazar el jugo de pomelo por una gaseosa de pomelo",
-        //     "category": "directos",
-        //     "links": ["Macerar", "Almibar"],
-        //     "difficulty": 3
-        // },
-        // {
-        //     "name": "Baileys Frozzen",
-        //     "description": "El Baileys Frozen es un cóctel refrescante y cremoso, es un cóctel con un sabor delicioso y equilibrado, que combina la cremosidad del Baileys con el dulzor de la leche condensada y el vodka. Esta hecho con Baileys Original Irish Cream, leche condensada, vodka y hielo. Es una bebida perfecta para disfrutar en un día caluroso, ya que es ligera y dulce. Sin embargo en esta receta optaremos por una opción mas cotidiana, remplazaremos la leche condensada por helado y el vodka por whisky para denotar mas su sabor",
-        //     "history": "El Baileys Irish Cream, la base de este cóctel, se originó en Irlanda en 1973. Fue creado por David Dand, un ejecutivo de la empresa Gilbeys of Ireland, y se lanzó oficialmente en 1974. La idea detrás de Baileys era combinar la riqueza y la suavidad de la crema irlandesa con el carácter distintivo del whisky irlandés, creando así un licor indulgente y único. El resultado fue un gran éxito y Baileys se convirtió en uno de los licores más populares y ampliamente consumidos en el mundo.",
-        //     "ingredients": ["Helado 3 bochas", "Baileys 60ml", "Whisky 30ml"],
-        //     "recepy": "En la licuadora colocaremos el helado que puede ser del gusto que quieran, yo recomiendo de crema americana, para no perder la esencia  del trago. Luego el Baileys y el Whisky (el que tengan disponible)",
-        //     "tips": [
-        //         "Agregar hielo al licuar le dará una sensación mas frozzen al trago",
-        //         "Si no tienen whisky podemos usar vodka"
-        //     ],
-        //     "optional": "Pueden agregar chocolate rallado o en trozos al momento de licuar, queda excelente!",
-        //     "category": "licuados",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693835160/pexels-n%C3%A9o-rioux-11631296_ocmnya.jpg",
-        //     "alt": "trago blanco y cremoso de baileys junto a su botella todo sobre una mesa marron",
-        //     "difficulty": 2
-        // },
-        // {
-        //     "name": "Cuba Libre",
-        //     "description": "El Cuba Libre es un trago clásico y uno de los cócteles más populares del mundo y se disfruta en todos los bares y hogares por su facilidad y sabor, es un cóctel refrescante y cítrico con un toque de dulzura. Esta hecho con ron, cola y jugo de limón. El ron le da al cóctel su sabor a alcohol, mientras que la cola le da su sabor dulce y carbonatado. El jugo de limón le da al cóctel su sabor cítrico y acidez.",
-        //     "history": "El Cuba Libre tiene sus raíces en la Cuba del siglo XX y se dice que se originó en La Habana. La historia más comúnmente aceptada es que el cóctel fue creado en 1900 por soldados estadounidenses que estaban en Cuba durante la Guerra Hispano-Estadounidense. Supuestamente, añadieron limón o lima y cola al ron local para crear una bebida refrescante que celebrara la independencia de Cuba. El nombre 'Cuba Libre' significa 'Cuba libre' y simboliza la liberación de Cuba de la opresión española.",
-        //     "ingredients": ["Limón", "Ron blanco", "Gaseosa Cola"],
-        //     "recepy": "En un vaso agregamos 3 hielos grandes 60ml de Ron blanco, completamos con Gaseosa cola y un poco de jugo de limón acompañado de un gajo como decoración ",
-        //     "optional": "Puedes agregar otros ingredientes al Cuba Libre, como hierbabuena, menta o cereza marrasquino",
-        //     "tips": [
-        //         "Usa cola fría. La cola fría ayudará a que el cóctel sea más refrescante.",
-        //         "Usa ron blanco. El ron blanco le da al cóctel su sabor más puro y ligero."
-        //     ],
-        //     "category": "directos",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693835807/vaso-te-helado-fresco-lima_lnnocd.jpg",
-        //     "alt": "ron y cola con limas en la base y con un fondo negro",
-        //     "difficulty": 1
-        // },
-        // {
-        //     "name": "Mojito",
-        //     "description": "El mojito es un cóctel clásico cubano hecho con ron, hierbabuena, jugo de limón, azúcar y hielo. Es una bebida refrescante y cítrica con un toque de dulzura. El mojito es un cóctel versátil que se puede adaptar a diferentes gustos. Se puede servir con hielo picado o con hielo en cubitos, y se puede decorar con una ramita de hierbabuena, o con una cereza marrasquino. También se puede preparar con ron reposado o añejo, o con otros tipos de alcohol, como vodka o ginebra.",
-        //     "history": "El Mojito tiene sus raíces en Cuba y se remonta al siglo XVI. Su nombre proviene de la palabra 'mojo', que se refiere a una bebida tradicional cubana hecha con hierbas, azúcar y limón. A lo largo de los años, el Mojito se ha convertido en un cóctel icónicos de la isla y ha ganado popularidad en todo el mundo. Fue popularizado por escritores como Ernest Hemingway y se ha convertido en una bebida emblemática de la cultura cubana.",
-        //     "ingredients": [
-        //         "Limón 45ml",
-        //         "Ron blanco 60ml",
-        //         "Azúcar 4 cdas",
-        //         "Menta 10 hojas",
-        //         "Soda"
-        //     ],
-        //     "recepy": "En esta receta podemos usar limón exprimido o bien usar 4 gajos lo cual yo recomiendo, maceramos hasta liberar los jugos (si lo exprimiste previamente salta ese paso) y agregamos las hojas de menta lo cual las aplastaremos levemente sin romper, y proseguimos con el ron y el hielo, revolvemos bien el fondo con una cuchara larga o bar spoon para integrar y por ultimo terminamos con un toping de soda",
-        //     "optional": "Puedes agregar otros ingredientes al mojito, como frutillas (fresas), frambuesas o naranja para el famoso Naranjito.",
-        //     "tips": [
-        //         "Usar limón con cascara y aplastar para liberar los aceites del limón y darle mas sabor al trago.",
-        //         "No rompas las hojas de menta ya que le dará un sabor amargo al trago"
-        //     ],
-        //     "category": "directos",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693836411/pexels-photo-4051263_cslmce.jpg",
-        //     "alt": "un vaso con hielo menta y ron y limas sobre una mesa de madera  con unas limas cortadas y de fondo una pared gris",
-        //     "difficulty": 3,
-        //     "links": ["Macerar", "Bar spoon", "Toping"]
-        // },
-        // {
-        //     "name": "Margarita",
-        //     "description": "La margarita es un cóctel clásico mexicano y uno de los mas populares a nivel mundial y su popularidad se ha mantenido durante décadas. Hecho con tequila, triple sec y jugo de limón, es un cóctel refrescante y cítrico con un toque de dulzura. El tequila le da al cóctel su sabor a alcohol, mientras que el triple sec le da su sabor dulce y cítrico. El jugo de limón le da al cóctel la parte mas cítrica y su característica acidez.",
-        //     "history": "La historia de la Margarita es rica en mitos y leyendas, pero se cree que se originó en México en algún momento del siglo XX. Una de las teorías más populares es que fue creada por el bartender Carlos 'Danny' Herrera en su restaurante Rancho La Gloria en Tijuana en la década de 1930. La Margarita se convirtió en un cóctel emblemático de México y, con el tiempo, ganó popularidad en todo el mundo.",
-        //     "ingredients": [
-        //         "Limón 30 ml",
-        //         "Tequila blanco 60 ml",
-        //         "Triple sec 30 ml"
-        //     ],
-        //     "recepy": "En la coctelera agregar el Tequila blanco, luego el Triple sec, y jugo de limón, hielo entero y a batir!, luego doble colado hacia la copa",
-        //     "optional": "Para hacer mas amable el trago podemos incorporar un golpe de almíbar, o bien podemos agregar fruta a la receta, pisar unas frambuesas , frutillas (fresas) o lo que nos guste para luego incluirlo.",
-        //     "tips": [
-        //         "Sal para el borde del vaso, mojamos previamente el borde con jugo de limón",
-        //         "Enfiar previamente una copa martini o la que tengan a disposición con hielo "
-        //     ],
-        //     "category": "batidos",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693836175/pexels-los-muertos-crew-7603328_mai4j5.jpg",
-        //     "alt": "mujer sosteniendo hacia adelante un vaso con sal en el borde",
-        //     "difficulty": 4,
-        //     "links": ["Doble colado"]
-        // },
-        // {
-        //     "name": "Campari Orange",
-        //     "description": "El Campari Orange es un cóctel clásico hecho con Campari, jugo de naranja y hielo. Este cóctel es apreciado por su amargura distintiva y su tonalidad naranja brillante. El Campari es un licor amargo hecho de hierbas y especias, mientras que el jugo de naranja le da al cóctel su sabor dulce y cítrico. El resultado es un cóctel equilibrado y armonioso, que combina el amargor del Campari con la dulzura del jugo de naranja.",
-        //     "history": "El Campari Orange es una variante de un cóctel clásico llamado 'Campari Soda', que se originó en Italia a fines del siglo XIX. El Campari es un aperitivo amargo y herbal italiano conocido por su sabor único y su color rojo intenso. A lo largo del tiempo, se ha utilizado en diversas preparaciones, y una de las más simples y populares es mezclarlo con agua con gas (soda) y una rodaja de naranja. Esta combinación se ha convertido en una bebida emblemática en Italia y más allá.",
-        //     "ingredients": ["Campari 60 ml", "Jugo de naranja"],
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693853932/delicioso-coctel-alto-angulo-rodaja-naranja_23-2149407476_drgtfe.jpg",
-        //     "alt": "vaso de campari con naranja sobre una mesa naranja y un fondo naranja claro con una bar spoon y un jigger de decoración",
-        //     "recepy": "En un vaso agregar 3 hielos grandes, 60ml de Campari y completar con Jugo de naranja y una rodaja para decorar",
-        //     "optional": "Podemos usar tónica para remplazar el jugo de naranja",
-        //     "category": "directos"
-        // },
+        {
+            "name": "Caipiriña",
+            "description": "La caipiriña es un cóctel tradicional brasileño hecho con cachaza, limón, azúcar y hielo. Es el cóctel nacional de Brasil y uno de los más populares del mundo. La cachaza es un licor destilado de jugo de caña de azúcar. Tiene un sabor fuerte y afrutado, que se combina bien con el limón y el azúcar. La caipiriña se suele servir en un vaso alto con hielo y una rodaja de limón. Es un cóctel perfecto para disfrutar en un día caluroso, ya que es refrescante y ligero.",
+            "history": "La Caipiriña se originó en Brasil y es una variante de la caipirinha, un cóctel que ha sido parte de la cultura brasileña durante más de un siglo. El término 'caipirinha' proviene de la palabra 'caipira', que es un término brasileño que se refiere a los habitantes rurales o campesinos. La bebida se asoció inicialmente con las zonas rurales de Brasil antes de convertirse en una bebida popular en todo el país.",
+            "ingredients": ["Lima 4 gajos", "Azúcar", "Cachaza 60 ml"],
+            "recepy": "En la coctelera, macerar 4 gajos de lima con 4 cucharadas de azúcar, llenar el vaso con hielo roto e incorporarlo a la coctelera, luego agregar 'cachaza/cachaça' y batir arduamente",
+            "optional": "Al aplastar podemos incorporar alguna fruta a gusto, como frutos rojos, o frutilla (fresa) se puede agregar más o menos azúcar, dependiendo de la preferencia personal. Y Además, la caipiriña se puede preparar con otros tipos de alcohol, como vodka o ron blanco. En este caso, la bebida se llama caipiroska o caipirissima, respectivamente.",
+            "tips": [
+                "Utilizar hielo bien picado para mejor dilución",
+                "Suele ser un trago bastante potente por lo que hay que tener cuidado de cuanto alcohol incorporamos, utilizar un Jigger"
+            ],
+            "category": "batidos",
+            "links": ["Jigger", "Macerar"],
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693668379/pexels-marcelo-verfe-13059626_ntpso0.jpg",
+            "alt": "Caipiriña en una vaso, sobre una mesada y rodeado de limas",
+            "difficulty": 3
+        },
+        {
+            "name": "Julep de Cynar",
+            "description": "El julep de Cynar es un cóctel refrescante y amargo, con un sabor complejo y equilibrado, que combina el amargor del Cynar con el dulzor del azúcar y la menta, similar al mojito. Es una bebida perfecta para disfrutar en un día caluroso, ya que es ligera y refrescante. El Cynar es un aperitivo italiano elaborado con alcachofas y otras hierbas amargas. Tiene un sabor amargo y afrutado, que se combina bien con el limón y el azúcar. ",
+            "history": "El cóctel Julep es una bebida clásica que se remonta al siglo XVIII y es conocida por ser una de las primeras bebidas alcohólicas mezcladas en la historia de los cócteles. Su origen se atribuye a la región sureña de Estados Unidos, donde se mezclaba con bourbon, azúcar y hierbabuena fresca. El Julep se convirtió en una bebida icónica de Kentucky y se asocia con la cultura del julepe de menta, especialmente en el famoso Derby de Kentucky.La variante del Julep de Cynar se inspira en esta tradición y agrega un giro italiano al cóctel al incorporar Cynar, un licor amargo a base de alcachofa. Esta combinación crea una bebida única que combina la herencia sureña con los sabores amargos y herbales de Italia.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693920063/26170053_1757260934345337_2262978995952262536_o.jpg_t0lqao.jpg",
+            "alt": "un vaso con un trago rojizo y con menta en un fondo negro",
+            "ingredients": [
+                "Limón 45 ml",
+                "Azúcar 4 cdas",
+                "Cynar 90 ml",
+                "Menta",
+                "Pomelo"
+            ],
+            "recepy": "En el vaso, macerar 4 rodajas de limón o exprimir (45ml), integrar con 4 cucharadas de azúcar o utilizar 45ml de almíbar, luego agregar 2 ramas de menta previamente lavadas y aplastarlas levemente sin romperlas, agregar 90ml de Cynar y hielo partido hasta arriba, revolver y terminar con juego de pomelo.",
+            "optional": "Podemos remplazar el jugo de pomelo por una gaseosa de pomelo",
+            "category": "directos",
+            "links": ["Macerar", "Almibar"],
+            "difficulty": 3
+        },
+        {
+            "name": "Baileys Frozzen",
+            "description": "El Baileys Frozen es un cóctel refrescante y cremoso, es un cóctel con un sabor delicioso y equilibrado, que combina la cremosidad del Baileys con el dulzor de la leche condensada y el vodka. Esta hecho con Baileys Original Irish Cream, leche condensada, vodka y hielo. Es una bebida perfecta para disfrutar en un día caluroso, ya que es ligera y dulce. Sin embargo en esta receta optaremos por una opción mas cotidiana, remplazaremos la leche condensada por helado y el vodka por whisky para denotar mas su sabor",
+            "history": "El Baileys Irish Cream, la base de este cóctel, se originó en Irlanda en 1973. Fue creado por David Dand, un ejecutivo de la empresa Gilbeys of Ireland, y se lanzó oficialmente en 1974. La idea detrás de Baileys era combinar la riqueza y la suavidad de la crema irlandesa con el carácter distintivo del whisky irlandés, creando así un licor indulgente y único. El resultado fue un gran éxito y Baileys se convirtió en uno de los licores más populares y ampliamente consumidos en el mundo.",
+            "ingredients": ["Helado 3 bochas", "Baileys 60ml", "Whisky 30ml"],
+            "recepy": "En la licuadora colocaremos el helado que puede ser del gusto que quieran, yo recomiendo de crema americana, para no perder la esencia del trago. Luego el Baileys y el Whisky (el que tengan disponible)",
+            "tips": [
+                "Agregar hielo al licuar le dará una sensación mas frozzen al trago",
+                "Si no tienen whisky podemos usar vodka"
+            ],
+            "optional": "Pueden agregar chocolate rallado o en trozos al momento de licuar, queda excelente!",
+            "category": "licuados",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693835160/pexels-n%C3%A9o-rioux-11631296_ocmnya.jpg",
+            "alt": "trago blanco y cremoso de baileys junto a su botella todo sobre una mesa marron",
+            "difficulty": 2
+        },
+        {
+            "name": "Cuba Libre",
+            "description": "El Cuba Libre es un trago clásico y uno de los cócteles más populares del mundo y se disfruta en todos los bares y hogares por su facilidad y sabor, es un cóctel refrescante y cítrico con un toque de dulzura. Esta hecho con ron, cola y jugo de limón. El ron le da al cóctel su sabor a alcohol, mientras que la cola le da su sabor dulce y carbonatado. El jugo de limón le da al cóctel su sabor cítrico y acidez.",
+            "history": "El Cuba Libre tiene sus raíces en la Cuba del siglo XX y se dice que se originó en La Habana. La historia más comúnmente aceptada es que el cóctel fue creado en 1900 por soldados estadounidenses que estaban en Cuba durante la Guerra Hispano-Estadounidense. Supuestamente, añadieron limón o lima y cola al ron local para crear una bebida refrescante que celebrara la independencia de Cuba. El nombre 'Cuba Libre' significa 'Cuba libre' y simboliza la liberación de Cuba de la opresión española.",
+            "ingredients": ["Limón", "Ron blanco", "Gaseosa Cola"],
+            "recepy": "En un vaso agregamos 3 hielos grandes 60ml de Ron blanco, completamos con Gaseosa cola y un poco de jugo de limón acompañado de un gajo como decoración ",
+            "optional": "Puedes agregar otros ingredientes al Cuba Libre, como hierbabuena, menta o cereza marrasquino",
+            "tips": [
+                "Usa cola fría. La cola fría ayudará a que el cóctel sea más refrescante.",
+                "Usa ron blanco. El ron blanco le da al cóctel su sabor más puro y ligero."
+            ],
+            "category": "directos",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693835807/vaso-te-helado-fresco-lima_lnnocd.jpg",
+            "alt": "ron y cola con limas en la base y con un fondo negro",
+            "difficulty": 1
+        },
+        {
+            "name": "Mojito",
+            "description": "El mojito es un cóctel clásico cubano hecho con ron, hierbabuena, jugo de limón, azúcar y hielo. Es una bebida refrescante y cítrica con un toque de dulzura. El mojito es un cóctel versátil que se puede adaptar a diferentes gustos. Se puede servir con hielo picado o con hielo en cubitos, y se puede decorar con una ramita de hierbabuena, o con una cereza marrasquino. También se puede preparar con ron reposado o añejo, o con otros tipos de alcohol, como vodka o ginebra.",
+            "history": "El Mojito tiene sus raíces en Cuba y se remonta al siglo XVI. Su nombre proviene de la palabra 'mojo', que se refiere a una bebida tradicional cubana hecha con hierbas, azúcar y limón. A lo largo de los años, el Mojito se ha convertido en un cóctel icónicos de la isla y ha ganado popularidad en todo el mundo. Fue popularizado por escritores como Ernest Hemingway y se ha convertido en una bebida emblemática de la cultura cubana.",
+            "ingredients": [
+                "Limón 45ml",
+                "Ron blanco 60ml",
+                "Azúcar 4 cdas",
+                "Menta 10 hojas",
+                "Soda"
+            ],
+            "recepy": "En esta receta podemos usar limón exprimido o bien usar 4 gajos lo cual yo recomiendo, maceramos hasta liberar los jugos (si lo exprimiste previamente salta ese paso) y agregamos las hojas de menta lo cual las aplastaremos levemente sin romper, y proseguimos con el ron y el hielo, revolvemos bien el fondo con una cuchara larga o bar spoon para integrar y por ultimo terminamos con un toping de soda",
+            "optional": "Puedes agregar otros ingredientes al mojito, como frutillas (fresas), frambuesas o naranja para el famoso Naranjito.",
+            "tips": [
+                "Usar limón con cascara y aplastar para liberar los aceites del limón y darle mas sabor al trago.",
+                "No rompas las hojas de menta ya que le dará un sabor amargo al trago"
+            ],
+            "category": "directos",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693836411/pexels-photo-4051263_cslmce.jpg",
+            "alt": "un vaso con hielo menta y ron y limas sobre una mesa de madera con unas limas cortadas y de fondo una pared gris",
+            "difficulty": 3,
+            "links": ["Macerar", "Bar spoon", "Toping"]
+        },
+        {
+            "name": "Margarita",
+            "description": "La margarita es un cóctel clásico mexicano y uno de los mas populares a nivel mundial y su popularidad se ha mantenido durante décadas. Hecho con tequila, triple sec y jugo de limón, es un cóctel refrescante y cítrico con un toque de dulzura. El tequila le da al cóctel su sabor a alcohol, mientras que el triple sec le da su sabor dulce y cítrico. El jugo de limón le da al cóctel la parte mas cítrica y su característica acidez.",
+            "history": "La historia de la Margarita es rica en mitos y leyendas, pero se cree que se originó en México en algún momento del siglo XX. Una de las teorías más populares es que fue creada por el bartender Carlos 'Danny' Herrera en su restaurante Rancho La Gloria en Tijuana en la década de 1930. La Margarita se convirtió en un cóctel emblemático de México y, con el tiempo, ganó popularidad en todo el mundo.",
+            "ingredients": [
+                "Limón 30 ml",
+                "Tequila blanco 60 ml",
+                "Triple sec 30 ml"
+            ],
+            "recepy": "En la coctelera agregar el Tequila blanco, luego el Triple sec, y jugo de limón, hielo entero y a batir!, luego doble colado hacia la copa",
+            "optional": "Para hacer mas amable el trago podemos incorporar un golpe de almíbar, o bien podemos agregar fruta a la receta, pisar unas frambuesas , frutillas (fresas) o lo que nos guste para luego incluirlo.",
+            "tips": [
+                "Sal para el borde del vaso, mojamos previamente el borde con jugo de limón",
+                "Enfiar previamente una copa martini o la que tengan a disposición con hielo "
+            ],
+            "category": "batidos",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693836175/pexels-los-muertos-crew-7603328_mai4j5.jpg",
+            "alt": "mujer sosteniendo hacia adelante un vaso con sal en el borde",
+            "difficulty": 4,
+            "links": ["Doble colado"]
+        },
+        {
+            "name": "Campari Orange",
+            "description": "El Campari Orange es un cóctel clásico hecho con Campari, jugo de naranja y hielo. Este cóctel es apreciado por su amargura distintiva y su tonalidad naranja brillante. El Campari es un licor amargo hecho de hierbas y especias, mientras que el jugo de naranja le da al cóctel su sabor dulce y cítrico. El resultado es un cóctel equilibrado y armonioso, que combina el amargor del Campari con la dulzura del jugo de naranja.",
+            "history": "El Campari Orange es una variante de un cóctel clásico llamado 'Campari Soda', que se originó en Italia a fines del siglo XIX. El Campari es un aperitivo amargo y herbal italiano conocido por su sabor único y su color rojo intenso. A lo largo del tiempo, se ha utilizado en diversas preparaciones, y una de las más simples y populares es mezclarlo con agua con gas (soda) y una rodaja de naranja. Esta combinación se ha convertido en una bebida emblemática en Italia y más allá.",
+            "ingredients": ["Campari 60 ml", "Jugo de naranja"],
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693853932/delicioso-coctel-alto-angulo-rodaja-naranja_23-2149407476_drgtfe.jpg",
+            "alt": "vaso de campari con naranja sobre una mesa naranja y un fondo naranja claro con una bar spoon y un jigger de decoración",
+            "recepy": "En un vaso agregar 3 hielos grandes, 60ml de Campari y completar con Jugo de naranja y una rodaja para decorar",
+            "optional": "Podemos usar tónica para remplazar el jugo de naranja",
+            "category": "directos"
+        },
 
-        // {
-        //     "name": "Daiquiri Clásico",
-        //     "description": "El Daiquiri es un cóctel refrescante,  que evoca imágenes de playas de arena blanca, aguas cristalinas y un clima cálido y tropical. Es conocido por su equilibrio entre el sabor cítrico y el dulzor, con un toque de ron que lo hace deliciosamente irresistible. Es una bebida ideal para los días calurosos y las reuniones sociales",
-        //     "history": "El Daiquiri tiene sus raíces en la ciudad de Santiago de Cuba a finales del siglo XIX. La leyenda cuenta que un ingeniero estadounidense llamado Jennings Cox, quien trabajaba en una mina cercana, inventó el cóctel. La receta original consistía en solo tres ingredientes: ron, jugo de limón y azúcar. Con el tiempo, el Daiquiri se hizo famoso gracias a la contribución del escritor y periodista estadounidense Ernest Hemingway, quien lo popularizó durante sus visitas a Cuba.",
-        //     "ingredients": [
-        //         "Jugo de Limón 25 ml",
-        //         "Ron 60 ml",
-        //         "Azúcar 1 cdita"
-        //     ],
-        //     "recepy": "En la coctelera agregar todos los ingredientes , agregar hielo y agitar intensamente hasta que la mezcla este bien fría, doble colar en una copa previamente enfriada",
-        //     "tips": [
-        //         "Lo ideal seria utilizar 15 ml de almíbar en lugar de azúcar para una mejor dilución"
-        //     ],
-        //     "category": "batidos",
-        //     "difficulty": 2,
-        //     "links": ["Doble colado", "Almibar"],
-        //     "optional": "Si deseamos algo mas conocido podemos incorporar frutillas (fresas) pisadas en la coctelera al momento de batir para darle un sabor mas frutal",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693862230/coctel-limon-rodaja-limon-sobre-mesa_140725-440_cz9osv.jpg",
-        //     "alt": "una copa de vidrio con liquido blancuzco con 3 gotas rojas, mesa de madera y un florero de fondo"
-        // },
-        // {
-        //     "name": "Fernet & cola",
-        //     "description": "El Fernet con Cola es un trago popular en muchas partes del mundo debido a su sabor único y versatilidad. Combina el sabor amargo y herbáceo del Fernet con la dulzura y el burbujeo de la cola, creando una bebida refrescante y única.",
-        //     "history": "El Fernet & Cola tiene sus raíces en Argentina, donde es una bebida nacional y una de las formas más populares de consumir Fernet, un licor amargo italiano. La combinación de Fernet y cola se ha convertido en un cóctel emblemático en Argentina y en otros países de América Latina. La bebida se originó en la década de 1980 y rápidamente se convirtió en una opción popular en bares y reuniones sociales.",
-        //     "ingredients": ["Fernet 60 ml", "Gaseosa Cola"],
-        //     "recepy": "En un vaso agregamos 3 hielos grandes, 60 ml de Fernet, y completamos con Gaseosa cola ",
-        //     "tips": [
-        //         "Para una preparación mas argentina utilizar una botella de plástico cortada.",
-        //         "Prepararlo 70/30 asi obtendremos el verdadero sabor del fernet"
-        //     ],
-        //     "category": "directos",
-        //     "difficulty": 1,
-        //     "links": [""],
-        //     "optional": "Existe también la posibilidad de utilizar gaseosa de pomelo en lugar de cola, pero yo me quedo con lo tradicional!",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693920936/hermosa-bebida-fria-cola-cubitos-hielo_1150-26255_x0oaxb.jpg",
-        //     "alt": "un vaso largo con una bebida oscura a base de cola y fernet sobre una mesada y 3 cubos de hielo a su lado"
-        // },
-        // {
-        //     "name": "Vodka Orange",
-        //     "description": "El Vodka Orange, es un trago simple pero delicioso que combina el vodka con jugo de naranja. Es una bebida refrescante y simple que combina la pureza y neutralidad del vodka con el jugo de naranja fresco y natural. Aunque es una bebida sencilla, tiene una historia interesante y es apreciada por su simplicidad y sabor vibrante. Es perfecto para disfrutar en cualquier momento del día.",
-        //     "history": "El Vodka Orange, conocido como 'Screwdriver', tiene una historia que se remonta al menos a la década de 1940. La bebida se popularizó en Estados Unidos durante la Segunda Guerra Mundial, cuando los soldados estadounidenses en Europa mezclaban vodka con jugo de naranja para disfrutar de una bebida refrescante y fácil de preparar. A medida que el vodka se volvió más ampliamente disponible en Estados Unidos, el cóctel ganó popularidad y se convirtió en un clásico",
-        //     "ingredients": ["Vodka 60 ml", "Jugo de naranja"],
-        //     "recepy": "En un vaso agregamos 3 hielos grandes, 60 ml de vodka, completamos con jugo de naranja y acompañado de un gajo como decoración, remueve suavemente con una bar spoon para mezclar los ingredientes",
-        //     "tips": [
-        //         "Utilizar en lo posible jugo fresco, le dará mas sabor y cuerpo al trago"
-        //     ],
-        //     "category": "directos",
-        //     "difficulty": 1,
-        //     "links": ["Bar spoon"],
-        //     "optional": "Una variante del Vodka Orange es el 'Screwdriver Rosa'. Para hacerlo, simplemente agrega un chorrito de granadina al cóctel, lo que le dará un bonito color rosado y un ligero toque de dulzura adicional.",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693921387/nutricion-liquida-deliciosa-comida-organica_1203-6217_eptnmu.jpg",
-        //     "alt": "un vaso largo con jugo de naranja y vodka, sobre una mesa blanca y fondo azul."
-        // },
-        // {
-        //     "name": "Daiquiri Frozzen",
-        //     "description": "El Daiquiri es un cóctel refrescante, que evoca imágenes de playas de arena blanca, aguas cristalinas y un clima cálido y tropical. Esta version Frozen es una versión congelada y refrescante del clásico Daiquiri y es una de las mas conocidas y populares hasta el momento, incluso mas conocida que su version clásica, que a sido opacada por esta mutación frozzen. Es un trago perfecto para los días calurosos y se caracteriza por su textura suave y fría.",
-        //     "history": "El Daiquiri tiene sus raíces en la ciudad de Santiago de Cuba a finales del siglo XIX. La leyenda cuenta que un ingeniero estadounidense llamado Jennings Cox, quien trabajaba en una mina cercana, inventó el cóctel. La receta original consistía en solo tres ingredientes: ron, jugo de limón y azúcar. Con el tiempo, el Daiquiri se hizo famoso gracias a la contribución del escritor y periodista estadounidense Ernest Hemingway, quien lo popularizó durante sus visitas a Cuba.",
-        //     "ingredients": [
-        //         "Jugo de Limón 25 ml",
-        //         "Ron 60 ml",
-        //         "Azúcar 2 cdas",
-        //         "Frutillas (fresas)"
-        //     ],
-        //     "recepy": "En una licuadora agregar todos los ingredientes , añade 1 taza de hielo picado a la licuadora, mezcla a alta velocidad hasta que la mezcla esté suave y tenga una consistencia similar a un batido congelado y servir!.",
-        //     "tips": [
-        //         "El hielo bien picado para que licue mejor",
-        //         "Utilizar fruta fresca en lo posible"
-        //     ],
-        //     "category": "licuados",
-        //     "difficulty": 2,
-        //     "links": [],
-        //     "optional": "Podemos agregar azúcar a gusto y utilizar la fruta que tengamos!",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693863335/postre-granizado-fresas-lima_23-2149421674_fehsrr.jpg",
-        //     "alt": "una copa de vidrio con liquido rojo espeso,sobre mesa de madera y un florero de fondo"
-        // },
-        // {
-        //     "name": "Manhattan",
-        //     "description": "El Manhattan es un cóctel clásico a base de whisky y vermut rojo, una bebida elegante y sofisticada, con un sabor equilibrado y armonioso... Es perfecto para disfrutar en cualquier ocasión, ya sea formal o informal. Es una bebida que se puede disfrutar sola o como acompañamiento de una comida.",
-        //     "history": "El Manhattan tiene raíces profundas en la historia de los cócteles y se remonta al siglo XIX en Nueva York. Se cree que el cóctel nació en el Manhattan Club durante una fiesta en honor de un político llamado Samuel J. Tilden. La bebida se popularizó rápidamente en la ciudad de Nueva York y, desde entonces, ha evolucionado en una serie de variaciones y adaptaciones.",
-        //     "ingredients": [
-        //         "Whisky bourbon 60 ml",
-        //         "Vermut rojo (rosso)",
-        //         "5 gotas de bitter Angostura"
-        //     ],
-        //     "recepy": "En un vaso mezclador verter el whisky el vermut y el bitter, revolver con una bar spoon durante 30s o hasta que este frio y doble colar hacia una copa previamente enfriada ",
-        //     "tips": [
-        //         "Decorar el Manhattan con una cereza marrasquino o un twist de naranja. es importante ya que le dará sabor al cóctel"
-        //     ],
-        //     "category": "",
-        //     "difficulty": 4,
-        //     "links": ["Vaso mezclador", "Bar spoon", "Doble colado"],
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693862903/vista-lateral-copa-coctel-martini-rojo-limon-bayas-rojas_176474-2509_fp2qta.jpg",
-        //     "alt": ""
-        // },
-        // {
-        //     "name": "Tom Collins",
-        //     "description": "El Tom Collins es un cóctel clásico que ha perdurado a lo largo del tiempo como una bebida icónica y refrescante. E s un cóctel clásico y refrescante que se ha mantenido popular durante más de un siglo. Esta bebida es un ejemplo perfecto de la simplicidad que puede alcanzar un cóctel cuando se seleccionan y combinan cuidadosamente los ingredientes correctos",
-        //     "history": "El Tom Collins se originó en Estados Unidos en el siglo XIX y se convirtió en un cóctel emblemático. La historia cuenta que el nombre 'Tom Collins' proviene de una broma que se hizo popular en Nueva York en 1874, donde las personas inventaban historias sobre un hombre llamado Tom Collins que supuestamente estaba difamando a otros en la ciudad. La broma se difundió y llegó a los bares, donde los camareros comenzaron a ofrecer un 'Tom Collins' como una forma de atraer a los clientes. Con el tiempo, la bebida se convirtió en un cóctel legítimo.",
-        //     "ingredients": [
-        //         "Gin 90 ml",
-        //         "Jugo de Limón 45 ml",
-        //         "Azúcar o almíbar 45ml",
-        //         "Soda"
-        //     ],
-        //     "recepy": "En una vaso agregar los ingredientes o bien si no tenemos almíbar, macerar limón con azúcar hasta sacar bien el jugo, llenar el vaso con hielo roto y revolver bien con una bar spoon hasta integrar, luego un toping de soda para completar",
-        //     "tips": [
-        //         "Podemos remplazar la soda por agua tónica, le dará un sabor mas parecido al clásico gin tonic"
-        //     ],
-        //     "category": "directos",
-        //     "difficulty": 3,
-        //     "links": ["Almibar", "Macerar", "Toping", "Bar spoon"],
-        //     "optional": "La versatilidad de este trago nos permite incorporar algún tipo de fruta para darle nuestro toque, con pomelo queda excelente pero también podemos optar por frutillas o frutos rojos",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693924144/copa-coctel-aromatico-primer-plano-romero_23-2148617668_bxh6cc.jpg",
-        //     "alt": "copón con trago blancuzco y un trozo de romero sobre mesa de madera"
-        // },
-        // {
-        //     "name": "Martini",
-        //     "description": "El Martini es uno de los cócteles más icónicos y sofisticados del mundo. Es conocido por su sencillez y su equilibrio entre el gin (o vodka) y el vermut, servido en una copa de martini enfriada y decorado con una aceituna o una rodaja de limón. El Martini es una bebida atemporal que se ha mantenido popular a lo largo de los años y se asocia con la elegancia y el estilo.",
-        //     "history": "El origen del Martini es objeto de debate y mito, pero se cree que se remonta al siglo XIX. Inicialmente, el Martini se hacía con ginebra y vermut seco en proporciones iguales, pero con el tiempo, las preferencias y las recetas variaron. La evolución del Martini ha dado lugar a una amplia gama de variantes, incluyendo el Martini Dry (seco), el Martini Dirty (con un toque de aceituna), y el Martini Perfect (con partes iguales de vermut seco y vermut dulce).",
-        //     "ingredients": ["Gin o Vodka, 60 ml", "Vermut seco (bianco) 15 ml"],
-        //     "recepy": "En la coctelera agregar todos los ingredientes , agregar hielo y agitar intensamente hasta que la mezcla este bien fría, doble colar en una copa previamente enfriada",
-        //     "tips": [
-        //         "No puede faltar la famosa aceituna para decorar nuestro trago y realzar esos sabores!",
-        //         "Variar la cantidad de vermut hará el trago mas amable, si decidimos utilizar mas vermut, disminuimos acorde la cantidad de gin o vodka ",
-        //         "También podemos hacer nuestro trago sin batir y en una vaso mezclador esto lo hará mas intenso ya que su dilución sera menor"
-        //     ],
-        //     "category": "batidos",
-        //     "difficulty": 3,
-        //     "links": ["Doble colado"],
-        //     "optional": "La elección entre gin y vodka es una cuestión de preferencia personal. El gin es tradicionalmente utilizado en el Martini clásico, mientras que el vodka crea un sabor más suave.",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693937739/pexels-photo-8358609_czlzcr.jpg",
-        //     "alt": "mano de mujer sosteniendo copa con trago transparente, y un pincho de aceitunas sobre la copa con fondo blanco"
-        // },
-        // {
-        //     "name": "Piña Colada",
-        //     "description": "La Piña Colada es un cóctel icónicos que evoca imágenes de playas de arena blanca, brisa tropical y días soleados. Este cóctel, que se originó en Puerto Rico, es conocido por su sabor dulce y tropical, que combina a la perfección la piña fresca, la crema de coco y el ron blanco. Su suavidad y refrescancia hacen que sea una elección popular para quienes buscan una bebida que les transporte a un paraíso tropical. ",
-        //     "history": "La Piña Colada tiene una historia rica y colorida que se remonta a la década de 1950 en Puerto Rico. Se cree que el cóctel fue creado por el bartender Ramón 'Monchito'  Marrero en el Caribe Hilton Hotel en San Juan. Monchito pasó tres meses experimentando con ingredientes antes de finalmente perfeccionar la receta que conocemos hoy. El 10 de agosto de 1954, el Piña Colada se convirtió en la bebida oficial de Puerto Rico.",
-        //     "ingredients": ["Gin o Vodka, 60 ml", "Vermut seco (bianco) 15 ml"],
-        //     "recepy": "En la coctelera agregar todos los ingredientes , agregar hielo y agitar intensamente hasta que la mezcla este bien fría, doble colar en una copa previamente enfriada",
-        //     "tips": [
-        //         "No puede faltar la famosa aceituna para decorar nuestro trago y realzar esos sabores!",
-        //         "Variar la cantidad de vermut hará el trago mas amable, si decidimos utilizar mas vermut, disminuimos acorde la cantidad de gin o vodka ",
-        //         "También podemos hacer nuestro trago sin batir y en una vaso mezclador esto lo hará mas intenso ya que su dilución sera menor"
-        //     ],
-        //     "category": "batidos",
-        //     "difficulty": 3,
-        //     "links": ["Doble colado"],
-        //     "optional": "La elección entre gin y vodka es una cuestión de preferencia personal. El gin es tradicionalmente utilizado en el Martini clásico, mientras que el vodka crea un sabor más suave.",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693937739/pexels-photo-8358609_czlzcr.jpg",
-        //     "alt": "mano de mujer sosteniendo copa con trago transparente, y un pincho de aceitunas sobre la copa con fondo blanco"
-        // },
-        // {
-        //     "name": "Old Fashioned",
-        //     "description": "El Old Fashioned es un cóctel clásico y atemporal que representa la esencia misma de la cocteleria. Es conocido por su sencillez y su énfasis en los sabores puros y simples de sus ingredientes. Este cóctel se caracteriza por su equilibrio entre el bourbon o whisky, el azúcar, el amargo y un toque de cítricos. El Old Fashioned es una bebida que se disfruta lentamente, apreciando la complejidad y la riqueza de los sabores. ",
-        //     "history": "El Old Fashioned es uno de los cócteles más antiguos y venerados. Su origen se atribuye al siglo XIX, cuando se le llamaba simplemente 'whisky cocktail'. En aquellos tiempos, la cocteleria era más simple y se centraba en los sabores puros de los licores. Los primeros cócteles consistían en licor, azúcar, agua y amargos, lo que refleja la esencia misma de la cocteleria clásica. A medida que evolucionó la cocteleria, se comenzaron a añadir otros ingredientes, como frutas y refrescos, a los cócteles. Sin embargo, algunos fanáticos de los clásicos pedían sus cócteles hechos a la antigua o (old fashion) de aquí su nombre.",
-        //     "ingredients": [
-        //         "Bourbon whisky 60 ml",
-        //         "Azúcar 1 cda",
-        //         "2 o 3 golpes de angostura bitter",
-        //         "Piel de naranja"
-        //     ],
-        //     "recepy": "En un vaso corto, añade el azúcar, seguido del angostura y unas gotas de agua, con una bar spoon mezclamos hasta disolver y formar un jarabe y lo esparcimos por las paredes del vaso. Agregar hielo al vaso, 2 grandes son suficientes, vierte lentamente el whisky sobre el hielo y revuelve suavemente. Por ultimo exprimir la cascara de naranja sobre el cóctel para liberar sus aceites esenciales y frotar el borde del vaso con la cascara antes de añadirla al cóctel como decoración ",
-        //     "tips": [
-        //         "Puedes flamear el jarabe (antes de agregar el hielo y el whisky) para caramelizar el azúcar y darle un toque único"
-               
-        //     ],
-        //     "category": "directos",
-        //     "difficulty": 3,
-        //     "links": ["Bar spoon"],
-        //     "optional": "Experimenta con diferentes tipos de amargos (bitters) y whiskeys para variaciones únicas. Los amargos de naranja junto con un whisky rye, por ejemplo, pueden dar un giro interesante al cóctel",
-        //     "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693937739/pexels-photo-8358609_czlzcr.jpg",
-        //     "alt": "mano de mujer sosteniendo copa con trago transparente, y un pincho de aceitunas sobre la copa con fondo blanco"
-        // }
+        {
+            "name": "Daiquiri Clásico",
+            "description": "El Daiquiri es un cóctel refrescante,  que evoca imágenes de playas de arena blanca, aguas cristalinas y un clima cálido y tropical. Es conocido por su equilibrio entre el sabor cítrico y el dulzor, con un toque de ron que lo hace deliciosamente irresistible. Es una bebida ideal para los días calurosos y las reuniones sociales",
+            "history": "El Daiquiri tiene sus raíces en la ciudad de Santiago de Cuba a finales del siglo XIX. La leyenda cuenta que un ingeniero estadounidense llamado Jennings Cox, quien trabajaba en una mina cercana, inventó el cóctel. La receta original consistía en solo tres ingredientes: ron, jugo de limón y azúcar. Con el tiempo, el Daiquiri se hizo famoso gracias a la contribución del escritor y periodista estadounidense Ernest Hemingway, quien lo popularizó durante sus visitas a Cuba.",
+            "ingredients": [
+                "Jugo de Limón 25 ml",
+                "Ron 60 ml",
+                "Azúcar 1 cdita"
+            ],
+            "recepy": "En la coctelera agregar todos los ingredientes , agregar hielo y agitar intensamente hasta que la mezcla este bien fría, doble colar en una copa previamente enfriada",
+            "tips": [
+                "Lo ideal seria utilizar 15 ml de almíbar en lugar de azúcar para una mejor dilución"
+            ],
+            "category": "batidos",
+            "difficulty": 2,
+            "links": ["Doble colado", "Almibar"],
+            "optional": "Si deseamos algo mas conocido podemos incorporar frutillas (fresas) pisadas en la coctelera al momento de batir para darle un sabor mas frutal",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693862230/coctel-limon-rodaja-limon-sobre-mesa_140725-440_cz9osv.jpg",
+            "alt": "una copa de vidrio con liquido blancuzco con 3 gotas rojas, mesa de madera y un florero de fondo"
+        },
+        {
+            "name": "Fernet & cola",
+            "description": "El Fernet con Cola es un trago popular en muchas partes del mundo debido a su sabor único y versatilidad. Combina el sabor amargo y herbáceo del Fernet con la dulzura y el burbujeo de la cola, creando una bebida refrescante y única.",
+            "history": "El Fernet & Cola tiene sus raíces en Argentina, donde es una bebida nacional y una de las formas más populares de consumir Fernet, un licor amargo italiano. La combinación de Fernet y cola se ha convertido en un cóctel emblemático en Argentina y en otros países de América Latina. La bebida se originó en la década de 1980 y rápidamente se convirtió en una opción popular en bares y reuniones sociales.",
+            "ingredients": ["Fernet 60 ml", "Gaseosa Cola"],
+            "recepy": "En un vaso agregamos 3 hielos grandes, 60 ml de Fernet, y completamos con Gaseosa cola ",
+            "tips": [
+                "Para una preparación mas argentina utilizar una botella de plástico cortada.",
+                "Prepararlo 70/30 asi obtendremos el verdadero sabor del fernet"
+            ],
+            "category": "directos",
+            "difficulty": 1,
+            "links": [""],
+            "optional": "Existe también la posibilidad de utilizar gaseosa de pomelo en lugar de cola, pero yo me quedo con lo tradicional!",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693920936/hermosa-bebida-fria-cola-cubitos-hielo_1150-26255_x0oaxb.jpg",
+            "alt": "un vaso largo con una bebida oscura a base de cola y fernet sobre una mesada y 3 cubos de hielo a su lado"
+        },
+        {
+            "name": "Vodka Orange",
+            "description": "El Vodka Orange, es un trago simple pero delicioso que combina el vodka con jugo de naranja. Es una bebida refrescante y simple que combina la pureza y neutralidad del vodka con el jugo de naranja fresco y natural. Aunque es una bebida sencilla, tiene una historia interesante y es apreciada por su simplicidad y sabor vibrante. Es perfecto para disfrutar en cualquier momento del día.",
+            "history": "El Vodka Orange, conocido como 'Screwdriver', tiene una historia que se remonta al menos a la década de 1940. La bebida se popularizó en Estados Unidos durante la Segunda Guerra Mundial, cuando los soldados estadounidenses en Europa mezclaban vodka con jugo de naranja para disfrutar de una bebida refrescante y fácil de preparar. A medida que el vodka se volvió más ampliamente disponible en Estados Unidos, el cóctel ganó popularidad y se convirtió en un clásico",
+            "ingredients": ["Vodka 60 ml", "Jugo de naranja"],
+            "recepy": "En un vaso agregamos 3 hielos grandes, 60 ml de vodka, completamos con jugo de naranja y acompañado de un gajo como decoración, remueve suavemente con una bar spoon para mezclar los ingredientes",
+            "tips": [
+                "Utilizar en lo posible jugo fresco, le dará mas sabor y cuerpo al trago"
+            ],
+            "category": "directos",
+            "difficulty": 1,
+            "links": ["Bar spoon"],
+            "optional": "Una variante del Vodka Orange es el 'Screwdriver Rosa'. Para hacerlo, simplemente agrega un chorrito de granadina al cóctel, lo que le dará un bonito color rosado y un ligero toque de dulzura adicional.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693921387/nutricion-liquida-deliciosa-comida-organica_1203-6217_eptnmu.jpg",
+            "alt": "un vaso largo con jugo de naranja y vodka, sobre una mesa blanca y fondo azul."
+        },
+        {
+            "name": "Daiquiri Frozzen",
+            "description": "El Daiquiri es un cóctel refrescante, que evoca imágenes de playas de arena blanca, aguas cristalinas y un clima cálido y tropical. Esta version Frozen es una versión congelada y refrescante del clásico Daiquiri y es una de las mas conocidas y populares hasta el momento, incluso mas conocida que su version clásica, que a sido opacada por esta mutación frozzen. Es un trago perfecto para los días calurosos y se caracteriza por su textura suave y fría.",
+            "history": "El Daiquiri tiene sus raíces en la ciudad de Santiago de Cuba a finales del siglo XIX. La leyenda cuenta que un ingeniero estadounidense llamado Jennings Cox, quien trabajaba en una mina cercana, inventó el cóctel. La receta original consistía en solo tres ingredientes: ron, jugo de limón y azúcar. Con el tiempo, el Daiquiri se hizo famoso gracias a la contribución del escritor y periodista estadounidense Ernest Hemingway, quien lo popularizó durante sus visitas a Cuba.",
+            "ingredients": [
+                "Jugo de Limón 25 ml",
+                "Ron 60 ml",
+                "Azúcar 2 cdas",
+                "Frutillas (fresas)"
+            ],
+            "recepy": "En una licuadora agregar todos los ingredientes , añade 1 taza de hielo picado a la licuadora, mezcla a alta velocidad hasta que la mezcla esté suave y tenga una consistencia similar a un batido congelado y servir!.",
+            "tips": [
+                "El hielo bien picado para que licue mejor",
+                "Utilizar fruta fresca en lo posible"
+            ],
+            "category": "licuados",
+            "difficulty": 2,
+            "links": [],
+            "optional": "Podemos agregar azúcar a gusto y utilizar la fruta que tengamos!",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693863335/postre-granizado-fresas-lima_23-2149421674_fehsrr.jpg",
+            "alt": "una copa de vidrio con liquido rojo espeso,sobre mesa de madera y un florero de fondo"
+        },
+        {
+            "name": "Manhattan",
+            "description": "El Manhattan es un cóctel clásico a base de whisky y vermut rojo, una bebida elegante y sofisticada, con un sabor equilibrado y armonioso... Es perfecto para disfrutar en cualquier ocasión, ya sea formal o informal. Es una bebida que se puede disfrutar sola o como acompañamiento de una comida.",
+            "history": "El Manhattan tiene raíces profundas en la historia de los cócteles y se remonta al siglo XIX en Nueva York. Se cree que el cóctel nació en el Manhattan Club durante una fiesta en honor de un político llamado Samuel J. Tilden. La bebida se popularizó rápidamente en la ciudad de Nueva York y, desde entonces, ha evolucionado en una serie de variaciones y adaptaciones.",
+            "ingredients": [
+                "Whisky bourbon 60 ml",
+                "Vermut rojo (rosso)",
+                "5 gotas de bitter Angostura"
+            ],
+            "recepy": "En un vaso mezclador verter el whisky el vermut y el bitter, revolver con una bar spoon durante 30s o hasta que este frio y doble colar hacia una copa previamente enfriada ",
+            "tips": [
+                "Decorar el Manhattan con una cereza marrasquino o un twist de naranja. es importante ya que le dará sabor al cóctel"
+            ],
+            "category": "",
+            "difficulty": 4,
+            "links": ["Vaso mezclador", "Bar spoon", "Doble colado"],
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693862903/vista-lateral-copa-coctel-martini-rojo-limon-bayas-rojas_176474-2509_fp2qta.jpg",
+            "alt": ""
+        },
+        {
+            "name": "Tom Collins",
+            "description": "El Tom Collins es un cóctel clásico que ha perdurado a lo largo del tiempo como una bebida icónica y refrescante. E s un cóctel clásico y refrescante que se ha mantenido popular durante más de un siglo. Esta bebida es un ejemplo perfecto de la simplicidad que puede alcanzar un cóctel cuando se seleccionan y combinan cuidadosamente los ingredientes correctos",
+            "history": "El Tom Collins se originó en Estados Unidos en el siglo XIX y se convirtió en un cóctel emblemático. La historia cuenta que el nombre 'Tom Collins' proviene de una broma que se hizo popular en Nueva York en 1874, donde las personas inventaban historias sobre un hombre llamado Tom Collins que supuestamente estaba difamando a otros en la ciudad. La broma se difundió y llegó a los bares, donde los camareros comenzaron a ofrecer un 'Tom Collins' como una forma de atraer a los clientes. Con el tiempo, la bebida se convirtió en un cóctel legítimo.",
+            "ingredients": [
+                "Gin 90 ml",
+                "Jugo de Limón 45 ml",
+                "Azúcar o almíbar 45ml",
+                "Soda"
+            ],
+            "recepy": "En una vaso agregar los ingredientes o bien si no tenemos almíbar, macerar limón con azúcar hasta sacar bien el jugo, llenar el vaso con hielo roto y revolver bien con una bar spoon hasta integrar, luego un toping de soda para completar",
+            "tips": [
+                "Podemos remplazar la soda por agua tónica, le dará un sabor mas parecido al clásico gin tonic"
+            ],
+            "category": "directos",
+            "difficulty": 3,
+            "links": ["Almibar", "Macerar", "Toping", "Bar spoon"],
+            "optional": "La versatilidad de este trago nos permite incorporar algún tipo de fruta para darle nuestro toque, con pomelo queda excelente pero también podemos optar por frutillas o frutos rojos",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693924144/copa-coctel-aromatico-primer-plano-romero_23-2148617668_bxh6cc.jpg",
+            "alt": "copón con trago blancuzco y un trozo de romero sobre mesa de madera"
+        },
+        {
+            "name": "Martini",
+            "description": "El Martini es uno de los cócteles más icónicos y sofisticados del mundo. Es conocido por su sencillez y su equilibrio entre el gin (o vodka) y el vermut, servido en una copa de martini enfriada y decorado con una aceituna o una rodaja de limón. El Martini es una bebida atemporal que se ha mantenido popular a lo largo de los años y se asocia con la elegancia y el estilo.",
+            "history": "El origen del Martini es objeto de debate y mito, pero se cree que se remonta al siglo XIX. Inicialmente, el Martini se hacía con ginebra y vermut seco en proporciones iguales, pero con el tiempo, las preferencias y las recetas variaron. La evolución del Martini ha dado lugar a una amplia gama de variantes, incluyendo el Martini Dry (seco), el Martini Dirty (con un toque de aceituna), y el Martini Perfect (con partes iguales de vermut seco y vermut dulce).",
+            "ingredients": ["Gin o Vodka, 60 ml", "Vermut seco (bianco) 15 ml"],
+            "recepy": "En la coctelera agregar todos los ingredientes , agregar hielo y agitar intensamente hasta que la mezcla este bien fría, doble colar en una copa previamente enfriada",
+            "tips": [
+                "No puede faltar la famosa aceituna para decorar nuestro trago y realzar esos sabores!",
+                "Variar la cantidad de vermut hará el trago mas amable, si decidimos utilizar mas vermut, disminuimos acorde la cantidad de gin o vodka ",
+                "También podemos hacer nuestro trago sin batir y en una vaso mezclador esto lo hará mas intenso ya que su dilución sera menor"
+            ],
+            "category": "batidos",
+            "difficulty": 3,
+            "links": ["Doble colado"],
+            "optional": "La elección entre gin y vodka es una cuestión de preferencia personal. El gin es tradicionalmente utilizado en el Martini clásico, mientras que el vodka crea un sabor más suave.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693937739/pexels-photo-8358609_czlzcr.jpg",
+            "alt": "mano de mujer sosteniendo copa con trago transparente, y un pincho de aceitunas sobre la copa con fondo blanco"
+        },
+        {
+            "name": "Piña Colada",
+            "description": "La Piña Colada es un cóctel icónicos que evoca imágenes de playas de arena blanca, brisa tropical y días soleados. Este cóctel, que se originó en Puerto Rico, es conocido por su sabor dulce y tropical, que combina a la perfección la piña fresca, la crema de coco y el ron blanco. Su suavidad y refrescancia hacen que sea una elección popular para quienes buscan una bebida que les transporte a un paraíso tropical. ",
+            "history": "La Piña Colada tiene una historia rica y colorida que se remonta a la década de 1950 en Puerto Rico. Se cree que el cóctel fue creado por el bartender Ramón 'Monchito'  Marrero en el Caribe Hilton Hotel en San Juan. Monchito pasó tres meses experimentando con ingredientes antes de finalmente perfeccionar la receta que conocemos hoy. El 10 de agosto de 1954, el Piña Colada se convirtió en la bebida oficial de Puerto Rico.",
+            "ingredients": ["Gin o Vodka, 60 ml", "Vermut seco (bianco) 15 ml"],
+            "recepy": "En la coctelera agregar todos los ingredientes , agregar hielo y agitar intensamente hasta que la mezcla este bien fría, doble colar en una copa previamente enfriada",
+            "tips": [
+                "No puede faltar la famosa aceituna para decorar nuestro trago y realzar esos sabores!",
+                "Variar la cantidad de vermut hará el trago mas amable, si decidimos utilizar mas vermut, disminuimos acorde la cantidad de gin o vodka ",
+                "También podemos hacer nuestro trago sin batir y en una vaso mezclador esto lo hará mas intenso ya que su dilución sera menor"
+            ],
+            "category": "batidos",
+            "difficulty": 3,
+            "links": ["Doble colado"],
+            "optional": "La elección entre gin y vodka es una cuestión de preferencia personal. El gin es tradicionalmente utilizado en el Martini clásico, mientras que el vodka crea un sabor más suave.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693937739/pexels-photo-8358609_czlzcr.jpg",
+            "alt": "mano de mujer sosteniendo copa con trago transparente, y un pincho de aceitunas sobre la copa con fondo blanco"
+        },
+        {
+            "name": "Old Fashioned",
+            "description": "El Old Fashioned es un cóctel clásico y atemporal que representa la esencia misma de la cocteleria. Es conocido por su sencillez y su énfasis en los sabores puros y simples de sus ingredientes. Este cóctel se caracteriza por su equilibrio entre el bourbon o whisky, el azúcar, el amargo y un toque de cítricos. El Old Fashioned es una bebida que se disfruta lentamente, apreciando la complejidad y la riqueza de los sabores. ",
+            "history": "El Old Fashioned es uno de los cócteles más antiguos y venerados. Su origen se atribuye al siglo XIX, cuando se le llamaba simplemente 'whisky cocktail'. En aquellos tiempos, la cocteleria era más simple y se centraba en los sabores puros de los licores. Los primeros cócteles consistían en licor, azúcar, agua y amargos, lo que refleja la esencia misma de la cocteleria clásica. A medida que evolucionó, se comenzaron a añadir otros ingredientes, como frutas y refrescos, a los cócteles. Sin embargo, algunos fanáticos de los clásicos pedían sus cócteles hechos a la antigua o (old fashion) de aquí su nombre.",
+            "ingredients": [
+                "Bourbon whisky 60 ml",
+                "Azúcar 1 cda",
+                "2 o 3 golpes de angostura bitter",
+                "Piel de naranja"
+            ],
+            "recepy": "En un vaso corto, añade el azúcar, seguido del angostura y unas gotas de agua, con una bar spoon mezclamos hasta disolver y formar un jarabe y lo esparcimos por las paredes del vaso. Agregar hielo al vaso, 2 grandes son suficientes, vierte lentamente el whisky sobre el hielo y revuelve suavemente. Por ultimo exprimir la cascara de naranja sobre el cóctel para liberar sus aceites esenciales y frotar el borde del vaso con la cascara antes de añadirla al cóctel como decoración ",
+            "tips": [
+                "Puedes flamear el jarabe (antes de agregar el hielo y el whisky) para caramelizar el azúcar y darle un toque único"
+            ],
+            "category": "directos",
+            "difficulty": 3,
+            "links": ["Bar spoon"],
+            "optional": "Experimenta con diferentes tipos de amargos (bitters) y whiskeys para variaciones únicas. Los amargos de naranja junto con un whisky rye, por ejemplo, pueden dar un giro interesante al cóctel",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693937739/pexels-photo-8358609_czlzcr.jpg",
+            "alt": "mano de mujer sosteniendo copa con trago transparente, y un pincho de aceitunas sobre la copa con fondo blanco"
+        },
         {
             "name": "Whisky Sour",
             "description": "El Whisky Sour es un cóctel clásico que ha perdurado a lo largo de los años gracias a su sencillez y equilibrio de sabores. Este cóctel se destaca por combinar el carácter robusto del whisky con la acidez del limón y el toque justo de dulzura, creando una experiencia de degustación refrescante y deliciosa. A continuación, te presento una descripción ampliada del Whisky Sour, incluyendo su origen e historia, ingredientes, receta, consejos y trucos, y una variante opcional. ",
@@ -310,7 +309,6 @@
             "recepy": "En una coctelera, incorporamos todos los ingredientes, agregamos bastante hielo y batimos enérgicamente hasta enfriar (unos 20 segundos) y servimos! ",
             "tips": [
                 "Para un toque adicional de sabor, puedes experimentar con la adición de clara de huevo (white egg) en la preparación del cóctel. Agita vigorosamente para obtener una textura espumosa."
-               
             ],
             "category": "directos",
             "difficulty": 2,
@@ -318,6 +316,172 @@
             "optional": "Experimenta con diferentes tipos de amargos (bitters) y whiskeys para variaciones únicas. Los amargos de naranja junto con un whisky rye, por ejemplo, pueden dar un giro interesante al cóctel",
             "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1694527575/coctel-limon-verde-sobre-mesa_140725-4787_o983oh.jpg",
             "alt": "vaso corto con liquido color ámbar y espuma gruesa decorado con romero, que también esta en la mesa donde se apoya el trago"
+        },
+        {
+            "name": "Negroni",
+            "description": "El Negroni es un cóctel icónico que atrae a los amantes de los sabores audaces y amargos. Este legendario brebaje italiano es una oda a la elegancia y el equilibrio en la coctelería. Con su color rojo intenso y su mezcla inconfundible de gin, vermut rojo y Campari, el Negroni es una experiencia sensorial única. Su sabor amargo, herbal y cítrico lo convierte en una elección audaz para quienes buscan un cóctel con carácter.",
+            "history": "El Negroni tiene sus raíces en Italia, específicamente en Florencia, donde se cree que fue creado en la década de 1910. La historia más popular cuenta que el conde Camillo Negroni, un cliente asiduo del Café Casoni en Florencia, pidió un Americano (un cóctel similar pero sin gin) con un toque extra de alcohol. El bartender, Fosco Scarselli, reemplazó el agua con gin y añadió una rodaja de naranja en lugar de limón como decoración, creando así el Negroni.Desde entonces, el Negroni ha ganado popularidad en todo el mundo y se ha convertido en un clásico en la cultura de la coctelería.",
+            "ingredients": [
+                "Gin 30 ml",
+                "Vermut rosso 30 ml",
+                "Campari 30 ml",
+                "Piel de naranja"
+            ],
+            "recepy": "En un vaso corto, incorporamos todos los ingredientes, agregamos bastante hielo y revolver con una bar spoon enérgicamente hasta enfriar (unos 20 segundos) y servimos! ",
+            "tips": [
+                "Para darle un toque mas 'pro' al trago podemos refrescarlo en una coctelera o vaso largo y le agregamos una piel de naranja para realzar el sabor, luego colar hacia el vaso con hielo fresco y ."
+            ],
+            "category": "directos",
+            "difficulty": 2,
+            "links": ["Bar spoon", "Refrescado"],
+            "optional": "Experimenta con diferentes tipos de vermús , bitters (campari) y gins para cambiar el tono al trago",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693863076/brandy-hielo-rodaja-naranja_140725-3987_tdpx72.jpg",
+            "alt": "vaso corto con liquido color ámbar rojizo, sobre una madera y a su lado una planta verde"
+        },
+        {
+            "name": "Pisco Sour",
+            "description": "El Pisco Sour es un cóctel emblemático de América del Sur que combina el espíritu robusto del pisco, un licor de uva, con la acidez fresca del limón y una pizca de dulzura. Este cóctel es conocido por su equilibrio perfecto de sabores y su característica capa de espuma de clara de huevo batida, que lo convierte en una bebida atractiva y deliciosa. El Pisco Sour es un símbolo de la cultura y la tradición de países como Perú y Chile.",
+            "history": "El Pisco Sour tiene una historia interesante y disputada entre Perú y Chile, ambos reclamando su paternidad. Se cree que el cóctel se originó a principios del siglo XX en los bares de Lima, Perú, gracias al trabajo de bartenders creativos. Sin embargo, Chile también ha contribuido a su popularidad y ha desarrollado su propia variante del Pisco Sour. Independientemente de su origen, el Pisco Sour es un símbolo de la cultura y la destreza de la coctelería en América del Sur.",
+            "ingredients": [
+                "Pisco 30 ml",
+                "Jugo de Limón 30 ml",
+                "Azúcar 2 cdtas  o Almíbar 20 ml",
+                "Clara de huevo"
+            ],
+            "recepy": "En una coctelera, agrega el Pisco, el jugo de limón, el jarabe simple y la clara de huevo. Agrega buena cantidad de hielo a la coctelera y agita enérgicamente durante unos 10-15 segundos para crear una espuma densa. Doble colar en un vaso corto o copa cocktail y podemos decorar con unas gotas de Angostura para dar un toque aromático y una rodaja de limón",
+            "tips": [
+                "El Angostura bitters añade un toque aromático y un contraste agradable al cóctel. Puedes ajustar la cantidad según tu preferencia personal."
+            ],
+            "category": "batidos",
+            "difficulty": 4,
+            "links": ["Bar spoon"],
+            "optional": "El Pisco Sour es un cóctel que se presta a la personalización. Algunos bartenders y amantes de los cócteles experimentan con la adición de otros ingredientes, como frutas frescas o amargos diferentes, para crear variaciones únicas.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1694531262/cocteles-daiquiri-sabrosos-alto-angulo_23-2149486874_jagxdh.jpg",
+            "alt": "3 vasos en una mesa, y sobre ellos una mano sosteniendo una coctelera inclinada hacia el vaso del medio sirviendo liquido"
+        },
+
+        {
+            "name": "Cosmopolitan",
+            "description": "El Cosmopolitan, cariñosamente conocido como 'Cosmo', es un cóctel elegante y contemporáneo que personifica la elegancia y la sofisticación moderna.\n Este cóctel es conocido por su color rosa brillante y su sabor agridulce y refrescante.\n Es una bebida que ha ganado popularidad en la cultura pop y es una elección clásica en bares y reuniones sociales.",
+            "history": "El origen e historia del cosmopolitan son un poco confusos, ya que hay varias personas que afirman haberlo inventado. La versión más aceptada es que el cosmopolitan fue creado por Cheryl Cook, una bartender del Strand Restaurant en South Beach, Florida, en 1985.\n Cook creó el cóctel como una variante del margarita, utilizando vodka en lugar de tequila y jugo de arándano en lugar de jugo de lima.\n Si bien es un trago del 1080 su popularidad se disparó en la década de 1990 gracias a la serie de televisión 'Sex and the City'. ",
+            "ingredients": [
+                "Vodka 45 ml",
+                "Triple sec 15 ml",
+                "Jugo de arándanos 45 ml",
+                "Jugo de limón 15 ml"
+            ],
+            "recepy": "En una coctelera, incorpora todos los ingredientes uno por uno, luego agrega buena cantidad de hielo y agita enérgicamente durante unos 10-15 segundos para crear una espuma densa. Doble colar en un vaso corto o copa cocktail y podemos decorar con unas gotas de Angostura para dar un toque aromático y una rodaja de limón",
+            "tips": [
+                "Para un sabor más original pruébalo con jugo de lima en lugar de jugo de limón!",
+                "Puedes decorar con un piel de naranja  o arándanos frescos"
+            ],
+            "category": "batidos",
+            "difficulty": 3,
+            "links": [""],
+            "optional": "Puedes experimentar con diferentes tipos de vodka con sabor, como vodka de frambuesa o cítricos, para darle un toque diferente.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1694727385/coctel-helado-rojo-sobre-mesa_140725-9712_shcinh.jpg",
+            "alt": "cóctel rojo en copa martini sobre mesa negra y piel de naranja de decoración,salpicado con gotas de agua"
+        },
+        {
+            "name": "Espresso Martini",
+            "description": "El Espresso Martini es un cóctel cautivador y energizante que combina dos placeres favoritos: el café y la coctelería.\n Esta bebida ofrece una fusión perfecta entre la profundidad y el amargor del café espresso recién hecho y la suavidad del vodka, con un toque de dulzura y complejidad añadida por el licor de café.\n Es una elección popular tanto para los amantes del café como para los entusiastas de los cócteles, y es perfecto como aperitivo o como un cóctel después de la cena.",
+            "history": "El espresso martini es un cóctel a base de espresso, vodka y licor de café. Fue creado en 1983 por el barman Dick Bradsell en el bar Soho Brasserie de Londres.\nLa historia cuenta que Bradsell fue abordado por una modelo que le pidió un cóctel que la 'despertara'. Bradsell creó el espresso martini mezclando espresso, vodka y licor de café, y la modelo quedó tan impresionada que el cóctel se convirtió rápidamente en un éxito.\n El espresso martini se popularizó rápidamente en todo el mundo, y hoy en día es uno de los cócteles más populares del mundo. Es una bebida perfecta para disfrutar después de una larga noche de fiesta o para empezar el día con energía.",
+            "ingredients": [
+                "Vodka 60 ml",
+                "Licor de café 30 ml (como Kahlúa)",
+                "Café espresso 30 ml (recién hecho y enfriado)"
+            ],
+            "recepy": "Primero prepara café espresso y déjalo enfiar (sino diluirá demasiado el trago), luego incorporar todos los ingredientes en una coctelera, agregamos hielo y batimos enérgicamente!, doble colar en una copa martini previamente enfriada. ",
+            "tips": [
+                "Utiliza un café espresso de alta calidad o un café recién hecho para obtener un Espresso Martini excepcional. La frescura del café influye en el sabor final.",
+                "Agita vigorosamente para crear una capa de espuma en la superficie del cóctel, que es una característica deseada del Espresso Martini."
+            ],
+            "category": "batidos",
+            "difficulty": 4,
+            "links": ["Doble colado"],
+            "optional": " Puedes experimentar con diferentes tipos de licor de café o agregar un toque de licor de avellana o vainilla para darle un giro aromatizado.\n También puedes explorar diferentes granos de café o infusiones para variaciones de sabor únicas.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1693863170/coctel-cafe-decorado-granos-cafe_140725-7817_odfxxi.jpg",
+            "alt": "cóctel de café en copa martini sobre mesa negra y granos de café sobre la misma"
+        },
+        {
+            "name": "Penicillin",
+            "description": "El Penicillin es un cóctel moderno que combina el vigor del whisky escocés con la calidez del jengibre y la complejidad del jarabe de miel y el toque refrescante del limón.\n Esta bebida es conocida por su equilibrio de sabores entre lo ahumado, lo picante, lo dulce y lo cítrico, creando una experiencia de sabor excepcional.\n El Penicillin es una elección intrigante y sofisticada para quienes buscan un cóctel con profundidad y carácter.",
+            "history": "El cóctel Penicillin fue creado en 2005 por el barman Sam Ross en el bar Milk & Honey de Nueva York. Ross estaba experimentando con sabores picantes y ahumados, y creó el cóctel Penicillin mezclando whisky, jugo de limón, jengibre y miel.\n El nombre del cóctel se inspiró en el color dorado del whisky y el jengibre, que recuerda al color de la penicilina. La miel, por su parte, representa los efectos curativos del antibiótico.\n El cóctel Penicillin se hizo rápidamente popular en Nueva York y, poco después, se extendió por todo el mundo. Hoy en día es uno de los cócteles más populares del mundo, y se puede encontrar en bares de todo el mundo.",
+            "ingredients": [
+                "Whisky escocés 60 ml (preferiblemente de malta)",
+                "Miel 30 ml (como Kahlúa)",
+                "Jugo de Limón 30 ml",
+                "Jengibre fresco 20g"
+            ],
+            "recepy": "Primero maceramos bien el jengibre fresco para liberar al sabor junto al jugo de limón y la miel, luego agregar el whisky, hielo y batir!, doble colar hacia un vaso corto con hielo nuevo ",
+
+            "tips": [
+                "El licor de jengibre puede ser un buen sustituto para el jengibre fresco, o también puedes sustituirlo con ginger beer."
+            ],
+            "category": "batidos",
+            "difficulty": 3,
+            "links": ["Doble colado"],
+            "optional": "El Penicillin es un cóctel que se presta a algunas pocas variaciones. Puedes experimentar con diferentes tipos de whisky escocés, como el de malta única, para variaciones en el perfil de sabor.\n También puedes ajustar la cantidad de jarabe de miel y licor de jengibre para adaptarlo a tus preferencias.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1694734980/there-is-glass-of-lemonade-with-ginger-and-lemons-generative-ai_901275-38072_vifn8d.jpg",
+            "alt": "cóctel amarillo con limón y jengibre sobre la mesa."
+        },
+        {
+            "name": "Moscow Mule",
+            "description": "El Moscow Mule es un clásico cóctel de origen estadounidense que combina la chispa del vodka, el sabor picante del ginger beer y la acidez del limón en una bebida refrescante y con carácter.\n Este cóctel es conocido por su presentación en una taza de cobre y su sabor equilibrado y vivaz.\n El Moscow Mule es un cóctel que evoca una sensación de frescura y es una elección perfecta para quienes buscan una bebida de sabor audaz pero refrescante.",
+            "history": "El Moscow Mule tiene una historia interesante que se remonta a la década de 1940 en Estados Unidos. Fue creado por John G. Martin, un distribuidor de vodka, y Jack Morgan, dueño del bar Cock 'n' Bull en Los Ángeles, junto con el inventor de la taza de cobre, Sophie Berezinski.\n La historia cuenta que crearon el cóctel para promover tanto el vodka como su bar y el invento de la taza de cobre.\n El Moscow Mule se hizo inmensamente popular y se convirtió en un clásico estadounidense.",
+            "ingredients": [
+                "Vodka 60 ml",
+                "Ginger beer 120 ml",
+                "Jugo de Limón 15 ml",
+                "Jengibre fresco 20g"
+            ],
+            "recepy": "Llena una taza de cobre (mule mug) o un tazón grande de metal con hielo hasta la mitad, luego el vodka y limón sobre el hielo, revolvemos suavemente y completamos con ginger beer hasta arriba",
+            "tips": [
+                "La taza de cobre no es solo una presentación elegante, sino que también ayuda a mantener la bebida fría. Asegúrate de que la taza esté bien helada antes de preparar el cóctel."
+            ],
+            "category": "directos",
+            "difficulty": 3,
+            "links": ["Macerar"],
+            "optional": "El Moscow Mule es un cóctel que se presta a algunas variaciones. \nPuedes experimentar con diferentes tipos de ginger beer para un toque picante único. \nAlgunos incluso agregan ingredientes como frutas o hierbas para crear variaciones personalizadas.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1694736427/disparo-vertical-coctel-mojito-i-taza-cobre-hojas-limon-menta-alrededor_181624-3732_hcqppb.jpg",
+            "alt": "taza de cobre con mentas y limas sobre una mesa negra."
+        },
+        {},
+        {
+            "name": "",
+            "description": "",
+            "history": "",
+            "ingredients": ["", "", "", ""],
+            "recepy": "",
+            "tips": [""],
+            "category": "",
+            "difficulty": 0,
+            "links": [""],
+            "optional": "",
+            "image_url": "",
+            "alt": ""
+        },
+        {
+            "name": " Sex On The Beach ",
+            "description": "El Sex On The Beach es un cóctel que te transporta instantáneamente a un paraíso tropical con su sabor agridulce y sus vibrantes colores. Es conocido por su equilibrio, versatilidad y apariencia siendo este, uno de los aspectos más llamativos del Sex On The Beach.\n Con sus capas de colores, desde el rojo de la granadina hasta el naranja, y su nombre provocativo lo convierten en una elección popular en entornos de playa, clubes y bares tropicales.",
+            "history": "El cóctel Sex on the Beach fue creado en 1987 por el camarero Ted Pizio en el bar Connaught Room de Londres.\n Pizio estaba tratando de crear un cóctel que fuera popular entre los estudiantes universitarios, y creó el Sex on the Beach mezclando vodka, licor de melocotón, jugo de naranja y jugo de arándano.\n El nombre del cóctel se inspiró en la combinación de sabores frutales y tropicales, que se asemejan a los colores y la sensación de estar en una playa y rápidamente se hizo popular en todo el mundo",
+            "ingredients": [
+                "Vodka 45 ml",
+                "Licor de durazno (melocotón) 15 ml",
+                "Jugo de arándanos 45 ml",
+                "Jugo de naranja 45 ml",
+                "Granadina 15 ml"
+            ],
+            "recepy": "En un vaso alto llénalo con hielo y agregar vodka y el licor de durazno, luego verter el jugo de naranja y arándanos sobre los alcoholes y con cuidado, vierte la granadina lentamente sobre la parte posterior de una cuchara o un tenedor para que se asiente en el fondo del vaso, creando un efecto de capas. Opcionalmente, decora con una rodaja de naranja y una cereza maraschino en un palillo y a disfrutar!",
+            "tips": [
+                "La granadina debe añadirse con cuidado para crear el efecto de capas, "
+            ],
+            "category": "directos",
+            "difficulty": 1,
+            "links": [""],
+            "optional": "Puedes experimentar con diferentes tipos de licores de frutas o agregar un toque de licor de coco para un sabor tropical adicional.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1694793273/free-photo-of-resfriado-alcohol-coctel-beber_xyy5fg.jpg",
+            "alt": "copa larga con liquido naranja, una capa roja en el fondo y con una rodaja de naranja en el borde de la copa"
         }
     ]
 }

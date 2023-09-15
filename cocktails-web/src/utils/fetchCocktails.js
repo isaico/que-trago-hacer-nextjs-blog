@@ -19,16 +19,16 @@ const fetchCocktails = async ({ blogCategory, categoryId, cocktailsNames }) => {
                 connectDB();
                 const pipeline = [
                     {
-                      $search: {
-                        index: "default",
-                        text: {
-                          query: categoryId,
-                          path: "ingredients"
-                        }
-                      }
-                    }
-                  ]
-                const resp = await Cocktail.aggregate(pipeline)
+                        $search: {
+                            index: 'default',
+                            text: {
+                                query: categoryId,
+                                path: 'ingredients',
+                            },
+                        },
+                    },
+                ];
+                const resp = await Cocktail.aggregate(pipeline);
                 const data = JSON.parse(JSON.stringify(resp));
                 return data;
             } catch (error) {
@@ -38,8 +38,13 @@ const fetchCocktails = async ({ blogCategory, categoryId, cocktailsNames }) => {
         default:
             try {
                 connectDB();
-                const resp = await Cocktail.find({ name: cocktailsNames });
-                const data = JSON.parse(JSON.stringify(resp));
+                const resp = await Cocktail.find({
+                    name: { $in:cocktailsNames} ,
+                });
+                const orderedResults = cocktailsNames.map(cocktailName =>
+                    resp.find(result => result.name === cocktailName)
+                  );
+                const data = JSON.parse(JSON.stringify(orderedResults));
                 return data;
             } catch (error) {
                 return error;

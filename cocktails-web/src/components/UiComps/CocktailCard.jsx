@@ -4,10 +4,7 @@ import { merriweather } from '@/utils/fonts';
 import Link from 'next/link';
 const CocktailCard = ({ cocktail, index, cocktailLength }) => {
     return (
-        <div
-        className="my-6 p-0.5 bg-grad-3 rounded-xl shadow-lg"
-        id={index}
-        >
+        <div className="my-6 p-0.5 bg-grad-3 rounded-xl shadow-lg" id={index}>
             <div className="bg-bg-white p-6 py-8 rounded-xl flex flex-col">
                 <div className="flex  justify-between items-center align-middle pb-12">
                     <h3
@@ -34,35 +31,35 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                     ></Image>
                     {cocktail?.description && (
                         <div>
-                            <h4 className="mb-4 font-medium">
+                            <h4 className="mb-4 font-medium underline decoration-primary-light underline-offset-2">
                                 Descripción del trago:
                             </h4>
-                            <p
-                                // dangerouslySetInnerHTML={{
-                                //     __html: cocktail?.description,
-                                // }}
-                                className="text-lg  whitespace-pre-line indent-6 "
-                            >
+                            <p className="whitespace-pre-line indent-3 ">
                                 {cocktail?.description}
                             </p>
                         </div>
                     )}
                     {cocktail?.history && (
                         <div>
-                            <h4 className="mb-4 mt-8 font-medium ">
+                            <h4 className="mb-4 mt-8 font-medium underline decoration-primary-light underline-offset-2">
                                 Su origen e historia:
                             </h4>
-                            <p className="text-lg whitespace-pre-line indent-6">{cocktail?.history}</p>
+                            <p className=" whitespace-pre-line indent-3">
+                                {cocktail?.history}
+                            </p>
                         </div>
                     )}
                 </div>
                 <div className="my-6">
-                    <h4 className="text-2xl font-medium mb-4">
+                    <h4 className="font-medium mb-4 underline decoration-primary-light underline-offset-2">
                         Ingredientes:{' '}
                     </h4>
                     <ul>
                         {cocktail?.ingredients.map((ing, i) => (
-                            <li className="flex items-center mb-2" key={i+100}>
+                            <li
+                                className="flex items-center mb-2 italic font-medium"
+                                key={i + 100}
+                            >
                                 <svg
                                     className="flex-shrink-0 w-3.5 h-3.5 text-primary-light mr-2"
                                     aria-hidden="true"
@@ -78,36 +75,41 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                     </ul>
                 </div>
                 <div className="mb-6">
-                    <h4 className="text-2xl font-medium mb-4">Receta: </h4>
+                    <h4 className="font-medium mb-4 underline decoration-primary-light underline-offset-2">
+                        Receta:{' '}
+                    </h4>
                     <p>{cocktail?.recepy}</p>
                 </div>
                 {cocktail.tips && cocktail.tips.length > 0 ? (
                     <div className="mb-6">
-                        <h4 className="mb-4 font-medium">Tips del bartender</h4>
-                        <ul className="list-disc list-inside text-lg">
+                        <h4 className="mb-4 font-medium underline decoration-primary-light underline-offset-2">
+                            Tips del bartender
+                        </h4>
+                        <ul className="list-disc list-inside ">
                             {cocktail.tips.map((tip, i) => (
-                                
-                                <li key={i+1000}>{tip} </li>
+                                <li key={i + 1000}>{tip} </li>
                             ))}
                         </ul>
                     </div>
                 ) : null}
                 {cocktail?.optional && (
                     <div className="mb-6">
-                        <h4 className="mb-4 font-medium">Opcional</h4>
-                        <p className="text-lg">{cocktail?.optional}</p>
+                        <h4 className="mb-4 font-medium underline decoration-primary-light underline-offset-2">
+                            Opcional
+                        </h4>
+                        <p className="">{cocktail?.optional}</p>
                     </div>
                 )}
                 {cocktail?.links && cocktail.links.length > 0 ? (
                     <div className="mb-6">
-                        <h4 className="text-xl font-base mb-4">
+                        <h4 className=" font-base font-medium mb-4">
                             Conceptos que vas a necesitar:
                         </h4>
                         <ol className="flex flex-wrap ">
                             {cocktail.links.map((link, i) => (
                                 <li
                                     className="bg-purple-50 border-2 border-purple-500 text-purple-800 text-base font-medium mr-2 px-2.5 py-0.5 rounded-lg dark:bg-purple-900 dark:text-purple-300 flex items-center hover:cursor-pointer hover:scale-105"
-                                    key={i+2000}
+                                    key={i + 2000}
                                 >
                                     {link}
                                     <svg
@@ -126,8 +128,6 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                         </ol>
                     </div>
                 ) : null}
-
-              
             </div>
         </div>
     );

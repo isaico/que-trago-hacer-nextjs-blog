@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
             <body className={`${jost.className} `}>
                 <NavBar />
                 <DefaultLayout>{children}</DefaultLayout>
-                <Banner/>
+                {/* <Banner/> */}
                 <Footer />
             </body>
         </html>

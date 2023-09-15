@@ -48,7 +48,7 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
                         ))}
                         {cocktailsNames && cocktailsNames.length > 0 ? (
                             <li className="py-0.5 mt-2 border-t-2 border-primary-light">
-                                <ol className="list-decimal list-inside">
+                                <ol className="list-[circle] list-inside">
                                     <h5 className="font-medium">
                                         Lista de tragos:
                                     </h5>
@@ -74,7 +74,6 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
                             <li className="py-0.5">
                                 <ul className="list-[circle] list-inside ">
                                     <h5 className="font-medium">Lista de artículos:</h5>
-                                    {/* <h5>Artículos: </h5> */}
                                     {articlesNames.map((article, i) => (
                                         <li
                                             key={i}

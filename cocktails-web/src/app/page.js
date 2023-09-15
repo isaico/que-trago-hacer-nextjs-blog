@@ -48,7 +48,7 @@ export default function Home() {
                         </Link>
                     </h2>
 
-                    <div className="bg-gray-50  border border-gray-200 rounded-lg p-8 md:p-12 mb-8 shadow-md   ">
+                    <div className="bg-bg-white  border border-gray-200 rounded-lg p-8 md:p-12 mb-8 shadow-md   ">
                         <h2 className="text-black  text-3xl md:text-5xl font-extrabold mb-6">
                             Consejos para Preparar Tragos en Casa
                         </h2>
@@ -59,7 +59,7 @@ export default function Home() {
                         <div>
                             <ol className="grid md:grid-cols-2 list-decimal list-inside text-gray-500 gap-12">
                                 <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg">
-                                    <li className="border  rounded-xl p-4 text-xl bg-gray-50 font-medium text-gray-700">
+                                    <li className="border  rounded-xl p-4 text-xl bg-bg-white font-medium text-gray-700">
                                         Practica medidas precisas
                                         <p className="text-lg font-normal pt-4 text-gray-500">
                                             Un ingrediente más o menos puede
@@ -69,7 +69,7 @@ export default function Home() {
                                     </li>
                                 </div>
                                 <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg">
-                                    <li className="border rounded-xl p-4 text-xl bg-gray-50  font-medium text-gray-700">
+                                    <li className="border rounded-xl p-4 text-xl bg-bg-white  font-medium text-gray-700">
                                         Hielo, hielo y más hielo
                                         <p className="text-lg font-normal pt-4 text-gray-500">
                                             La base de un buen trago es una
@@ -80,7 +80,7 @@ export default function Home() {
                                     </li>
                                 </div>
                                 <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg">
-                                    <li className="border rounded-xl  p-4 text-xl  bg-gray-50 font-medium text-gray-700">
+                                    <li className="border rounded-xl  p-4 text-xl  bg-bg-white font-medium text-gray-700">
                                         Usa los utensilios básicos
                                         <p className="text-lg font-normal pt-4 text-gray-500">
                                             Batidor, coctelera, colador, jigger,
@@ -90,7 +90,7 @@ export default function Home() {
                                     </li>
                                 </div>
                                 <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg">
-                                    <li className="border  rounded-xl p-4 text-lg  bg-gray-50 font-medium text-gray-700">
+                                    <li className="border  rounded-xl p-4 text-lg  bg-bg-white font-medium text-gray-700">
                                         Prueba diferentes tragos
                                         <p className="text-lg font-normal pt-4 text-gray-500">
                                             Prueba con diferentes bebidas,

@@ -10,29 +10,33 @@ import {
     categoryPosts,
     categoryPreparacion,
 } from '@/utils/paths';
+import Image from 'next/image';
 const NavBar = () => {
     const pathname = usePathname();
     return (
         <Navbar
             fluid
             rounded
-            className="bg-bg-white border-b  border-gray-200 fixed w-full z-50 py-4 "
+            className="bg-bg-white border-b  border-gray-200 fixed w-full z-50 py-2 "
         >
-            {/* <Navbar.Brand href="https://flowbite-react.com">
-                    <img
-                        alt="Flowbite React Logo"
-                        className="mr-3 h-6 sm:h-9"
-                        src="/favicon.svg"
-                    />
-                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-                        Flowbite React
-                    </span>
-                </Navbar.Brand> */}
             <Link href="/">
+                <Image
+                    alt="que trago hacer? logo"
+                    className="mr-3"
+                    src="https://res.cloudinary.com/dzyllqqxi/image/upload/v1694796731/que-trago-hacer-low-resolution-logo-color-on-transparent-background_1_duda3u.png"
+                    height={20}
+                    width={150}
+                />
+            </Link>
+            {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+                    Flowbite React
+                </span> */}
+
+            {/* <Link href="/">
                 <span className="self-center whitespace-nowrap text-xl font-semibold  text-grad-main">
                     QTH-Blog
                 </span>
-            </Link>
+            </Link> */}
             <div className="flex md:order-2">
                 {/* <Link href="/app">
                     <Button

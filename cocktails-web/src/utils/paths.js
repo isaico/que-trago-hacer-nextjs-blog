@@ -31,11 +31,11 @@ export const categoryTragos = [
 export const categoryPosts = [
     {
         //matchear el category_id del blog con el final del path
-        path: '/blog/posts/Top-10-tragos',
-        text: 'Top 10 tragos',
+        path: '/blog/posts/Top-10-cocteles-clasicos',
         key: 101,
         category: 'posts',
-        id: 'Top 10 tragos ',
+        text: 'Los 10 cócteles clásicos que debes conocer',
+        id: 'Top 10 cocteles clasicos',
     },
     {
         path: '/blog/posts/como-hacer-algo',

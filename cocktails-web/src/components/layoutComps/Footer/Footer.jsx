@@ -1,6 +1,6 @@
-import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import SocialIcons from '@/components/UiComps/SocialIcons';
 import Image from 'next/image';
-
+import Link from 'next/link';
 export default function Footer() {
     const dateToString = new Date().toLocaleString('es-AR', {
         timeZone: 'UTC',
@@ -9,22 +9,7 @@ export default function Footer() {
     return (
         <footer className="bg-white w-full border-t">
             <div className=" w-full p-4 py-6 lg:py-8">
-                <div className="md:flex md:justify-between">
-                    <div className="mb-6 md:mb-0">
-                        <a
-                            href="https://flowbite.com/"
-                            className="flex items-center"
-                        >
-                            <img
-                                src="https://flowbite.com/docs/images/logo.svg"
-                                className="h-8 mr-3"
-                                alt="FlowBite Logo"
-                            />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                                Flowbite
-                            </span>
-                        </a>
-                    </div>
+                <div className="md:flex md:justify-between ">
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
@@ -90,20 +75,40 @@ export default function Footer() {
                             </ul>
                         </div>
                     </div>
+                    <div className="mb-6 md:mb-0">
+                        <Link href="/">
+                            <Image
+                                src="https://res.cloudinary.com/dzyllqqxi/image/upload/v1694796731/que-trago-hacer-low-resolution-logo-color-on-transparent-background_1_duda3u.png"
+                                className="mr-3"
+                                height={50}
+                                width={150}
+                                alt="que trago hacer? Logo"
+                            />
+                        </Link>
+                    </div>
                 </div>
+
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <div className="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex gap-2">
+                    <div className="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex gap-2 items-center">
                         <p>
-                            © Copyright {dateToString} . Todos los derechos
-                            reservados. | Hecho con 💙 por
+                            © Copyright {dateToString}. ¿Qué trago hacer?, Todos los derechos
+                            reservados. | Diseño y desarrollo por
                         </p>
-                        <a href="#" target="_blank">
-                            <p className="underline decoration-blue-400 ml-1">
-                                Isaias Garcia - Full stack dev
-                            </p>
+                        <a href="http://github.com/isaico" target="_blank" className="flex items-center">
+                            <Image
+                                src="https://res.cloudinary.com/dzyllqqxi/image/upload/v1692975511/avataaars_hrw2td.png"
+                                width={20}
+                                height={20}
+                                alt="avatar animado de un hombre con buzo gris con lentes y sonriendo  mirando la cámara, con fondo celeste"
+                                className="rounded-full pb-2 h-auto  w-auto"
+                        />
+                        <p className="underline decoration-blue-500 ">
+                            Isaias Garcia - Full stack dev
+                        </p>
                         </a>
                     </div>
+                    <SocialIcons inFooter={true} />
                     {/* <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                         <a
                             href="#"

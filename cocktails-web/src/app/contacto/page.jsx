@@ -1,158 +1,144 @@
 'use client';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { Button } from 'flowbite-react';
 import DefaultToast from '@/components/UiComps/Toast';
-const contact = async () => {
+import { handleSubmit } from '@/utils/handleSubmit';
+import SocialIcons from '@/components/UiComps/SocialIcons';
+const contact = () => {
     const [showToast, setShowToast] = useState({
         ok: false,
         alert: 'empty',
         status: 0,
     });
     const [loading, setLoading] = useState(false);
-    const input = useRef();
-
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        setLoading(true);
-        const formData = new FormData(event.currentTarget);
-        const data = JSON.stringify({
-            email: formData.get('email'),
-            name: formData.get('name'),
-            subject: formData.get('subject'),
-            message: formData.get('message'),
-        });
-        try {
-            const resp = await fetch('/api/send', {
-                method: 'POST',
-                headers: {
-                    'Content-type': 'application/json',
-                },
-                body: data,
-            });
-            console.log(resp);
-            if (resp.status == 200) {
-                setShowToast({
-                    ok: true,
-                    alert: 'Mensaje enviado',
-                    status: 200,
-                });
-                setLoading(false);
-            } else {
-                setShowToast({
-                    ok: true,
-                    alert: 'Error al enviar, intente nuevamente!',
-                    status: 500,
-                });
-                setLoading(false);
-            }
-            // console.log(resp);
-        } catch (error) {
-            throw new Error(error);
-        }
-        input.current.value = '';
-    };
 
     return (
-        <div className=" ">
-            <div className="flex">
-                <form onSubmit={handleSubmit}>
-                    <div className="relative z-0 w-full mb-6 group">
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" "
-                            required
-                            ref={input}
-                        />
-                        <label
-                            htmlFor="floating_email"
-                            className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                        >
-                            Email
-                        </label>
+        <div className=" w-full">
+            <div className="grid sm:grid-cols-2 w-full h-[calc(100vh-61px)] ">
+                <div className="flex flex-col justify-center items-center text-center px-20 justify-self-center relative ">
+                    <div className="flex flex-col text-center items-center justify-center ">
+                        <h1 className="text-6xl text-center p-4 mb-2  font-semibold text-grad-2 flex items-center gap-2">
+                            Hablemos!
+                            <span className="text-white text-4xl ">🥂🎉</span>
+                        </h1>
+                        <p className="text-md font-medium text-gray-600 mb-6 ">
+                            Si te gusto el sitio y quieres que haga uno para ti,
+                            escríbeme!, o si tienes alguna duda, pregunta o
+                            propuesta, no pierdas el tiempo y contáctame con un
+                            solo clic!
+                        </p>
                     </div>
-
-                    <div className="grid md:grid-cols-2 md:gap-6">
+                    <form
+                        onSubmit={(event) =>
+                            handleSubmit(event, setLoading, setShowToast)
+                        }
+                        id="form"
+                        className="w-full"
+                    >
                         <div className="relative z-0 w-full mb-6 group">
                             <input
                                 type="text"
                                 name="name"
                                 id="name"
-                                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-primary peer"
                                 placeholder=" "
                                 required
-                                ref={input}
                             />
                             <label
                                 htmlFor="floating_first_name"
-                                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
                             >
                                 Nombre
                             </label>
                         </div>
-                        <div className="relative z-0 w-full mb-6 group">
-                            <input
-                                type="text"
-                                name="subject"
-                                id="asunto"
-                                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" "
-                                required
-                                ref={input}
-                            />
-                            <label
-                                htmlFor="floating_last_name"
-                                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                            >
-                                Asunto
-                            </label>
+
+                        <div className="grid md:grid-cols-2 md:gap-6">
+                            <div className="relative z-0 w-full mb-6 group">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-primary peer "
+                                    placeholder=" "
+                                    required
+                                />
+                                <label
+                                    htmlFor="email"
+                                    className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-8 scale-125 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
+                                >
+                                    Email
+                                </label>
+                            </div>
+                            <div className="relative z-0 w-full mb-6 group">
+                                <input
+                                    type="text"
+                                    name="subject"
+                                    id="asunto"
+                                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-primary peer"
+                                    placeholder=" "
+                                    required
+                                />
+                                <label
+                                    htmlFor="floating_last_name"
+                                    className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
+                                >
+                                    Asunto
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div className="grid md:grid-cols-2 md:gap-6">
-                        <div className="relative z-0 w-full mb-6 group">
-                            <input
+
+                        <div className="relative z-0 w-full mb-6 mt-4 group">
+                            <textarea
                                 type="textarea"
                                 name="message"
                                 id="message"
-                                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  border-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-primary peer"
                                 placeholder=" "
                                 required
-                                ref={input}
                             />
                             <label
                                 htmlFor="floating_phone"
-                                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                rows="6"
+                                className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
                             >
                                 Mensaje
                             </label>
                         </div>
-                       
+
+                        <div className=" w-full flex items-center justify-between ">
+                            {loading ? (
+                                <Button
+                                    isProcessing
+                                    gradientDuoTone="purpleToPink"
+                                    pill
+                                    type="submit"
+                                >
+                                    <span className="px-8">Enviar!</span>
+                                </Button>
+                            ) : (
+                                <Button
+                                    gradientDuoTone="purpleToPink"
+                                    pill
+                                    type="submit"
+                                >
+                                    <span className="px-8">Enviar!</span>
+                                </Button>
+                            )}
+
+                            {showToast.ok ? (
+                                <DefaultToast
+                                    alert={showToast.alert}
+                                    status={showToast.status}
+                                ></DefaultToast>
+                            ) : null}
+                        </div>
+                    </form>
+                    <div className="absolute bottom-2 right-2 "> 
+                        <SocialIcons />
                     </div>
-                    {loading ? (
-                        <Button
-                            isProcessing
-                            gradientDuoTone="purpleToPink"
-                            size="xs"
-                            type="submit"
-                        >
-                            <p>Enviar!</p>
-                        </Button>
-                    ) : (
-                        <Button gradientDuoTone="purpleToPink" size="xs" type="submit">
-                            <p>Enviar!</p>
-                        </Button>
-                    )}
-                </form>
+                </div>
+                <div className="bg-[url(https://res.cloudinary.com/dzyllqqxi/image/upload/v1694714639/mejores-amigos-brindando-juntos-ilustrados_23-2148394377_cbsd5t.jpg)] w-full bg-cover bg-center"></div>
             </div>
-            {showToast.ok ? (
-                <DefaultToast
-                    alert={showToast.alert}
-                    status={showToast.status}
-                ></DefaultToast>
-            ) : null}
         </div>
     );
 };
