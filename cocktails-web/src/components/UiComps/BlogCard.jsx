@@ -12,7 +12,7 @@ const BlogCard = ({ blog }) => {
             
             {blog ? (
                 <div className="flex relative justify-center border rounded-xl bg-gray-50 border-gray-200  shadow-lg group-hover:shadow-xl hover:border-primary ease duration-150  max-h-[350px]">
-                    {blog.pilar === true ? (
+                    {blog.featured  === true ? (
                         <span className="bg-pink-200 text-xs font-medium text-pink-900 text-center p-0.5 leading-none rounded-full px-2  absolute -translate-y-1/2 translate-x-1/2 left-auto top-0 right-4">
                             Destacado
                         </span>

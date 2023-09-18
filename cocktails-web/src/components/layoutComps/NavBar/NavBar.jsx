@@ -75,8 +75,9 @@ const NavBar = () => {
                                 {item && (
                                     <NavLink
                                         src={item.path}
-                                        category={item.category}
-                                        id={item.id}
+                                        pilar={item.pilar ? item.pilar : null}
+                                        // category={item.category}
+                                        // id={item.id}
                                     >
                                         {item.text}
                                     </NavLink>
@@ -92,13 +93,15 @@ const NavBar = () => {
                                 className="px-6 py-3 text-base hover:cursor-default"
                                 key={item.key}
                             >
-                                <NavLink
-                                    src={item.path}
-                                    category={item.category}
-                                    id={item.id}
-                                >
-                                    {item.text}
-                                </NavLink>
+                                  {item && (
+                                    <NavLink
+                                        src={item.path}
+                                    >
+                                        {item.text}
+                                    </NavLink>
+                                )}
+                                
+                                {/* <NavLink src={item.path} >{item.text}</NavLink> */}
                             </Dropdown.Item>
                         ))}
                     </Dropdown>
@@ -116,8 +119,8 @@ const NavBar = () => {
                             >
                                 <NavLink
                                     src={item.path}
-                                    category={item.category}
-                                    id={item.id}
+                                    // category={item.category}
+                                    // id={item.id}
                                 >
                                     {item.text}
                                 </NavLink>

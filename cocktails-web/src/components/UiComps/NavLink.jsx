@@ -1,15 +1,16 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
-const NavLink = ({ src, children, category, id }) => {
-    const pathname = usePathname();
+const NavLink = ({ src, children }) => {
+    const pathName = usePathname();
     return (
         <Link
             href={{
                 pathname: src,
-                // query: { category: category, id: id },
             }}
-            className={`${pathname ===  src ? 'active' : ''} hover:text-primary hover:underline`}
+            className={`${
+                pathName === src ? 'active' : ''
+            } hover:text-primary hover:underline`}
         >
             {children}
         </Link>

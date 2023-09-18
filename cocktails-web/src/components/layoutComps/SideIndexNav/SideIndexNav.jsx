@@ -27,11 +27,11 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
     };
 
     return (
-        <div className="flex justify-center items-center sticky top-[61px]  mx-12 ">
+        <div className="flex justify-center items-center sticky py-4 top-[61px]  mx-12 border-2 rounded-xl ">
             <div className="grid justify-center w-full text-start break-all ">
                 <h3 className="text-xl mb-4 font-medium">Tabla de contenido</h3>
                 <div>
-                    <ul className="list-disc text-base  ">
+                    <ul className="list-disc text-base">
                         {ids?.map((item, i) => (
                             <li
                                 key={i}
@@ -46,8 +46,9 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
                                 </Link>
                             </li>
                         ))}
+                        <hr />
                         {cocktailsNames && cocktailsNames.length > 0 ? (
-                            <li className="py-0.5 mt-2 border-t-2 border-primary-light">
+                            <li className="py-0.5 mt-2 ">
                                 <ol className="list-[circle] list-inside">
                                     <h5 className="font-medium">
                                         Lista de tragos:
@@ -72,20 +73,42 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
 
                         {articlesNames && articlesNames.length > 0 ? (
                             <li className="py-0.5">
-                                <ul className="list-[circle] list-inside ">
-                                    <h5 className="font-medium">Lista de artículos:</h5>
+                                <ul className="list-[circle] list-inside">
+                                    <h5 className="font-medium">
+                                        Lista de artículos:
+                                    </h5>
                                     {articlesNames.map((article, i) => (
                                         <li
                                             key={i}
-                                            className="hover:bg-gray-100  hover:text-primary rounded-lg"
+                                            // className="hover:bg-gray-100  hover:text-primary rounded-lg"
                                         >
                                             <Link
                                                 href={`#${article._id}`}
                                                 onClick={handleScroll}
                                                 replace
+                                                className="hover:bg-gray-100  hover:text-primary rounded-lg"
                                             >
                                                 {article.title}
                                             </Link>
+
+                                            <ul className="">
+                                                {article.list?.map((item) => (
+                                                    <li
+                                                        className="hover:bg-gray-100  hover:text-primary rounded-lg ml-8"
+                                                        key={item._id}
+                                                    >
+                                                        <Link
+                                                            href={`#${item._id}`}
+                                                            onClick={
+                                                                handleScroll
+                                                            }
+                                                            replace
+                                                        >
+                                                           - {item.title}
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
                                         </li>
                                     ))}
                                 </ul>

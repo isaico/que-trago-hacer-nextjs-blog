@@ -1,9 +1,8 @@
 import connectDB from '@/libs/mongodb';
 import Blog from '@/models/blog';
 
-const fetchRecommendedPosts = async ( field) => {
+const fetchRecommendedPosts = async (field) => {
     try {
-        
         connectDB();
         if (field && field !== undefined && field.length > 0) {
             const resp = await Blog.find(

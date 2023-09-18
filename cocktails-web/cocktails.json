@@ -482,6 +482,26 @@
             "optional": "Puedes experimentar con diferentes tipos de licores de frutas o agregar un toque de licor de coco para un sabor tropical adicional.",
             "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1694793273/free-photo-of-resfriado-alcohol-coctel-beber_xyy5fg.jpg",
             "alt": "copa larga con liquido naranja, una capa roja en el fondo y con una rodaja de naranja en el borde de la copa"
+        },
+        {
+            "name": "White Russian",
+            "description": "El White Russian es un cóctel que combina la suavidad del vodka, la profundidad del licor de café y la cremosidad de la crema.\n Es conocido por su aspecto similar al café con leche y su sabor decadente. Este cóctel se ha ganado un lugar especial en el mundo de la coctelería gracias a su equilibrio de sabores y su elegante simplicidad.",
+            "history": "La historia exacta del White Russian es un tanto incierta y envuelta en el misterio. Se cree que es una variante del cóctel Black Russian, que surgió en la década de 1940. El Black Russian original consistía en vodka y licor de café, sin la adición de crema.\n\n La versión con crema, que conocemos como White Russian, ganó popularidad en los años 60 y 70. Algunas fuentes atribuyen la creación del White Russian a Gustave Tops, un bartender belga que trabajaba en el Hotel Metropole en Bruselas.\n Sin embargo, su crecimiento en popularidad se debió en gran medida a su aparición en la película de culto 'El Gran Lebowski' (The Big Lebowski) de los hermanos Coen, estrenada en 1998.",
+            "ingredients": [
+                "Vodka 45 ml",
+                "Licor de café 20 ml (como Kahlúa)",
+                "Crema liquida 20 ml"   
+            ],
+            "recepy": "En un vaso corto,agregar hielo, luego añade el vodka y el licor de café sobre el hielo. Con cuidado, vierte la crema líquida sobre la parte posterior de una bar spoon o un tenedor para que flote en la parte superior de la mezcla y asi formar capas. Puedes beberlo directamente o mezclar, es a tu gusto! salud!",
+            "tips": [
+                "Asegúrate de que la crema esté bien fría antes de añadirla al cóctel "
+            ],
+            "category": "directos",
+            "difficulty": 2,
+            "links": ["Bar spoon"],
+            "optional": "Agrega una pizca de jarabe de chocolate para un toque de chocolate indulgente.\n Sustituye el vodka por ron blanco para una variante más caribeña.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload//e_improve,e_sharpen/v1695076471/white-russian-4290606_1280_t04tsq.jpg",
+            "alt": "copa corta con liquido blanco y base de liquida negra, separado por capas"
         }
     ]
 }

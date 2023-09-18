@@ -13,6 +13,7 @@ import SideIndexNav from '../SideIndexNav/SideIndexNav';
 import { buildIds } from '@/utils/buildIds';
 import SideTopics from '../SideTopics/SideTopics';
 import { sanitize } from 'isomorphic-dompurify';
+import PilarLayout from '../PIlarLayout/PilarLayout';
 
 const BlogLayout = async ({ blog }) => {
     let cocktails = [];
@@ -26,8 +27,10 @@ const BlogLayout = async ({ blog }) => {
             cocktailsNames: blog.cocktails_names,
         });
     }
+    console.log(cocktails)
+    console.log(blog.cocktails_names)
     return (
-        <article className="mt-12 flex flex-col  justify-end  w-full scroll-smooth relative">
+        <main className="mt-12 flex flex-col  justify-end  w-full scroll-smooth relative">
             <div className="md:grid md:grid-cols-8 md:grid-flow-col md:gap-6 w-full flex flex-col ">
                 <div className=" flex flex-col justify-center justify-self-center mx-auto col-span-4 col-start-3 max-w-4xl ">
                     <DefaultBreadcrumb
@@ -52,12 +55,14 @@ const BlogLayout = async ({ blog }) => {
                                 >
                                     {blog?.title}
                                 </h1>
-                                <p className="pb-8 text-center leading-8">
-                                    {blog?.brief_desc}
-                                </p>
+                                <p
+                                    className="pb-8 text-center leading-8  whitespace-pre-line"
+                                    dangerouslySetInnerHTML={{
+                                        __html: sanitize(blog?.brief_desc),
+                                    }}
+                                ></p>
                             </div>
                         )}
-
                         <Image
                             src={blog?.image_url}
                             height={1000}
@@ -67,12 +72,7 @@ const BlogLayout = async ({ blog }) => {
                         />
                         {blog?.description && (
                             <div className="pt-16 pb-12" id="description">
-                                <ArticleTitle id={'blog-desc'}>
-                                    {blog?.title_desc}
-                                </ArticleTitle>
-                                {/* <p className="leading-8 whitespace-pre-line mt-8">
-                                    {blogDescription}
-                                </p> */}
+                                <ArticleTitle>{blog?.title_desc}</ArticleTitle>
                                 <p
                                     dangerouslySetInnerHTML={{
                                         __html: sanitize(blog.description),
@@ -82,32 +82,41 @@ const BlogLayout = async ({ blog }) => {
                             </div>
                         )}
 
-                        {cocktails && cocktails.length > 0 ? (
-                            <div>
-                                <ArticleTitle id="list_title">
-                                    {blog?.list_title}
-                                </ArticleTitle>
+                        {blog.pilar !== true ? (
+                            <>
+                                {cocktails && cocktails.length > 0 ? (
+                                    <article>
+                                        <ArticleTitle id="list_title">
+                                            {blog?.list_title}
+                                        </ArticleTitle>
 
-                                <CocktailsContainer
-                                    cocktails={cocktails}
-                                ></CocktailsContainer>
-                            </div>
-                        ) : null}
-                        {blog?.articles && blog?.articles.length > 0 ? (
-                            <ArticleLayout articles={blog?.articles} />
-                        ) : null}
+                                        <CocktailsContainer
+                                            cocktails={cocktails}
+                                        ></CocktailsContainer>
+                                    </article>
+                                ) : null}
+
+                                {blog?.articles && blog?.articles.length > 0 ? (
+                                    <ArticleLayout articles={blog?.articles} />
+                                ) : null}
+                            </>
+                        ) : (
+                            <PilarLayout articles={blog.articles}></PilarLayout>
+                        )}
+
                         {blog?.conclusion && (
                             <div id="conclusion" className="my-8">
-                                <ArticleTitle>{blog.conclusion.title}</ArticleTitle>
+                                <ArticleTitle>
+                                    {blog.conclusion.title}
+                                </ArticleTitle>
                                 <p
                                     dangerouslySetInnerHTML={{
-                                        __html: sanitize(blog.conclusion.description),
+                                        __html: sanitize(
+                                            blog.conclusion.description
+                                        ),
                                     }}
                                     className="leading-8 whitespace-pre-line "
                                 ></p>
-                                {/* <DefaultAccordion
-                                    tips={blog.tips}
-                                ></DefaultAccordion> */}
                             </div>
                         )}
                     </div>
@@ -127,14 +136,14 @@ const BlogLayout = async ({ blog }) => {
                     <SideTopics></SideTopics>
                 </aside>
             </div>
-
-            <Affiliations indexes={[]} />
-
-            <div id="recommended" className="text-center ">
-                <ArticleTitle>Publicaciones relacionadas</ArticleTitle>
-                <RecommendedCards field={blog.recommended_posts} />
-            </div>
-        </article>
+            <Affiliations />
+            {blog.recommended_posts && (
+                <div id="recommended" className="text-center ">
+                    <ArticleTitle>Publicaciones relacionadas</ArticleTitle>
+                    <RecommendedCards field={blog.recommended_posts} />
+                </div>
+            )}
+        </main>
     );
 };
 

@@ -13,7 +13,7 @@ export function buildIds({ blog }) {
         });
     }
 
-    if (blog.tips && blog.tips.length > 0) {
+    if (blog.conclusion && blog.conclusion !== undefined) {
         ids.push({
             id: 'conclusion',
             text: 'Fin del post',

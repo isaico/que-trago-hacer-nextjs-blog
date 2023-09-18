@@ -21,7 +21,14 @@ const BlogSchema = new Schema(
             {
                 title: String,
                 description: String,
-                list: [String],
+                list: [
+                    {
+                        title: String,
+                        content: String,
+                        image_url: String,
+                        alt: String,
+                    },
+                ],
                 image_url: String,
                 alt: String,
             },
@@ -32,8 +39,9 @@ const BlogSchema = new Schema(
             description: String,
             list: [String],
         },
-        tools: [String],
+        // tools: [String],
         pilar: Boolean,
+        featured : Boolean,
         recommended_posts: [String],
     },
     {

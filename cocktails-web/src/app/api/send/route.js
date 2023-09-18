@@ -26,7 +26,6 @@ export async function POST(request) {
                 }
             });
         });
-        console.log(data,"resp promise");
         return NextResponse.json(data);
     } catch (error) {
         return NextResponse.json({ error });

@@ -4,8 +4,9 @@ import fetchBlogs from '@/utils/fetchBlogs';
 
 const HomeBlogCards = async () => {
     const blogs = await fetchBlogs([
+        'Tragos y Cocteles: La guía definitiva de coctelería',
         'Los 10 cócteles clásicos que debes conocer',
-        'algo sobre tragos',
+        'Destila Elegancia: Los 8 Mejores Tragos con Vodka',
     ]);
     return (
         <div className="grid md:grid-cols-2 gap-8 mb-8">

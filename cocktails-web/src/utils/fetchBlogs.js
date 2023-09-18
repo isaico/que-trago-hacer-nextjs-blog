@@ -2,15 +2,18 @@ import connectDB from '@/libs/mongodb';
 import Blog from '@/models/blog';
 import { NextResponse } from 'next/server';
 
-const fetchBlogs = async (field) => {
+const fetchBlogs = async (namesArray) => {
     try {
         connectDB();
-        if (field && field.length > 0 !== undefined) {
+        if (namesArray && namesArray.length > 0 !== undefined) {
             const resp = await Blog.find(
-                { title: field },
-                'title brief_desc small_image_url alt blog_category category_id createdAt pilar'
+                { title: namesArray },
+                'title brief_desc small_image_url alt blog_category category_id createdAt pilar featured'
             );
-            const data = JSON.parse(JSON.stringify(resp));
+            const orderedResults = namesArray.map(item =>
+                resp.find(result => result.title === item)
+            );
+            const data = JSON.parse(JSON.stringify(orderedResults));
             return data;
         } else {
             const resp = await Blog.find({});

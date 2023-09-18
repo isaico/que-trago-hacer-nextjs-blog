@@ -11,7 +11,6 @@ export const handleSubmit = async (event,setLoading,setShowToast) => {
         subject: formData.get('subject'),
         message: formData.get('message'),
     });
-    console.log(data)
     try {
         const resp = await fetch('/api/send', {
             method: 'POST',
@@ -35,7 +34,6 @@ export const handleSubmit = async (event,setLoading,setShowToast) => {
             });
             setLoading(false);
         }
-        // console.log(resp);
     } catch (error) {
         throw new Error(error);
     }

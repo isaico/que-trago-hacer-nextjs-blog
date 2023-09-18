@@ -15,9 +15,9 @@ export default function Home() {
                         , encuentra los mejores tragos y cocktails a tu medida.
                     </h1>
                     <h2 className="mb-8 text-lg font-normal text-gray-300 lg:text-2xl sm:px-16 lg:px-48">
-                        Aprende las recetas de cócteles clásicos y
-                        modernos, recetas de tragos fáciles de hacer en casa y
-                        también consejos para prepararlos correctamente.
+                        Aprende las recetas de cócteles clásicos y modernos,
+                        recetas de tragos fáciles de hacer en casa y también
+                        consejos para prepararlos correctamente.
                     </h2>
                     <div className="py-8 ">
                         <Link
@@ -58,18 +58,22 @@ export default function Home() {
                         </p>
                         <div>
                             <ol className="grid md:grid-cols-2 list-decimal list-inside text-gray-500 gap-12">
-                                <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg">
-                                    <li className="border  rounded-xl p-4 text-xl bg-bg-white font-medium text-gray-700">
-                                        Practica medidas precisas
+                                <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg h-full">
+                                    <li className="border  rounded-xl p-4 text-xl bg-bg-white font-medium text-gray-700 h-full">
+                                        Mide con Precisión
                                         <p className="text-lg font-normal pt-4 text-gray-500">
-                                            Un ingrediente más o menos puede
-                                            arruinar tu preparación, ¡así que
-                                            mide con precisión los ingredientes!
+                                            La precisión en las medidas es clave
+                                            para la consistencia en tus bebidas.
+                                            Utiliza jiggers o medidores para
+                                            asegurarte de que estás agregando la
+                                            cantidad correcta de ingredientes,
+                                            lo que garantiza que cada trago sea
+                                            perfecto.
                                         </p>
                                     </li>
                                 </div>
                                 <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg">
-                                    <li className="border rounded-xl p-4 text-xl bg-bg-white  font-medium text-gray-700">
+                                    <li className="border rounded-xl p-4 text-xl bg-bg-white  font-medium text-gray-700 h-full">
                                         Hielo, hielo y más hielo
                                         <p className="text-lg font-normal pt-4 text-gray-500">
                                             La base de un buen trago es una
@@ -80,22 +84,25 @@ export default function Home() {
                                     </li>
                                 </div>
                                 <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg">
-                                    <li className="border rounded-xl  p-4 text-xl  bg-bg-white font-medium text-gray-700">
+                                    <li className="border rounded-xl  p-4 text-xl  bg-bg-white font-medium text-gray-700 h-full">
                                         Usa los utensilios básicos
                                         <p className="text-lg font-normal pt-4 text-gray-500">
-                                            Batidor, coctelera, colador, jigger,
-                                            copa. Con estos básicos podrás
+                                            Coctelera, colador uruga, jigger, y
+                                            bar spoon. Con estos básicos podrás
                                             preparar casi cualquier trago.
                                         </p>
                                     </li>
                                 </div>
                                 <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg">
-                                    <li className="border  rounded-xl p-4 text-lg  bg-bg-white font-medium text-gray-700">
-                                        Prueba diferentes tragos
+                                    <li className="border  rounded-xl p-4 text-lg  bg-bg-white font-medium text-gray-700 h-full">
+                                        Aprende las Técnicas Básicas de Mezcla
                                         <p className="text-lg font-normal pt-4 text-gray-500">
-                                            Prueba con diferentes bebidas,
-                                            combinaciones y sabores. Sé creativo
-                                            y combina diferentes elementos.
+                                            Dominar técnicas como batir,
+                                            refrescar y macerar frutas te
+                                            ayudará a lograr la textura y el
+                                            equilibrio adecuados en tus tragos.
+                                            Investiga y practica estas
+                                            habilidades para lograr tragos difíciles.
                                         </p>
                                     </li>
                                 </div>

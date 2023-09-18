@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { stringToRoute } from '@/utils/stringToRoute';
+import { sanitize } from 'isomorphic-dompurify';
+
 const RecommendedCard = ({ article }) => {
     let blogRoute = '';
     if (article.blog_category == 'posts') {
@@ -8,7 +10,6 @@ const RecommendedCard = ({ article }) => {
     }
     return (
         <>
-        
             <div className="max-w-[350px] bg-white border border-gray-200 rounded-lg shadow">
                 <Image
                     className="rounded-t-lg"
@@ -23,8 +24,13 @@ const RecommendedCard = ({ article }) => {
                         {article.title}
                     </h5>
 
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-4">
-                        {article.brief_desc}
+                    <p
+                        className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-4"
+                        dangerouslySetInnerHTML={{
+                            __html: sanitize(article.brief_desc),
+                        }}
+                    >
+                        {/* {article.brief_desc} */}
                     </p>
                     <Link
                         href={

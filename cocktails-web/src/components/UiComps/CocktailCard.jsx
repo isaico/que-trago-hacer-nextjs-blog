@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Rating from '@/components/UiComps/Rating';
 import { merriweather } from '@/utils/fonts';
-import Link from 'next/link';
 const CocktailCard = ({ cocktail, index, cocktailLength }) => {
     return (
         <div className="my-6 p-0.5 bg-grad-3 rounded-xl shadow-lg" id={index}>

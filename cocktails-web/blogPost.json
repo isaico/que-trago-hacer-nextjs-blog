@@ -1,0 +1,32 @@
+{
+    "getCocktails": true,
+    "title": "Destila Elegancia: Los 8 Mejores Tragos con Vodka",
+    "brief_desc": "Descubre la sofisticación y versatilidad del vodka con nuestra selección de <strong>los mejores tragos </strong>que seguramente se convertirán en los favoritos de tus amigos en tu próxima fiesta o reunion.",
+    "title_desc": "Explota la Versatilidad del Vodka en esta lista de: los 8 Mejores Tragos.",
+    "description": "El <strong>vodka, conocido por su sabor neutro y su capacidad para mezclarse </strong>con una variedad infinita de ingredientes, es la base perfecta para crear tragos inolvidables.\n\n  Si estás buscando elevar tus habilidades como anfitrión y sorprender a tus invitados o simplemente saber usar una de las bebidas mas neutras de la mejor forma, has llegado al lugar correcto. En este artículo, te presentaremos <strong>los 10 mejores tragos con vodka</strong> que añadirán un toque de elegancia a cualquier ocasión.\n\nSi necesitas pulir los <em>conceptos básicos de la cocteleria</em>, note preocupes tenemos <a href='/blog/tragos/vodka'><i>la publicación perfecta</i></a> para que aprendas lo necesario para reproducir todos los <strong>tragos con vodka</strong> de la lista!",
+    "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1695069699/pexels-photo-7809735_pgmcdp.jpg",
+    "small_image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1695069931/pexels-photo-7809735_pgmcdp_f9b6a3.jpg",
+    "alt": "imagen de varios tragos sobre una mesa, algunos con fruta y varios colores",
+    "blog_category": "tragos",
+    "category_id": "vodka",
+    "cocktails_names": [
+        "Martini",
+        "Cosmopolitan",
+        "Moscow Mule",
+        "White Russian",
+        "Caipiroska",
+        "Sex on the beach",
+        "Blue Lagoon",
+        "Espresso Martini"
+    ],
+    "articles": [],
+    "conclusion": [
+        {
+            "title": "Un brindis por el Vodka!",
+            "description": "Cada uno de estos <strong>tragos con vodka</strong> tiene su propia personalidad y sabor distintivo.\n Así que, la próxima vez que quieras impresionar a tus amigos con tus habilidades de bartender, ¡asegúrate de probar alguno de estos<strong> deliciosos tragos</strong>! ¿Cuál te gustaría probar primero? ¡Salud!"
+        }
+    ],
+    "pilar": false,
+    "featured": false,
+    "recommended_posts": ["Tragos y Cocteles: La guía definitiva de coctelería","Los 10 cócteles clásicos que debes conocer"]
+}
