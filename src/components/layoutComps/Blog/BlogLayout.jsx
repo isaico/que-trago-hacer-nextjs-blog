@@ -13,7 +13,7 @@ import Loader from '@/components/UiComps/Loader';
 // import SideIndexNav from '../SideIndexNav/SideIndexNav';
 import { buildIds } from '@/utils/buildIds';
 // import SideTopics from '../SideTopics/SideTopics';
-// import { sanitize } from 'isomorphic-dompurify';
+import { sanitize } from 'isomorphic-dompurify';
 // import PilarLayout from '../PIlarLayout/PilarLayout';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
@@ -21,6 +21,7 @@ const CocktailsContainer = dynamic(() =>
     import('../CocktailsContainer/CocktailsContainer')
 );
 const BackButton = dynamic(() => import('@/components/UiComps/BackButton'));
+// const sanitize = dynamic(() => import('isomorphic-dompurify'));
 const DefaultBreadcrumb = dynamic(() =>
     import('@/components/UiComps/BreadCrumb')
 );
@@ -31,10 +32,11 @@ const PostedBy = dynamic(() => import('@/components/UiComps/PostedBy'));
 const ArticleLayout = dynamic(() =>
     import('@/components/layoutComps/Article/ArticleLayout')
 );
-const { merriweather } = dynamic(() => import('@/utils/fonts'));
+const merriweather = dynamic(() => import('@/utils/fonts'));
 const ArticleTitle = dynamic(() => import('@/components/UiComps/ArticleTitle'));
 const Affiliations = dynamic(() => import('../Affiliations/Affiliations'));
 const SideIndexNav = dynamic(() => import('../SideIndexNav/SideIndexNav'));
+const SideTopics = dynamic(() => import('../SideTopics/SideTopics'));
 
 const BlogLayout = async ({ blog }) => {
     let cocktails = [];
@@ -79,12 +81,7 @@ const BlogLayout = async ({ blog }) => {
                                     <p
                                         className="pb-8 text-center leading-8  whitespace-pre-line"
                                         dangerouslySetInnerHTML={{
-                                            __html: async () => {
-                                                const sanitize = await import(
-                                                    'isomorphic-dompurify'
-                                                );
-                                                sanitize(blog?.brief_desc);
-                                            },
+                                            __html: sanitize(blog?.brief_desc),
                                         }}
                                     ></p>
                                 </div>
@@ -103,12 +100,7 @@ const BlogLayout = async ({ blog }) => {
                                     </ArticleTitle>
                                     <p
                                         dangerouslySetInnerHTML={{
-                                            __html: async () => {
-                                                const sanitize = await import(
-                                                    'isomorphic-dompurify'
-                                                );
-                                                sanitize(blog?.description);
-                                            },
+                                            __html: sanitize(blog?.description),
                                         }}
                                         className="leading-8 whitespace-pre-line mt-8"
                                     ></p>
@@ -147,15 +139,9 @@ const BlogLayout = async ({ blog }) => {
                                     </ArticleTitle>
                                     <p
                                         dangerouslySetInnerHTML={{
-                                            __html: async () => {
-                                                const sanitize = await import(
-                                                    'isomorphic-dompurify'
-                                                );
-                                                sanitize(
-                                                    blog?.conclusion
-                                                        ?.description
-                                                );
-                                            },
+                                            __html: sanitize(
+                                                blog?.conclusion?.description
+                                            ),
                                         }}
                                         className="leading-8 whitespace-pre-line "
                                     ></p>

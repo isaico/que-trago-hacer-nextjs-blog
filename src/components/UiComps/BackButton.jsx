@@ -1,13 +1,12 @@
 'use client';
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { Button } from 'flowbite-react';
 
 const BackButton = ({ color = 'pink' }) => {
     const router = useRouter();
 
     return (
-        <Button pill color={color} onClick={() => router.back()}>
+        <button className={`px-8 ${color} border flex items-center py-2 rounded-full hover:border-primary-light`} color={color} onClick={() => router.back()}>
             <svg
                 viewBox="0 0 21 21"
                 fill="currentColor"
@@ -27,7 +26,7 @@ const BackButton = ({ color = 'pink' }) => {
                 </g>
             </svg>
             Volver
-        </Button>
+        </button>
     );
 };
 
