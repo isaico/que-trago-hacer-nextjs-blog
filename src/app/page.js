@@ -1,12 +1,53 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import RecommendedCards from '@/components/layoutComps/RecommendedCards/RecommendedCardsContainer';
 import HomeBlogCards from '@/components/layoutComps/HomeBlogCards/HomeBlogCards';
+import Image from 'next/image';
+import heroBg from '../../public/bottles-hero.jpg';
+
 export default function Home() {
     return (
         <main className="text-gray-500">
             {/* hero section */}
-            <section className="bg-center bg-no-repeat bg-[url('https://res.cloudinary.com/dzyllqqxi/image/upload/v1692819606/pexels-chris-f-1283219_z11q9e.jpg')] bg-cover bg-gray-700 bg-blend-multiply w-screen h-[60vh] flex items-center justify-center">
+            <div className="relative  h-[60vh] w-screen">
+                <Image
+                    src={heroBg}
+                    alt=""
+                    quality={100}
+                    fill
+                    placeholder='blur'
+                    sizes="100vw"
+                    style={{
+                        objectFit: 'cover',
+                    }}
+                />
+                <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full backdrop-brightness-50 rounded-lg">
+                    <div className="text-white opacity-100 text-center absolute top-1/2 left-0 right-0 -translate-y-1/2    max-w-screen-xl translate-x-1/2">
+                        <div className=" -translate-x-[35%]">
+                            <h1 className="mb-4 px-4 text-4xl font-semibold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+                                <span className="text-grad-main">
+                                    ¿Qué trago hacer?
+                                </span>
+                                , encuentra los mejores tragos y cocktails a tu
+                                medida.
+                            </h1>
+                            <h2 className="mb-8 text-lg font-normal text-gray-300 lg:text-2xl sm:px-16 lg:px-48">
+                                Aprende las recetas de cócteles clásicos y
+                                modernos, recetas de tragos fáciles de hacer en
+                                casa y también consejos para prepararlos
+                                correctamente.
+                            </h2>
+                            <div className="py-8 ">
+                                <Link
+                                    href="/blog"
+                                    className="bg-primary p-4 hover:shadow-md hover:shadow-purple-700 px-8 rounded-full text-lg text-gray-200 font-medium "
+                                >
+                                    VER POSTS
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* <section className="bg-center bg-no-repeat bg-[url('https://res.cloudinary.com/dzyllqqxi/image/upload/v1695151755/pexels-chris-f-1283219_1_lgcpen.jpg')] bg-cover bg-gray-700 bg-blend-multiply w-screen h-[60vh] flex items-center justify-center">
                 <div className="max-w-screen-xl text-center ">
                     <h1 className="mb-4 px-4 text-4xl font-semibold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
                         <span className="text-grad-main">
@@ -28,7 +69,7 @@ export default function Home() {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* cards section */}
             <h2 className="text-black  text-3xl md:text-5xl  mb-12 mt-16 text-center">
                 En este blog encontrarás
@@ -102,7 +143,8 @@ export default function Home() {
                                             ayudará a lograr la textura y el
                                             equilibrio adecuados en tus tragos.
                                             Investiga y practica estas
-                                            habilidades para lograr tragos difíciles.
+                                            habilidades para lograr tragos
+                                            difíciles.
                                         </p>
                                     </li>
                                 </div>

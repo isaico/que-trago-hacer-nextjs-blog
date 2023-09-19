@@ -78,7 +78,6 @@ const RecommendedCard = ({ article }) => {
                         </div>
                     </div>
                 </div> */}
-            {/* </Link> */}
         </>
     );
 };
