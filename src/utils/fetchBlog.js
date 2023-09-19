@@ -2,7 +2,6 @@ import connectDB from '@/libs/mongodb';
 import Blog from '@/models/blog';
 import { NextResponse } from 'next/server';
 
-
 const fetchBlog = async (id) => {
     try {
         connectDB();

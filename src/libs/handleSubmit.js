@@ -1,6 +1,6 @@
 
 
-export const handleSubmit = async (event,setLoading,setShowToast) => {
+const handleSubmit = async (event,setLoading,setShowToast) => {
     event.preventDefault();
     setLoading(true);
 
@@ -39,3 +39,4 @@ export const handleSubmit = async (event,setLoading,setShowToast) => {
     }
     document.getElementById('form').reset();
 };
+export default handleSubmit

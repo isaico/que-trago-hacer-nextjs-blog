@@ -1,9 +1,14 @@
 'use client';
 import { useState } from 'react';
-import { Button } from 'flowbite-react';
-import DefaultToast from '@/components/UiComps/Toast';
-import { handleSubmit } from '@/libs/handleSubmit';
-import SocialIcons from '@/components/UiComps/SocialIcons';
+// import DefaultToast from '@/components/UiComps/Toast';
+import  handleSubmit  from '@/libs/handleSubmit';
+// import SocialIcons from '@/components/UiComps/SocialIcons';
+import dynamic from 'next/dynamic';
+
+const SocialIcons = dynamic(() => import('@/components/UiComps/SocialIcons'));
+const DefaultToast = dynamic(() => import('@/components/UiComps/Toast'));
+// const handleSubmit = dynamic(() => import('@/libs/handleSubmit'));
+
 const contact = () => {
     const [showToast, setShowToast] = useState({
         ok: false,
@@ -29,7 +34,7 @@ const contact = () => {
                         </p>
                     </div>
                     <form
-                        onSubmit={(event) =>
+                        onSubmit={(event) => 
                             handleSubmit(event, setLoading, setShowToast)
                         }
                         id="form"
@@ -107,22 +112,28 @@ const contact = () => {
 
                         <div className=" w-full flex items-center justify-between ">
                             {loading ? (
-                                <Button
-                                    isProcessing
-                                    gradientDuoTone="purpleToPink"
-                                    pill
-                                    type="submit"
-                                >
-                                    <span className="px-8">Enviar!</span>
-                                </Button>
+                                <button className="px-12 bg-grad-main rounded-full py-2 text-white font-medium">
+                                    Enviando...
+                                </button>
                             ) : (
-                                <Button
-                                    gradientDuoTone="purpleToPink"
-                                    pill
-                                    type="submit"
-                                >
-                                    <span className="px-8">Enviar!</span>
-                                </Button>
+                                // <Button
+                                //     isProcessing
+                                //     gradientDuoTone="purpleToPink"
+                                //     pill
+                                //     type="submit"
+                                // >
+                                //     <span className="px-8">Enviar!</span>
+                                // </Button>
+                                // <Button
+                                //     gradientDuoTone="purpleToPink"
+                                //     pill
+                                //     type="submit"
+                                // >
+                                //     <span className="px-8">Enviar!</span>
+                                // </Button>
+                                <button className="px-12 bg-grad-main rounded-full py-2 text-white font-medium hover:to-purple-400">
+                                    Enviar!
+                                </button>
                             )}
 
                             {showToast.ok ? (
@@ -133,7 +144,7 @@ const contact = () => {
                             ) : null}
                         </div>
                     </form>
-                    <div className="absolute bottom-2 right-2 "> 
+                    <div className="absolute bottom-2 right-2 ">
                         <SocialIcons />
                     </div>
                 </div>

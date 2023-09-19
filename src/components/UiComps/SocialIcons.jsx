@@ -1,4 +1,3 @@
-import React from 'react';
 
 const SocialIcons = ({ color = 'text-gray-700', size = 'w-6', inFooter }) => {
     return (
