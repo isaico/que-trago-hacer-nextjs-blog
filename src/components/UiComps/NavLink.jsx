@@ -11,6 +11,7 @@ const NavLink = ({ src, children }) => {
             className={`${
                 pathName === src ? 'active' : ''
             } hover:text-primary hover:underline`}
+            prefetch={false}
         >
             {children}
         </Link>

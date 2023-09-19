@@ -7,10 +7,10 @@ export default function Home() {
     return (
         <main className="text-gray-500">
             {/* hero section */}
-            <div className="relative  h-[60vh] w-screen">
+            <div className="relative h-[60vh] w-screen">
                 <Image
                     src={heroBg}
-                    alt=""
+                    alt="imagen de una estantería llena de botellas"
                     quality={100}
                     fill
                     placeholder='blur'
@@ -18,6 +18,7 @@ export default function Home() {
                     style={{
                         objectFit: 'cover',
                     }}
+                    priority
                 />
                 <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full backdrop-brightness-50 rounded-lg">
                     <div className="text-white opacity-100 text-center absolute top-1/2 left-0 right-0 -translate-y-1/2    max-w-screen-xl translate-x-1/2">

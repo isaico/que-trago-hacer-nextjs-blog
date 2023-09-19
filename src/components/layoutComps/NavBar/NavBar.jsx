@@ -28,15 +28,7 @@ const NavBar = () => {
                     width={150}
                 />
             </Link>
-            {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-                    Flowbite React
-                </span> */}
-
-            {/* <Link href="/">
-                <span className="self-center whitespace-nowrap text-xl font-semibold  text-grad-main">
-                    QTH-Blog
-                </span>
-            </Link> */}
+            
             <div className="flex md:order-2">
                 {/* <Link href="/app">
                     <Button
@@ -76,8 +68,7 @@ const NavBar = () => {
                                     <NavLink
                                         src={item.path}
                                         pilar={item.pilar ? item.pilar : null}
-                                        // category={item.category}
-                                        // id={item.id}
+                                        
                                     >
                                         {item.text}
                                     </NavLink>
@@ -101,7 +92,7 @@ const NavBar = () => {
                                     </NavLink>
                                 )}
                                 
-                                {/* <NavLink src={item.path} >{item.text}</NavLink> */}
+                               
                             </Dropdown.Item>
                         ))}
                     </Dropdown>
@@ -119,8 +110,7 @@ const NavBar = () => {
                             >
                                 <NavLink
                                     src={item.path}
-                                    // category={item.category}
-                                    // id={item.id}
+                                
                                 >
                                     {item.text}
                                 </NavLink>
@@ -134,6 +124,7 @@ const NavBar = () => {
                     className={`${
                         pathname == '/blog' ? 'active' : ''
                     } text-lg font-normal`}
+                    prefetch={false}
                 >
                     Blog
                 </Link>
