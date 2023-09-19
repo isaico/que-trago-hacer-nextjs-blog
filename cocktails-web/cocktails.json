@@ -490,7 +490,7 @@
             "ingredients": [
                 "Vodka 45 ml",
                 "Licor de café 20 ml (como Kahlúa)",
-                "Crema liquida 20 ml"   
+                "Crema liquida 20 ml"
             ],
             "recepy": "En un vaso corto,agregar hielo, luego añade el vodka y el licor de café sobre el hielo. Con cuidado, vierte la crema líquida sobre la parte posterior de una bar spoon o un tenedor para que flote en la parte superior de la mezcla y asi formar capas. Puedes beberlo directamente o mezclar, es a tu gusto! salud!",
             "tips": [
@@ -502,6 +502,43 @@
             "optional": "Agrega una pizca de jarabe de chocolate para un toque de chocolate indulgente.\n Sustituye el vodka por ron blanco para una variante más caribeña.",
             "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload//e_improve,e_sharpen/v1695076471/white-russian-4290606_1280_t04tsq.jpg",
             "alt": "copa corta con liquido blanco y base de liquida negra, separado por capas"
+        },
+        {
+            "name": "Blue Lagoon",
+            "description": "El Blue Lagoon es un cóctel de ensueño que te transporta a playas tropicales y aguas cristalinas con cada sorbo.\n Este cóctel se caracteriza por su hermoso color azul brillante y su sabor refrescante.\n Sin lugar a dudas, la característica más impactante del Blue Lagoon es su impresionante color azul, que evoca imágenes de lagunas tropicales.",
+            "history": "Aunque la historia exacta del Blue Lagoon es un tanto incierta, se cree que se originó en la década de 1960 o 1970, cuando los cócteles coloridos y exóticos comenzaron a ganar popularidad.\n Su nombre alude a la famosa laguna azul de Islandia, pero no se relaciona directamente con el país.\n A lo largo de los años, este cóctel ha evolucionado y se ha convertido en una bebida de referencia en la cultura de la coctelería moderna",
+            "ingredients": [
+                "Vodka 50 ml",
+                "Licor blue curaçao 25 ml",
+                "Jugo de Limón 25 ml"
+            ],
+            "recepy": "En un vaso alto, agregar hielo, luego añade el vodka y el licor sobre el hielo. Exprime el jugo de limón fresco sobre los otros ingredientes en el vaso y remueve suavemente los ingredientes con una bar spoon.",
+            "tips": [
+                "Si te gusta más ácido, puedes añadir un poco más de limón para equilibrar la dulzura del curaçao azul."
+            ],
+            "category": "directos",
+            "difficulty": 2,
+            "links": ["Bar spoon"],
+            "optional": "Si prefieres una versión más ligera y efervescente del Blue Lagoon, puedes añadir soda de limón al cóctel para darle un toque burbujeante.\n Sustituye el vodka por ron blanco para una variante más caribeña.",
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1695080304/coctel-azul-rodaja-limon_140725-4467_ynij9f.jpg",
+            "alt": "vaso largo con liquido azul y rodaja de cítrico por encima,sobre una mesa y fondo de plantas"
+        },
+        {
+            "name": "Caipiroska",
+            "description": "La  Caipiroska es una variante refrescante y deliciosa de la clásica Caipirinha brasileña. \nA diferencia de la Caipirinha, que utiliza cachaça como base alcohólica, el Caipiroska emplea vodka, lo que le da un giro suave y elegante al sabor. \nEste cóctel se caracteriza por su frescura y versatilidad, lo que lo convierte en una opción popular en bares y reuniones informales.",
+            "history": "El Caipiroska es una creación más reciente que la Caipirinha y ha ganado popularidad en la última parte del siglo XX y principios del siglo XXI.\n Aunque la Caipirinha tiene profundas raíces en la cultura brasileña, el Caipiroska es una adaptación que refleja la preferencia global por el vodka como licor base. \nSu nombre proviene de la combinación de 'Caipirinha' y 'vodka', indicando su vínculo con la clásica bebida brasileña.",
+            "ingredients": ["Lima 4 gajos", "Azúcar", "Vodka 60 ml"],
+            "recepy": "En la coctelera, macerar 4 gajos de lima con 4 cucharadas de azúcar, llenar el vaso con hielo roto e incorporarlo a la coctelera, luego agregar el vodka y batir arduamente",
+            "optional": "Al aplastar podemos incorporar alguna fruta a gusto, como frutos rojos, o frutilla (fresa).",
+            "tips": [
+                "Utilizar hielo bien picado para mejor dilución",
+                "Suele ser un trago bastante potente por lo que hay que tener cuidado de cuanto alcohol incorporamos, utilizar un Jigger"
+            ],
+            "category": "batidos",
+            "links": ["Jigger", "Macerar"],
+            "image_url": "https://res.cloudinary.com/dzyllqqxi/image/upload/v1695080738/caipirinha-2435257_1280_oivwgl.jpg",
+            "alt": "dos vasos con liquido, uno con liquido naranja y otro blancuzco sobre una mesa y con limas en su interior",
+            "difficulty": 3
         }
     ]
 }

@@ -27,8 +27,7 @@ const BlogLayout = async ({ blog }) => {
             cocktailsNames: blog.cocktails_names,
         });
     }
-    console.log(cocktails)
-    console.log(blog.cocktails_names)
+    
     return (
         <main className="mt-12 flex flex-col  justify-end  w-full scroll-smooth relative">
             <div className="md:grid md:grid-cols-8 md:grid-flow-col md:gap-6 w-full flex flex-col ">
