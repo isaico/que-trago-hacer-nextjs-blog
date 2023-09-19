@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/server';
-import fetchBlog from '@/utils/fetchBlog';
+import fetchBlog from '../../../';
 import fetchCocktails from '@/utils/fetchCocktails';
 export const contentType = 'image/jpg';
 export const size = { width: 1000, height: 1000 };

@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Button } from 'flowbite-react';
 import DefaultToast from '@/components/UiComps/Toast';
-import { handleSubmit } from '@/libs/handleSubmit';
+import { handleSubmit } from '@/utils/handleSubmit';
 import SocialIcons from '@/components/UiComps/SocialIcons';
 const contact = () => {
     const [showToast, setShowToast] = useState({
