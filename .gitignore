@@ -35,4 +35,7 @@ yarn-error.log*
 next-env.d.ts
 
 # documents
-
+/blogPost.json
+borrador.md
+cocktails.json
+pilar.md
