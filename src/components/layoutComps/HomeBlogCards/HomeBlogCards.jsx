@@ -1,9 +1,8 @@
 // import BlogCard from '@/components/UiComps/BlogCard';
 import fetchBlogs from '@/utils/fetchBlogs';
-import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
-const BlogCard = dynamic(() => import('@/components/UiComps/BlogCard'));
-const Loader = dynamic(() => import('@/components/UiComps/Loader'));
+import { Suspense, lazy } from 'react';
+const BlogCard = lazy(() => import('@/components/UiComps/BlogCard'));
+const Loader = lazy(() => import('@/components/UiComps/Loader'));
 const HomeBlogCards = async () => {
     const blogs = await fetchBlogs([
         'Tragos y Cocteles: La guía definitiva de coctelería',

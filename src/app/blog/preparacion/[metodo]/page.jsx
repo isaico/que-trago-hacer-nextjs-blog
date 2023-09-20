@@ -1,6 +1,7 @@
 import fetchBlog from '@/utils/fetchBlog';
 // import BlogLayout from '@/components/layoutComps/Blog/BlogLayout';
 // import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
+import dynamic from 'next/dynamic';
 const ErrorFetchData = dynamic(() =>
     import('@/components/UiComps/ErrorFetchData')
 );

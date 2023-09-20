@@ -3,15 +3,14 @@ import fetchBlogs from '@/utils/fetchBlogs';
 // import BackButton from '@/components/UiComps/BackButton';
 // import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
 // import Jumbotron from '@/components/layoutComps/Jumbotron/Jumbotron';
-import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 import Loader from '@/components/UiComps/Loader';
-const BlogCard = dynamic(() => import('@/components/UiComps/BlogCard'));
-const BackButton = dynamic(() => import('@/components/UiComps/BackButton'));
-const ErrorFetchData = dynamic(() =>
+const BlogCard = lazy(() => import('@/components/UiComps/BlogCard'));
+const BackButton = lazy(() => import('@/components/UiComps/BackButton'));
+const ErrorFetchData = lazy(() =>
     import('@/components/UiComps/ErrorFetchData')
 );
-const Jumbotron = dynamic(() =>
+const Jumbotron = lazy(() =>
     import('@/components/layoutComps/Jumbotron/Jumbotron')
 );
 const Page = async () => {
@@ -26,7 +25,7 @@ const Page = async () => {
                     <Jumbotron
                         title={'Blog de cocteleria clásica y recetas de tragos'}
                         description={
-                            'Encuentre aquí todas nuestras recetas de tragos, desde los más clásicos hasta innovadores cocktails, populares y a la moda. Publicaciones sobre coctelería clasica y trucos para que tus cocteles estén a la altura'
+                            'Encuentre aquí todas nuestras recetas de tragos, desde los más clásicos hasta innovadores cocktails, populares y a la moda. Publicaciones sobre coctelería clásica y trucos para que tus cocteles estén a la altura'
                         }
                     />
                 </div>

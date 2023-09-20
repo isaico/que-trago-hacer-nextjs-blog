@@ -27,7 +27,7 @@ const NavBar = () => {
                     width={150}
                 />
             </Link>
-            
+
             <div className="flex md:order-2">
                 {/* <Link href="/app">
                     <Button
@@ -67,7 +67,6 @@ const NavBar = () => {
                                     <NavLink
                                         src={item.path}
                                         pilar={item.pilar ? item.pilar : null}
-                                        
                                     >
                                         {item.text}
                                     </NavLink>
@@ -83,15 +82,11 @@ const NavBar = () => {
                                 className="px-6 py-3 text-base hover:cursor-default"
                                 key={item.key}
                             >
-                                  {item && (
-                                    <NavLink
-                                        src={item.path}
-                                    >
+                                {item && (
+                                    <NavLink src={item.path}>
                                         {item.text}
                                     </NavLink>
                                 )}
-                                
-                               
                             </Dropdown.Item>
                         ))}
                     </Dropdown>
@@ -107,12 +102,7 @@ const NavBar = () => {
                                 className="px-6 py-3 text-base hover:cursor-default "
                                 key={item.key}
                             >
-                                <NavLink
-                                    src={item.path}
-                                
-                                >
-                                    {item.text}
-                                </NavLink>
+                                <NavLink src={item.path}>{item.text}</NavLink>
                             </Dropdown.Item>
                         ))}
                     </Dropdown>
