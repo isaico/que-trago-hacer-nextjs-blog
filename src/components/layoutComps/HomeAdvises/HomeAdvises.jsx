@@ -1,6 +1,4 @@
-const Loading = lazy(() => '@/components/UiComps/Loader');
 import Link from 'next/link';
-import { Suspense, lazy } from 'react';
 const HomeAdvises = () => {
     return (
         <>
@@ -14,7 +12,7 @@ const HomeAdvises = () => {
                     aquí
                 </Link>
             </h2>
-            <Suspense fallback={<Loading />}></Suspense>
+
             <div className="bg-bg-white  border border-gray-200 rounded-lg p-8 md:p-12 mb-8 shadow-md   ">
                 <h2 className="text-black  text-3xl md:text-5xl font-extrabold mb-6">
                     Consejos para Preparar Tragos en Casa

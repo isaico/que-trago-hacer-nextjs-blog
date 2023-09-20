@@ -1,10 +1,8 @@
 import DefaultLayout from './DefaultLayout';
+import dynamic from 'next/dynamic';
 const NavBar = dynamic(() => import('../components/layoutComps/NavBar/NavBar'));
 const Footer = dynamic(() => import('@/components/layoutComps/Footer/Footer'));
 const Banner = dynamic(() => import('@/components/UiComps/Banner'));
-import Loader from '@/components/UiComps/Loader';
-import { Suspense } from 'react';
-import dynamic from 'next/dynamic';
 import { jost } from '@/utils/fonts';
 import './globals.css';
 
@@ -18,13 +16,12 @@ export default function RootLayout({ children }) {
         <html lang="es">
             <body className={`${jost.className} `}>
                 <NavBar />
-                <Suspense fallback={<Loader />}>
-                    <DefaultLayout>{children}</DefaultLayout>
-                </Suspense>
+
+                <DefaultLayout>{children}</DefaultLayout>
+
                 {/* <Banner/> */}
-                <Suspense fallback={<Loader />}>
-                    <Footer />
-                </Suspense>
+
+                <Footer />
             </body>
         </html>
     );

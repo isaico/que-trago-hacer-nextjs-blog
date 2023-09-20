@@ -17,7 +17,7 @@ const Posts = async ({ params }) => {
         <>
             {blog ? (
                 <Suspense fallback={<Loader />}>
-                    <BlogLayout blog={blog} />{' '}
+                    <BlogLayout blog={blog} />
                 </Suspense>
             ) : (
                 <ErrorFetchData />
