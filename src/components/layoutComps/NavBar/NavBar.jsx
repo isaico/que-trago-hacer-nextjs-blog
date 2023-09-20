@@ -4,7 +4,6 @@ import { Navbar, Dropdown } from 'flowbite-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import NavLink from '@/components/UiComps/NavLink';
-import { useRouter } from 'next/navigation';
 import {
     categoryTragos,
     categoryPosts,

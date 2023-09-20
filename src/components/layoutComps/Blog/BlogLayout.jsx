@@ -1,27 +1,26 @@
-import Image from 'next/image';
 // import CocktailsContainer from '../CocktailsContainer/CocktailsContainer';
 // import BackButton from '@/components/UiComps/BackButton';
 // import DefaultBreadcrumb from '@/components/UiComps/BreadCrumb';
 // import RecommendedCards from '../RecommendedCards/RecommendedCardsContainer';
 // import PostedBy from '@/components/UiComps/PostedBy';
-import fetchCocktails from '@/utils/fetchCocktails';
-import Loader from '@/components/UiComps/Loader';
 // import ArticleLayout from '@/components/layoutComps/Article/ArticleLayout';
 // import { merriweather } from '@/utils/fonts';
 // import ArticleTitle from '@/components/UiComps/ArticleTitle';
 // import Affiliations from '../Affiliations/Affiliations';
 // import SideIndexNav from '../SideIndexNav/SideIndexNav';
-import { buildIds } from '@/utils/buildIds';
 // import SideTopics from '../SideTopics/SideTopics';
-import { sanitize } from 'isomorphic-dompurify';
 // import PilarLayout from '../PIlarLayout/PilarLayout';
+import Image from 'next/image';
+import fetchCocktails from '@/utils/fetchCocktails';
+// import { buildIds } from '@/utils/buildIds';
+import { sanitize } from 'isomorphic-dompurify';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
+const Loader = dynamic(() => import('@/components/UiComps/Loader'));
 const CocktailsContainer = dynamic(() =>
     import('../CocktailsContainer/CocktailsContainer')
 );
 const BackButton = dynamic(() => import('@/components/UiComps/BackButton'));
-// const sanitize = dynamic(() => import('isomorphic-dompurify'));
 const DefaultBreadcrumb = dynamic(() =>
     import('@/components/UiComps/BreadCrumb')
 );
@@ -40,7 +39,7 @@ const SideTopics = dynamic(() => import('../SideTopics/SideTopics'));
 
 const BlogLayout = async ({ blog }) => {
     let cocktails = [];
-    let ids = buildIds({ blog }); //obtengo los ids para el sidenav
+    // let ids = buildIds({ blog }); //obtengo los ids para el sidenav
     //chequeo que el blog pida un array de cócteles
     if (blog.getCocktails) {
         //dentro de la función hay un switch que devolverá un array en cada caso dependiendo de la categoría
@@ -91,7 +90,7 @@ const BlogLayout = async ({ blog }) => {
                                 height={1000}
                                 width={1000}
                                 alt={blog?.alt}
-                                className=" w-auto h-auto"
+                            
                             />
                             <Suspense fallback={<Loader />}>
                                 {blog?.description && (
@@ -141,7 +140,7 @@ const BlogLayout = async ({ blog }) => {
                                 </Suspense>
                             )}
 
-                            <Suspense fallback={<Loader/>}>
+                            <Suspense fallback={<Loader />}>
                                 {blog?.conclusion && (
                                     <div id="conclusion" className="my-8">
                                         <ArticleTitle>
@@ -150,7 +149,8 @@ const BlogLayout = async ({ blog }) => {
                                         <p
                                             dangerouslySetInnerHTML={{
                                                 __html: sanitize(
-                                                    blog?.conclusion?.description
+                                                    blog?.conclusion
+                                                        ?.description
                                                 ),
                                             }}
                                             className="leading-8 whitespace-pre-line "
@@ -170,7 +170,7 @@ const BlogLayout = async ({ blog }) => {
                 </aside> */}
                 <aside className="col-span-2 col-start-1">
                     <div className="flex justify-center mb-12">
-                        <BackButton color="gray"/>
+                        <BackButton color="gray" />
                     </div>
                     {/* <SideTopics></SideTopics> */}
                 </aside>

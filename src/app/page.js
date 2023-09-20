@@ -3,7 +3,9 @@ import Image from 'next/image';
 import heroBg from '../../public/bottles-hero.jpg';
 import { lazy, Suspense } from 'react';
 import Loader from '@/components/UiComps/Loader';
-
+const HomeAdvises = lazy(() =>
+    import('@/components/layoutComps/HomeAdvises/HomeAdvises')
+);
 const HomeBlogCards = lazy(() =>
     import('@/components/layoutComps/HomeBlogCards/HomeBlogCards')
 );
@@ -59,7 +61,8 @@ export default function Home() {
                     <div className="pb-4 mx-auto max-w-screen-xl lg:pb-4">
                         <HomeBlogCards />
                         <Suspense fallback={<Loader />}>
-                            <h2 className="text-black  text-3xl md:text-5xl  mb-28 mt-36 text-center border-b pb-8">
+                            <HomeAdvises />
+                            {/* <h2 className="text-black  text-3xl md:text-5xl  mb-28 mt-36 text-center border-b pb-8">
                                 <span className="text-grad-main font-medium">
                                     "¿Qué trago hacer?"
                                 </span>
@@ -72,7 +75,6 @@ export default function Home() {
                                     aquí
                                 </Link>
                             </h2>
-
                             <div className="bg-bg-white  border border-gray-200 rounded-lg p-8 md:p-12 mb-8 shadow-md   ">
                                 <h2 className="text-black  text-3xl md:text-5xl font-extrabold mb-6">
                                     Consejos para Preparar Tragos en Casa
@@ -141,7 +143,7 @@ export default function Home() {
                                         </div>
                                     </ol>
                                 </div>
-                            </div>
+                            </div> */}
                         </Suspense>
                     </div>
                 </section>
