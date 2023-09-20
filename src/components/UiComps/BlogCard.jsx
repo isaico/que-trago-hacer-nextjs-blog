@@ -1,15 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import PostedBy from './PostedBy';
+import { Suspense } from 'react';
+const  PostedBy = dynamic(()=>import('./PostedBy')) 
 import { stringToRoute } from '@/utils/stringToRoute';
+import dynamic from 'next/dynamic';
+// const stringToRoute = dynamic(()=>import("@/utils/stringToRoute"))
+const Loader = dynamic(()=>import("@/components/UiComps/Loader"))
 const BlogCard = ({ blog }) => {
-    let blogRoute = '';
-    if (blog.blog_category == 'posts') {
-        blogRoute = stringToRoute(blog.category_id);
-    }
+    // let blogRoute = stringToRoute(blog.category_id);;
+    // if (blog.blog_category == 'posts') {
+    //     blogRoute = 
+    // }
     return (
-        <>
-            
+        <Suspense fallback={<Loader/>}>
             {blog ? (
                 <div className="flex relative justify-center border rounded-xl bg-gray-50 border-gray-200  shadow-lg group-hover:shadow-xl hover:border-primary ease duration-150  max-h-[350px]">
                     {blog.featured  === true ? (
@@ -46,7 +49,7 @@ const BlogCard = ({ blog }) => {
                             href={
                                 blog.blog_category == 'posts'
                                     ? {
-                                          pathname: `/blog/${blog.blog_category}/${blogRoute}`,
+                                          pathname: `/blog/${blog.blog_category}/${stringToRoute(blog.category_id)}`,
                                       }
                                     : {
                                           pathname: `/blog/${blog.blog_category}/${blog.category_id}`,
@@ -77,7 +80,7 @@ const BlogCard = ({ blog }) => {
                 <div> error al cargar datos</div>
             )}
             {/* </Link> */}
-        </>
+        </Suspense>
     );
 };
 

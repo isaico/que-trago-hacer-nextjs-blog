@@ -93,22 +93,29 @@ const BlogLayout = async ({ blog }) => {
                                 alt={blog?.alt}
                                 className=" w-auto h-auto"
                             />
-                            {blog?.description && (
-                                <div className="pt-16 pb-12" id="description">
-                                    <ArticleTitle>
-                                        {blog?.title_desc}
-                                    </ArticleTitle>
-                                    <p
-                                        dangerouslySetInnerHTML={{
-                                            __html: sanitize(blog?.description),
-                                        }}
-                                        className="leading-8 whitespace-pre-line mt-8"
-                                    ></p>
-                                </div>
-                            )}
+                            <Suspense fallback={<Loader />}>
+                                {blog?.description && (
+                                    <div
+                                        className="pt-16 pb-12"
+                                        id="description"
+                                    >
+                                        <ArticleTitle>
+                                            {blog?.title_desc}
+                                        </ArticleTitle>
+                                        <p
+                                            dangerouslySetInnerHTML={{
+                                                __html: sanitize(
+                                                    blog?.description
+                                                ),
+                                            }}
+                                            className="leading-8 whitespace-pre-line mt-8"
+                                        ></p>
+                                    </div>
+                                )}
+                            </Suspense>
 
                             {blog && blog.pilar !== true ? (
-                                <>
+                                <Suspense fallback={<Loader />}>
                                     {cocktails && cocktails.length > 0 ? (
                                         <article>
                                             <ArticleTitle id="list_title">
@@ -127,42 +134,45 @@ const BlogLayout = async ({ blog }) => {
                                             articles={blog?.articles}
                                         />
                                     ) : null}
-                                </>
+                                </Suspense>
                             ) : (
-                                <ArticleLayout articles={blog?.articles} />
+                                <Suspense fallback={<Loader />}>
+                                    <ArticleLayout articles={blog?.articles} />
+                                </Suspense>
                             )}
 
-                            {blog?.conclusion && (
-                                <div id="conclusion" className="my-8">
-                                    <ArticleTitle>
-                                        {blog.conclusion.title}
-                                    </ArticleTitle>
-                                    <p
-                                        dangerouslySetInnerHTML={{
-                                            __html: sanitize(
-                                                blog?.conclusion?.description
-                                            ),
-                                        }}
-                                        className="leading-8 whitespace-pre-line "
-                                    ></p>
-                                </div>
-                            )}
+                            <Suspense fallback={<Loader/>}>
+                                {blog?.conclusion && (
+                                    <div id="conclusion" className="my-8">
+                                        <ArticleTitle>
+                                            {blog.conclusion.title}
+                                        </ArticleTitle>
+                                        <p
+                                            dangerouslySetInnerHTML={{
+                                                __html: sanitize(
+                                                    blog?.conclusion?.description
+                                                ),
+                                            }}
+                                            className="leading-8 whitespace-pre-line "
+                                        ></p>
+                                    </div>
+                                )}
+                            </Suspense>
                         </div>
                     </div>
                 </Suspense>
-                <aside className=" col-span-2 col-start-7 ">
+                {/* <aside className=" col-span-2 col-start-7 ">
                     <SideIndexNav
                         cocktails={cocktails}
                         articles={blog.articles}
                         ids={ids}
                     ></SideIndexNav>
-                </aside>
+                </aside> */}
                 <aside className="col-span-2 col-start-1">
                     <div className="flex justify-center mb-12">
-                        {' '}
-                        <BackButton color="gray"></BackButton>
+                        <BackButton color="gray"/>
                     </div>
-                    <SideTopics></SideTopics>
+                    {/* <SideTopics></SideTopics> */}
                 </aside>
             </div>
             <Suspense fallback={<Loader />}>

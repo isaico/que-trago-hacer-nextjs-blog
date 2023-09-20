@@ -1,7 +1,9 @@
-import Link from 'next/link';
-import BlogCard from '@/components/UiComps/BlogCard';
+// import BlogCard from '@/components/UiComps/BlogCard';
 import fetchBlogs from '@/utils/fetchBlogs';
-
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
+const BlogCard = dynamic(() => import('@/components/UiComps/BlogCard'));
+const Loader = dynamic(() => import('@/components/UiComps/Loader'));
 const HomeBlogCards = async () => {
     const blogs = await fetchBlogs([
         'Tragos y Cocteles: La guía definitiva de coctelería',
@@ -12,7 +14,9 @@ const HomeBlogCards = async () => {
         <div className="grid md:grid-cols-2 gap-8 mb-8">
             {blogs.map((blog) => (
                 <div key={blog._id}>
-                    <BlogCard blog={blog}></BlogCard>
+                    <Suspense fallback={<Loader />}>
+                        <BlogCard blog={blog}></BlogCard>
+                    </Suspense>
                 </div>
             ))}
         </div>

@@ -2,9 +2,8 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
-const BackButton = ({ color = 'pink' }) => {
+const BackButton = ({ color = 'text-gray-200' }) => {
     const router = useRouter();
-
     return (
         <button className={`px-8 ${color} border flex items-center py-2 rounded-full hover:border-primary-light`} color={color} onClick={() => router.back()}>
             <svg

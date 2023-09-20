@@ -31,24 +31,25 @@ const Page = async () => {
                     />
                 </div>
             </Suspense>
-            <Suspense fallback={<Loader />}>
-                <div className=" max-w-screen-xl">
-                    {blogs ? (
+            <div className=" max-w-screen-xl">
+                {blogs ? (
+                    <Suspense fallback={<Loader />}>
                         <div className="">
                             <div className="grid  md:grid-cols-2 gap-8 gap-x-14 w-full">
                                 {blogs.map((blog) => (
                                     <div key={blog._id}>
-                                        {' '}
-                                        <BlogCard blog={blog}></BlogCard>
+                                        <Suspense fallback={<Loader />}>
+                                            <BlogCard blog={blog}></BlogCard>
+                                        </Suspense>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                    ) : (
-                        <ErrorFetchData />
-                    )}
-                </div>
-            </Suspense>
+                    </Suspense>
+                ) : (
+                    <ErrorFetchData />
+                )}
+            </div>
         </div>
     );
 };
