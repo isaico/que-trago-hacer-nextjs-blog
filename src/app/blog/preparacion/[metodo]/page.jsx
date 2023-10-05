@@ -9,6 +9,7 @@ const ErrorFetchData = dynamic(() =>
 const BlogLayout = dynamic(() =>
     import('@/components/layoutComps/Blog/BlogLayout')
 );
+import Loader from "@/components/UiComps/Loader"
 const Preparacion = async ({ params }) => {
     const blog = await fetchBlog(params.metodo);
     return (

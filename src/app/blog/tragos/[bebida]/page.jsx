@@ -9,6 +9,7 @@ const ErrorFetchData = dynamic(() =>
 const BlogLayout = dynamic(() =>
     import('@/components/layoutComps/Blog/BlogLayout')
 );
+import Loader from "@/components/UiComps/Loader"
 const Tragos = async ({ params }) => {
     const blog = await fetchBlog(params.bebida);
     return (

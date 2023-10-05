@@ -12,7 +12,7 @@
 // import PilarLayout from '../PIlarLayout/PilarLayout';
 import Image from 'next/image';
 import fetchCocktails from '@/utils/fetchCocktails';
-// import { buildIds } from '@/utils/buildIds';
+import { buildIds } from '@/utils/buildIds';
 import { sanitize } from 'isomorphic-dompurify';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
@@ -39,7 +39,7 @@ const SideTopics = dynamic(() => import('../SideTopics/SideTopics'));
 
 const BlogLayout = async ({ blog }) => {
     let cocktails = [];
-    // let ids = buildIds({ blog }); //obtengo los ids para el sidenav
+    let ids = buildIds({ blog }); //obtengo los ids para el sidenav
     //chequeo que el blog pida un array de cócteles
     if (blog.getCocktails) {
         //dentro de la función hay un switch que devolverá un array en cada caso dependiendo de la categoría
@@ -142,13 +142,13 @@ const BlogLayout = async ({ blog }) => {
                     </div>
                 </div>
 
-                {/* <aside className=" col-span-2 col-start-7 ">
+                <aside className=" col-span-2 col-start-7 ">
                     <SideIndexNav
                         cocktails={cocktails}
                         articles={blog.articles}
                         ids={ids}
                     ></SideIndexNav>
-                </aside> */}
+                </aside>
                 <aside className="col-span-2 col-start-1">
                     <div className="flex justify-center mb-12">
                         <BackButton color="gray" />
