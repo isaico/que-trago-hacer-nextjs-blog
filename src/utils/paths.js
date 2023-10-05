@@ -5,28 +5,28 @@ export const categoryTragos = [
         key: 1,
         // category: 'tragos',
         // id: 'vodka',
-    },
-    {
-        path: '/blog/tragos/ron',
-        text: 'Tragos con Ron',
-        key: 2,
-        // category: 'tragos',
-        // id: 'ron',
-    },
-    {
-        path: '/blog/tragos/gin',
-        text: 'Tragos con Gin',
-        key: 3,
-        // category: 'tragos',
-        // id: 'gin',
-    },
-    {
-        path: '/blog/tragos/jaggermeister',
-        text: 'Tragos con Jagger',
-        key: 4,
-        // category: 'tragos',
-        // id: 'jaggermeister',
-    },
+    }
+    // {
+    //     path: '/blog/tragos/ron',
+    //     text: 'Tragos con Ron',
+    //     key: 2,
+    //     // category: 'tragos',
+    //     // id: 'ron',
+    // },
+    // {
+    //     path: '/blog/tragos/gin',
+    //     text: 'Tragos con Gin',
+    //     key: 3,
+    //     // category: 'tragos',
+    //     // id: 'gin',
+    // },
+    // {
+    //     path: '/blog/tragos/jaggermeister',
+    //     text: 'Tragos con Jagger',
+    //     key: 4,
+    //     // category: 'tragos',
+    //     // id: 'jaggermeister',
+    // },
 ];
 export const categoryPosts = [
     {
@@ -45,13 +45,13 @@ export const categoryPosts = [
         // id: 'Top 10 cocteles clasicos',
     },
 
-    {
-        path: '/blog/posts/vodka-vs-gin',
-        text: 'Vodka vs gin',
-        key: 102,
-        // category: 'posts',
-        // id: 'Vodka vs gin',
-    },
+    // {
+    //     path: '/blog/posts/vodka-vs-gin',
+    //     text: 'Vodka vs gin',
+    //     key: 102,
+    //     // category: 'posts',
+    //     // id: 'Vodka vs gin',
+    // },
 ];
 export const categoryPreparacion = [
     {
@@ -61,18 +61,18 @@ export const categoryPreparacion = [
         // category: 'preparacion',
         // id: 'batidos',
     },
-    {
-        path: '/blog/preparacion/licuados',
-        text: 'Cocteles Licuados',
-        key: 202,
-        // category: 'preparacion',
-        // id: 'licuados',
-    },
-    {
-        path: '/blog/preparacion/directos',
-        text: 'Cocteles Directos',
-        key: 203,
-        // category: 'preparacion',
-        // id: 'directos',
-    },
+    // {
+    //     path: '/blog/preparacion/licuados',
+    //     text: 'Cocteles Licuados',
+    //     key: 202,
+    //     // category: 'preparacion',
+    //     // id: 'licuados',
+    // },
+    // {
+    //     path: '/blog/preparacion/directos',
+    //     text: 'Cocteles Directos',
+    //     key: 203,
+    //     // category: 'preparacion',
+    //     // id: 'directos',
+    // },
 ];
