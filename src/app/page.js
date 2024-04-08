@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import heroBg from '../../public/bottles-hero.jpg';
+import heroBg from '../../public/bottles-hero.webp';
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
+import { Hero } from '../components/layoutComps/Hero/Hero';
+
 const Loader = dynamic(() => import('@/components/UiComps/Loader'));
 const HomeAdvises = dynamic(() =>
     import('@/components/layoutComps/HomeAdvises/HomeAdvises')
@@ -13,11 +15,12 @@ const HomeBlogCards = dynamic(() =>
 export default function Home() {
     return (
         <main className="text-gray-500">
-            <div className="relative h-[60vh] w-screen">
+            <Hero bgSrc={heroBg} />
+            {/* <div className="relative h-[60vh] w-screen bg-[url('/bottles-hero-webp')]">
                 <Image
                     src={heroBg}
                     alt="imagen de una estantería llena de botellas"
-                    quality={100}
+                    quality={50}
                     fill
                     placeholder="blur"
                     sizes="100vw"
@@ -56,7 +59,7 @@ export default function Home() {
             </div>
             <h2 className="text-black  text-3xl md:text-5xl  mb-12 mt-16 text-center">
                 En este blog encontrarás
-            </h2>
+            </h2> */}
             <section className="">
                 <div className="pb-4 mx-auto max-w-screen-xl lg:pb-4">
                     <Suspense fallback={<Loader />}>

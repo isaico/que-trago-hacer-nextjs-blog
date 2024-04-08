@@ -2,7 +2,7 @@ import Link from 'next/link';
 const HomeAdvises = () => {
     return (
         <>
-            <h2 className="text-black  text-3xl md:text-5xl  mb-28 mt-36 text-center border-b pb-8">
+            <h2 className="text-black  text-3xl md:text-5xl  mb-28 mt-36 text-center border-b pb-8" id='advises'>
                 <span className="text-grad-main font-medium">
                     "¿Qué trago hacer?"
                 </span>
@@ -23,9 +23,9 @@ const HomeAdvises = () => {
                 </p>
                 <div>
                     <ol className="grid md:grid-cols-2 list-decimal list-inside text-gray-500 gap-12">
-                        <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg h-full">
-                            <li className="border  rounded-xl p-4 text-xl bg-bg-white font-medium text-gray-700 h-full">
-                                Mide con Precisión
+                        <li className="border rounded-xl p-4 text-xl bg-bg-white font-medium text-gray-100 h-full bg-grad-3 ">
+                            Mide con Precisión
+                            <div className="px-2 border bg-bg-white rounded-xl shadow-lg h-full mt-2">
                                 <p className="text-lg font-normal pt-4 text-gray-500">
                                     La precisión en las medidas es clave para la
                                     consistencia en tus bebidas. Utiliza jiggers
@@ -34,31 +34,31 @@ const HomeAdvises = () => {
                                     ingredientes, lo que garantiza que cada
                                     trago sea perfecto.
                                 </p>
-                            </li>
-                        </div>
-                        <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg">
-                            <li className="border rounded-xl p-4 text-xl bg-bg-white  font-medium text-gray-700 h-full">
-                                Hielo, hielo y más hielo
+                            </div>
+                        </li>
+                        <li className="border rounded-xl p-4 text-xl bg-bg-white font-medium text-gray-100 h-full bg-grad-3">
+                            Hielo, hielo y ...hielo
+                            <div className=" px-2 border bg-bg-white rounded-xl shadow-lg h-full mt-2">
                                 <p className="text-lg font-normal pt-4 text-gray-500">
                                     La base de un buen trago es una buena
                                     cantidad de hielo para refrescar y diluir
-                                    correctamente, que nunca te falte!
+                                    correctamente, servir, y mantener frías tus bebidas, que nunca te falte!!
                                 </p>
-                            </li>
-                        </div>
-                        <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg">
-                            <li className="border rounded-xl  p-4 text-xl  bg-bg-white font-medium text-gray-700 h-full">
-                                Usa los utensilios básicos
+                            </div>
+                        </li>
+                        <li className="border rounded-xl p-4 text-xl bg-bg-white font-medium text-gray-100 h-full bg-grad-3">
+                            Usa los utensilios básicos
+                            <div className="px-2 border bg-bg-white rounded-xl shadow-lg h-full mt-2">
                                 <p className="text-lg font-normal pt-4 text-gray-500">
                                     Coctelera, colador uruga, jigger, y bar
                                     spoon. Con estos básicos podrás preparar
                                     casi cualquier trago.
                                 </p>
-                            </li>
-                        </div>
-                        <div className=" p-0.5 bg-grad-3 rounded-xl shadow-lg">
-                            <li className="border  rounded-xl p-4 text-lg  bg-bg-white font-medium text-gray-700 h-full">
-                                Aprende las Técnicas Básicas de Mezcla
+                            </div>
+                        </li>
+                        <li className="border rounded-xl p-4 text-xl bg-bg-white font-medium text-gray-100 h-full bg-grad-3">
+                            Aprende las Técnicas Básicas de Mezcla
+                            <div className="px-2 border bg-bg-white rounded-xl shadow-lg h-full mt-2">
                                 <p className="text-lg font-normal pt-4 text-gray-500">
                                     Dominar técnicas como batir, refrescar y
                                     macerar frutas te ayudará a lograr la
@@ -66,8 +66,8 @@ const HomeAdvises = () => {
                                     tragos. Investiga y practica estas
                                     habilidades para lograr tragos difíciles.
                                 </p>
-                            </li>
-                        </div>
+                            </div>
+                        </li>
                     </ol>
                 </div>
             </div>

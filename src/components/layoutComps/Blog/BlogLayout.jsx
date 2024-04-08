@@ -1,15 +1,4 @@
-// import CocktailsContainer from '../CocktailsContainer/CocktailsContainer';
-// import BackButton from '@/components/UiComps/BackButton';
-// import DefaultBreadcrumb from '@/components/UiComps/BreadCrumb';
-// import RecommendedCards from '../RecommendedCards/RecommendedCardsContainer';
-// import PostedBy from '@/components/UiComps/PostedBy';
-// import ArticleLayout from '@/components/layoutComps/Article/ArticleLayout';
-// import { merriweather } from '@/utils/fonts';
-// import ArticleTitle from '@/components/UiComps/ArticleTitle';
-// import Affiliations from '../Affiliations/Affiliations';
-// import SideIndexNav from '../SideIndexNav/SideIndexNav';
-// import SideTopics from '../SideTopics/SideTopics';
-// import PilarLayout from '../PIlarLayout/PilarLayout';
+
 import Image from 'next/image';
 import fetchCocktails from '@/utils/fetchCocktails';
 import { buildIds } from '@/utils/buildIds';

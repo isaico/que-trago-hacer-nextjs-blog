@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import ArticleTitle from '@/components/UiComps/ArticleTitle';
-// import { sanitize } from 'isomorphic-dompurify';
+import { sanitize } from 'isomorphic-dompurify';
 import { Suspense, lazy } from 'react';
 const Loader = lazy(() => import('@/components/UiComps/Loader'));
 const ArticleLayout = ({ articles }) => {
@@ -10,15 +10,15 @@ const ArticleLayout = ({ articles }) => {
                 <article className="my-8 pb-10" key={i} id={article._id}>
                     <Suspense fallback={<Loader />}>
                         <ArticleTitle>{article.title}</ArticleTitle>
-                        <p className="my-8 whitespace-pre-line">
+                        {/* <p className="my-8 whitespace-pre-line">
                             {article.description}
-                        </p>
-                        {/* <p
+                        </p> */}
+                        <p
                             className="my-8 whitespace-pre-line"
                             dangerouslySetInnerHTML={{
                                 __html: sanitize(article.description),
                             }}
-                        ></p> */}
+                        ></p>
                         {article.image_url && (
                             <Image
                                 src={article.image_url}
@@ -42,15 +42,15 @@ const ArticleLayout = ({ articles }) => {
                                             className="float-right ml-2 mb-2 rounded-md "
                                         />
                                     )}
-                                    <p className="mb-8 whitespace-pre-line">
+                                    {/* <p className="mb-8 whitespace-pre-line">
                                         {item.content}
-                                    </p>
-                                    {/* <p
+                                    </p> */}
+                                    <p
                                         className="mb-8 whitespace-pre-line"
                                         dangerouslySetInnerHTML={{
                                             __html: sanitize(item.content),
                                         }}
-                                    ></p> */}
+                                    ></p>
                                 </li>
                             ))}
                         </ul>

@@ -43,14 +43,16 @@ const NavBar = () => {
                 <Navbar.Toggle />
             </div>
             <Navbar.Collapse className=" text-gray-900 ">
-                <Link
-                    href="/"
-                    className={`${
-                        pathname == '/' ? 'active' : ''
-                    } text-lg font-normal`}
-                >
-                    Inicio
-                </Link>
+                <li>
+                    <Link
+                        href="/"
+                        className={`${
+                            pathname == '/' ? 'active' : ''
+                        } text-lg font-normal`}
+                    >
+                        Inicio
+                    </Link>
+                </li>
 
                 <li className="p-2 pl-3 md:p-0  border-gray-100 border-b md:border-none text-lg font-normal">
                     <Dropdown
@@ -108,24 +110,28 @@ const NavBar = () => {
                     </Dropdown>
                 </li>
 
-                <Link
-                    href="/blog"
-                    className={`${
-                        pathname == '/blog' ? 'active' : ''
-                    } text-lg font-normal`}
-                    prefetch={false}
-                >
-                    Blog
-                </Link>
-                <Link
-                    href="/contacto"
-                    className={`${
-                        pathname == '/contacto' ? 'active' : ''
-                    } text-lg font-normal`}
-                    prefetch={false}
-                >
-                    Contacto
-                </Link>
+                <li>
+                    <Link
+                        href="/blog"
+                        className={`${
+                            pathname == '/blog' ? 'active' : ''
+                        } text-lg font-normal`}
+                        prefetch={false}
+                    >
+                        Ver todos los posts
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/contacto"
+                        className={`${
+                            pathname == '/contacto' ? 'active' : ''
+                        } text-lg font-normal`}
+                        prefetch={false}
+                    >
+                        Contacto
+                    </Link>
+                </li>
             </Navbar.Collapse>
         </Navbar>
     );

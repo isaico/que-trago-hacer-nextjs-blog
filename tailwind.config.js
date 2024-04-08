@@ -17,7 +17,7 @@ module.exports = {
             'bg-dark': '#111827',
             'bg-white': '#ffff',
             'bg-white-dark': '#f3f3f3',
-            primary: '#E74694',
+            primary: '#db026b',
             "primary-dark":"#a80059",
             "primary-light":"#ec84b7",
             "secondary":"#D61F69",
