@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import heroBg from "../../../../public/bottles-hero.webp"
 
-export const Hero = ({ bgSrc }) => {
+export const Hero = () => {
     return (
         <section>
             <div className="relative h-[60vh] w-screen bg-[url('/bottles-hero-webp')]">
                 <Image
-                    src={bgSrc}
+                    src={heroBg}
                     alt="imagen de una estantería llena de botellas"
                     quality={50}
                     fill
@@ -32,7 +33,7 @@ export const Hero = ({ bgSrc }) => {
                         <div className="py-8 ">
                             <Link
                                 href="/blog"
-                                className="bg-primary p-4 hover:shadow-md hover:shadow-purple-700 px-8 rounded-full text-lg text-gray-200 font-medium "
+                                className="bg-primary p-4 hover:shadow-md hover:shadow-purple-700 px-8 rounded-full text-lg text-white font-medium "
                             >
                                 VER POSTS
                             </Link>

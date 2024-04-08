@@ -1,6 +1,5 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import heroBg from '../../public/bottles-hero.webp';
+
+
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import { Hero } from '../components/layoutComps/Hero/Hero';
@@ -15,7 +14,7 @@ const HomeBlogCards = dynamic(() =>
 export default function Home() {
     return (
         <main className="text-gray-500">
-            <Hero bgSrc={heroBg} />
+            <Hero  />
             {/* <div className="relative h-[60vh] w-screen bg-[url('/bottles-hero-webp')]">
                 <Image
                     src={heroBg}

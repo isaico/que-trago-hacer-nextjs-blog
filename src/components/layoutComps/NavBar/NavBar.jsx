@@ -21,7 +21,7 @@ const NavBar = () => {
             <Link href="/">
                 <Image
                     alt="que trago hacer? logo"
-                    className="mr-3"
+                    className="mr-3 w-auto h-auto"
                     src="https://res.cloudinary.com/dzyllqqxi/image/upload/v1694796731/que-trago-hacer-low-resolution-logo-color-on-transparent-background_1_duda3u.png"
                     height={20}
                     width={150}

@@ -12,7 +12,7 @@ const PostedBy = ({time}) => {
                     width={25}
                     height={25}
                     alt="avatar animado de un hombre con buzo gris con lentes y sonriendo  mirando la camara, con fondo celeste"
-                    className="rounded-full ring-2 ring-gray-300"
+                    className="rounded-full ring-2 ring-gray-300 w-auto h-auto"
                 ></Image>
             </a>
             <p className="text-sm pl-2"> {date}</p>

@@ -39,7 +39,7 @@ const ArticleLayout = ({ articles }) => {
                                             height={300}
                                             width={300}
                                             alt={item.alt}
-                                            className="float-right ml-2 mb-2 rounded-md "
+                                            className="float-right ml-2 mb-2 rounded-md w-auto h-auto"
                                         />
                                     )}
                                     {/* <p className="mb-8 whitespace-pre-line">

@@ -21,7 +21,7 @@ const BlogCard = ({ blog }) => {
                         </span>
                     ) : null}
                     <Image
-                        className="object-contain rounded-tl-xl rounded-bl-xl h-full   md:h-auto"
+                        className="object-contain rounded-tl-xl rounded-bl-xl h-full  md:h-auto"
                         src={blog.small_image_url}
                         height={350}
                         width={350}
