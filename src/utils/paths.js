@@ -1,10 +1,9 @@
+//Matchear el category_id del post con el final del path
 export const categoryTragos = [
     {
-        path: '/blog/tragos/vodka',
+        path: '/blog/tragos/8-mejores-tragos-con-vodka',
         text: 'Los 8 Mejores Tragos con Vodka',
         key: 1,
-        // category: 'tragos',
-        // id: 'vodka',
     }
     // {
     //     path: '/blog/tragos/ron',
@@ -33,16 +32,13 @@ export const categoryPosts = [
         path: '/blog/posts/Tragos-y-cocteles-la-guia-definitiva',
         text: 'Tragos y Cocteles: La guía definitiva de coctelería',
         key: 100,
-        // category: 'posts',
-        // id: 'Como hacer algo',
+        
     },
     {
         //matchear el category_id del blog con el final del path
         path: '/blog/posts/Top-10-cocteles-clasicos',
         key: 101,
         text: 'Los 10 cócteles clásicos que debes conocer',
-        // category: 'posts',
-        // id: 'Top 10 cocteles clasicos',
     },
 
     // {
@@ -58,15 +54,13 @@ export const categoryPreparacion = [
         path: '/blog/preparacion/batidos',
         text: 'Cocteles Batidos',
         key: 201,
-        // category: 'preparacion',
-        // id: 'batidos',
+        
     },
     // {
     //     path: '/blog/preparacion/licuados',
     //     text: 'Cocteles Licuados',
     //     key: 202,
-    //     // category: 'preparacion',
-    //     // id: 'licuados',
+   
     // },
     // {
     //     path: '/blog/preparacion/directos',

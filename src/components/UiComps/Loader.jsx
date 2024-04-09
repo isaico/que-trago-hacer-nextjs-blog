@@ -2,8 +2,8 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div role="status" className='min-h-screen w-full'>
-            <div className="grid justify-center">
+        <div role="status" className='min-h-screen w-full '>
+            <div className="grid justify-center items-center my-16">
                 <svg
                     aria-hidden="true"
                     className="w-16 h-16 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-primary"

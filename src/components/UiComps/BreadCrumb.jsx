@@ -5,8 +5,8 @@ import { FaGreaterThan } from 'react-icons/fa6';
 export default function DefaultBreadcrumb({ category, title }) {
     const upperCategory = category[0].toUpperCase() + category.slice(1);
     return (
-        <div>
-            <ul className="flex gap-6 justify-start items-center text-gray-600 font-medium my-2">
+        <>
+            <ul className="flex flex-wrap  gap-6 justify-start items-center text-gray-600 font-medium my-2">
                 <li className="flex items-center">
                     <HiHome className="text-sm text-gray-500 mr-3" />
                     <Link
@@ -34,7 +34,7 @@ export default function DefaultBreadcrumb({ category, title }) {
                     <p className="text-sm font-normal">{title}</p>
                 </li>
             </ul>
-        </div>
+        </>
         // <Breadcrumb aria-label="Default breadcrumb example">
         //     <Breadcrumb.Item icon={HiHome}>
         //         <Link href="/" className="text-sm font-normal underline hover:text-primary">

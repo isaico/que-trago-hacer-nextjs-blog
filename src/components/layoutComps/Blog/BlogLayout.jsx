@@ -1,10 +1,10 @@
-
 import Image from 'next/image';
 import fetchCocktails from '@/utils/fetchCocktails';
 import { buildIds } from '@/utils/buildIds';
 import { sanitize } from 'isomorphic-dompurify';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
+// lazy/dynamic imports
 const Loader = dynamic(() => import('@/components/UiComps/Loader'));
 const CocktailsContainer = dynamic(() =>
     import('../CocktailsContainer/CocktailsContainer')
@@ -41,22 +41,25 @@ const BlogLayout = async ({ blog }) => {
 
     return (
         <main className="mt-12 flex flex-col  justify-end  w-full scroll-smooth relative">
-            <div className="md:grid md:grid-cols-8 md:grid-flow-col md:gap-6 w-full flex flex-col ">
-                <div className=" flex flex-col justify-center justify-self-center mx-auto col-span-4 col-start-3 max-w-4xl ">
-                    <DefaultBreadcrumb
-                        category={blog.blog_category}
-                        title={blog.title}
-                    />
-                    <div className="p-2 flex justify-between items-center ">
-                        <PostedBy time={blog.createdAt}></PostedBy>
-                        <span className="font-normal text-sm ">
-                            Categoría:
-                            <span className="bg-pink-50 text-primary text-xs mr-2 px-2.5 ml-0.5 py-0.5 rounded-full">
-                                {blog.blog_category}
+            <div className="absolute left-4 top-2">
+                <BackButton color="gray" />
+            </div>
+            <div className="w-full flex flex-col-reverse  md:flex-row  mt-16">
+                <div className="flex md:basis-5/6 flex-col justify-center justify-self-center items-center w-full md:mx-auto p-2 relative">
+                    <div className="text-base md:text-xl  leading-normal md:leading-8 font-normal text-gray-700  md:max-w-5xl w-full px-4">
+                        <DefaultBreadcrumb
+                            category={blog.blog_category}
+                            title={blog.title}
+                        />
+                        <div className="p-2 flex justify-between items-center ">
+                            <PostedBy time={blog.createdAt}></PostedBy>
+                            <span className="font-normal text-sm ">
+                                Categoría:
+                                <span className="bg-pink-50 text-primary text-xs mr-2 px-2.5 ml-0.5 py-0.5 rounded-full">
+                                    {blog.blog_category}
+                                </span>
                             </span>
-                        </span>
-                    </div>
-                    <div className="text-xl leading-8 font-normal text-gray-700">
+                        </div>
                         {blog.title && (
                             <div id="title">
                                 <h1
@@ -65,19 +68,21 @@ const BlogLayout = async ({ blog }) => {
                                     {blog?.title}
                                 </h1>
                                 <p
-                                    className="pb-8 text-center leading-8  whitespace-pre-line"
+                                    className="pb-8  md:text-md text-center leading-normal md:leading-8  whitespace-pre-line"
                                     dangerouslySetInnerHTML={{
                                         __html: sanitize(blog?.brief_desc),
                                     }}
                                 ></p>
                             </div>
                         )}
-                        <Image
-                            src={blog?.image_url}
-                            height={1000}
-                            width={1000}
-                            alt={blog?.alt}
-                        />
+                        <div className="flex justify-center ">
+                            <Image
+                                src={blog?.image_url}
+                                height={1000}
+                                width={1000}
+                                alt={blog?.alt}
+                            />
+                        </div>
 
                         {blog?.description && (
                             <div className="pt-16 pb-12" id="description">
@@ -86,7 +91,7 @@ const BlogLayout = async ({ blog }) => {
                                     dangerouslySetInnerHTML={{
                                         __html: sanitize(blog?.description),
                                     }}
-                                    className="leading-8 whitespace-pre-line mt-8"
+                                    className="leading-normal md:leading-8 whitespace-pre-line mt-8"
                                 ></p>
                             </div>
                         )}
@@ -124,25 +129,20 @@ const BlogLayout = async ({ blog }) => {
                                             blog?.conclusion?.description
                                         ),
                                     }}
-                                    className="leading-8 whitespace-pre-line "
+                                    className="leading-normal md:leading-8 whitespace-pre-line "
                                 ></p>
                             </div>
                         )}
+                        
                     </div>
                 </div>
 
-                <aside className=" col-span-2 col-start-7 ">
+                <aside className="">
                     <SideIndexNav
                         cocktails={cocktails}
                         articles={blog.articles}
                         ids={ids}
-                    ></SideIndexNav>
-                </aside>
-                <aside className="col-span-2 col-start-1">
-                    <div className="flex justify-center mb-12">
-                        <BackButton color="gray" />
-                    </div>
-                    {/* <SideTopics></SideTopics> */}
+                    />
                 </aside>
             </div>
             <Suspense fallback={<Loader />}>

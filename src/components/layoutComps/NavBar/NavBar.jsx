@@ -10,21 +10,26 @@ import {
     categoryPreparacion,
 } from '@/utils/paths';
 import Image from 'next/image';
+import logo from "@/app/assets/qth-logo.webp"
+
 const NavBar = () => {
     const pathname = usePathname();
     return (
         <Navbar
             fluid
             rounded
-            className="bg-bg-white border-b  border-gray-200 fixed w-full z-50 py-2 "
+            className="bg-bg-white border-b border-gray-200 fixed w-full z-50 py-2 "
         >
             <Link href="/">
                 <Image
                     alt="que trago hacer? logo"
                     className="mr-3 w-auto h-auto"
-                    src="https://res.cloudinary.com/dzyllqqxi/image/upload/v1694796731/que-trago-hacer-low-resolution-logo-color-on-transparent-background_1_duda3u.png"
-                    height={20}
-                    width={150}
+                    src={logo}
+                    priority
+                    placeholder='blur'
+                    // src="https://res.cloudinary.com/dzyllqqxi/image/upload/v1694796731/que-trago-hacer-low-resolution-logo-color-on-transparent-background_1_duda3u.png"
+                    height={50}
+                    width={50}
                 />
             </Link>
 
@@ -93,7 +98,7 @@ const NavBar = () => {
                         ))}
                     </Dropdown>
                 </li>
-                <li className="p-2 pl-3 md:p-0  border-gray-100 border-b md:border-none text-lg font-normal">
+                {/* <li className="p-2 pl-3 md:p-0  border-gray-100 border-b md:border-none text-lg font-normal">
                     <Dropdown
                         label="Preparacion"
                         inline
@@ -108,7 +113,7 @@ const NavBar = () => {
                             </Dropdown.Item>
                         ))}
                     </Dropdown>
-                </li>
+                </li> */}
 
                 <li>
                     <Link

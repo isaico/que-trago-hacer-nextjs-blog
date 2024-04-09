@@ -9,7 +9,7 @@ const ArticleTitle = ({
 }) => {
     return (
         <h2
-            className={`${size} font-normal ${color} pb-4 ${merriweather.className}`}
+            className={` text-2xl md:${size}  font-normal ${color} pb-4 ${merriweather.className}`}
             id={id}
         >
             {children}

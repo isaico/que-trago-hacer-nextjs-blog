@@ -1,4 +1,3 @@
-
 const SocialIcons = ({ color = 'text-gray-700', size = 'w-6', inFooter }) => {
     return (
         <div className="flex mt-4 space-x-5 justify-center items-center sm:mt-0">
@@ -67,6 +66,12 @@ const SocialIcons = ({ color = 'text-gray-700', size = 'w-6', inFooter }) => {
                     <span className="sr-only">GitHub</span>
                 </a>
             ) : null}
+            <a
+                href="https://www.termsfeed.com/live/454ebe0b-ec12-418c-a629-d6d571979bac"
+                className="hover:underline text-gray-500 font-medium"
+            >
+                Políticas de privacidad
+            </a>
         </div>
     );
 };

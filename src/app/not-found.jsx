@@ -11,7 +11,7 @@ const notFound = () => {
                     </h1>
                     <div className="flex flex-col items-center">
                         <p className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl flex ">
-                            Ups! no se encontro la pagina!
+                            Ups! no se encontró la pagina!
                             <svg
                                 viewBox="0 0 24 24"
                                 fill="currentColor"

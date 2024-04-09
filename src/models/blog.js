@@ -5,6 +5,7 @@ const BlogSchema = new Schema(
         getCocktails: Boolean,
         title: { type: String, required: true, unique: true },
         brief_desc: String,
+        head_desc: String,
         title_desc: String,
         description: String,
         image_url: String,
@@ -41,7 +42,7 @@ const BlogSchema = new Schema(
         },
         // tools: [String],
         pilar: Boolean,
-        featured : Boolean,
+        featured: Boolean,
         recommended_posts: [String],
     },
     {

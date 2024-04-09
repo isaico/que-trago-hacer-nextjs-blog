@@ -13,7 +13,7 @@ const CocktailCard = ({ cocktail, index, cocktailLength }) => {
                 id={index}
             >
                 <div className="bg-bg-white p-6 py-8 rounded-xl flex flex-col">
-                    <div className="flex  justify-between items-center align-middle pb-12">
+                    <div className="flex flex-col gap-2 md:flex-row justify-between items-center align-middle pb-4 md:pb-12">
                         <h3
                             className={`text-3xl font-normal  text-primary ${merriweather.className}`}
                         >

@@ -1,10 +1,10 @@
 import { getDate } from '@/utils/getDate';
 import Image from 'next/image';
-const PostedBy = ({time}) => {
+const PostedBy = ({ time }) => {
     const date = getDate(time);
 
     return (
-        <div className="flex items-center justify-start py-2">
+        <div className="flex flex-wrap items-center justify-start py-2">
             <p className="text-sm ">Posted by:</p>
             <a href="#" className="pl-2">
                 <Image

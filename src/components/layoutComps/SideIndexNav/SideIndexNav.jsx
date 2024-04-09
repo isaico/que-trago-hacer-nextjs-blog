@@ -25,9 +25,10 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
             behavior: 'smooth',
         });
     };
+   
 
     return (
-        <div className="flex justify-center items-center sticky py-4 top-[61px]  mx-12 border-2 rounded-xl ">
+        <div className="flex justify-center items-center sticky py-4 px-8 top-[61px] w-full border-2 rounded-xl ">
             <div className="grid justify-center w-full text-start break-all ">
                 <h3 className="text-xl mb-4 font-medium">Tabla de contenido</h3>
                 <div>
@@ -104,7 +105,7 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
                                                             }
                                                             replace
                                                         >
-                                                           - {item.title}
+                                                            - {item.title}
                                                         </Link>
                                                     </li>
                                                 ))}
@@ -117,6 +118,7 @@ const SideIndexNav = ({ cocktails, articles, ids }) => {
                     </ul>
                 </div>
             </div>
+          
         </div>
     );
 };

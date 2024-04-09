@@ -1,17 +1,55 @@
 import fetchBlog from '@/utils/fetchBlog';
-// import BlogLayout from '@/components/layoutComps/Blog/BlogLayout';
-// import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
+import { cache } from 'react';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
+import Loader from '@/components/UiComps/Loader';
+import fetchBlogCategory from '@/utils/fetchBlogCategory';
+/* ------------------------------ lazy imports ------------------------------ */
 const ErrorFetchData = dynamic(() =>
     import('@/components/UiComps/ErrorFetchData')
 );
 const BlogLayout = dynamic(() =>
     import('@/components/layoutComps/Blog/BlogLayout')
 );
-import Loader from "@/components/UiComps/Loader"
+
+/* ------------------- function to avoid duplicated fetchs ------------------ */
+
+const getPost = cache(async (paramsSlug) => {
+    const post = await fetchBlog(paramsSlug);
+    return post;
+});
+/* ------------------------------ Head metadata ----------------------------- */
+export async function generateMetadata({ params }, parent) {
+    // read route params
+    const post = params.bebida.replace(/-/g, ' ');
+
+    // fetch data
+    const blogPost = await getPost(post);
+
+    // optionally access and extend (rather than replace) parent metadata
+    const previousImages = (await parent).openGraph?.images || [];
+
+    return {
+        title: blogPost.title,
+        description: blogPost.head_desc,
+        openGraph: {
+            images: [
+                {
+                    url: blogPost.image_url,
+                },
+                ...previousImages,
+            ],
+        },
+    };
+}
+export async function generateStaticParams() {
+    const posts = await fetchBlogCategory('tragos');
+    return posts.map(({ category_id }) => category_id);
+}
+/* ----------------------------- Page ----------------------------- */
+
 const Tragos = async ({ params }) => {
-    const blog = await fetchBlog(params.bebida);
+    const blog = await getPost(params.bebida.replace(/-/g, ' '));
     return (
         <>
             {blog ? (

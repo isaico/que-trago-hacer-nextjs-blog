@@ -10,13 +10,11 @@ const HomeBlogCards = async () => {
         'Destila Elegancia: Los 8 Mejores Tragos con Vodka',
     ]);
     return (
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div className="flex gap-8 flex-wrap justify-center">
             {blogs.map((blog) => (
-                <div key={blog._id}>
-                    <Suspense fallback={<Loader />}>
-                        <BlogCard blog={blog}></BlogCard>
-                    </Suspense>
-                </div>
+                <Suspense fallback={<Loader />}>
+                    <BlogCard blog={blog}></BlogCard>
+                </Suspense>
             ))}
         </div>
     );

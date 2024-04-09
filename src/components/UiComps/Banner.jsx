@@ -11,13 +11,13 @@ const Banner = () => {
                 showBanner ? 'visible' : 'hidden'
             } `}
         >
-            <div className="bg-primary-light flex justify-center items-center w-full p-4">
-                <span className="">
-                    🍪 Utilizamos cookies y anuncios para sustentar sitio, al
+            <div className="bg-primary-light flex justify-center items-center w-full p-4 ">
+                <p className="">
+                    🍪 Usamos cache, y anuncios para sustentar sitio, al
                     continuar aceptas esto. 👌
-                </span>
+                </p>
                 <button
-                    className="absolute right-4 text-2xl px-2 "
+                    className=" md:absolute right-4 text-2xl px-2 "
                     onClick={() => setShowBanner(false)}
                 >
                     <span>X</span>

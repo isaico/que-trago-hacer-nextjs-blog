@@ -3,7 +3,7 @@ import ArticleTitle from '@/components/UiComps/ArticleTitle';
 const Affiliations = () => {
     return (
         <div className="py-16 bg-gray-500 w-full grid justify-center text-gray-100 text-center my-12 ">
-            <div className="max-w-4xl ">
+            <div className="mx-4 md:mx-auto md:max-w-4xl ">
                 <ArticleTitle size={'text-3xl'} color={'text-gray-100'}>
                     Si te interesa saber mas sobre cocteleria te recomendamos
                     este curso!
@@ -11,9 +11,9 @@ const Affiliations = () => {
                 <p className="pb-6 text-gray-200 font-base">
                     Estudia en casa con "ISE instituto superior de educación"
                     con este completo curso que te ayudara a mejorar tus
-                    habilidades de bartender!. 
+                    habilidades de bartender!.
                 </p>
-                <div className='flex gap-8 justify-center'>
+                <div className="flex gap-8 justify-center">
                     <a
                         href="https://go.hotmart.com/E86543328A?ap=81f3"
                         target="_blank"
