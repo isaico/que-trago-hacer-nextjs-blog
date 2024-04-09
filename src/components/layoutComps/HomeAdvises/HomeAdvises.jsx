@@ -2,15 +2,22 @@ import Link from 'next/link';
 const HomeAdvises = () => {
     return (
         <>
-            <h2 className="text-black  text-3xl md:text-5xl  mb-28 mt-36 text-center border-b pb-8" id='advises'>
+            <h2
+                className="text-black  text-3xl md:text-5xl  mb-28 mt-36 text-center border-b pb-8"
+                id="advises"
+            >
                 <span className="text-grad-main font-medium">
                     "¿Qué trago hacer?"
-                </span>
-                es el blog ideal para los amantes de los tragos, puedes ver todo
-                nuestro contenido{' '}
-                <Link href="/blog" className="text-primary underline ">
-                    aquí
-                </Link>
+                </span>{' '}
+                es el blog ideal para los amantes de los tragos, sorprende a
+                todos en tu siguiente reunion!,{' '}
+                <Link
+                    href="/blog/posts/Tragos-y-cocteles-la-guia-definitiva"
+                    className="text-primary underline "
+                >
+                    aprende sobre cocteleria
+                </Link>{' '}
+                con nuestra guía.
             </h2>
 
             <div className="bg-bg-white  border border-gray-200 rounded-lg p-8 md:p-12 mb-8 shadow-md   ">
@@ -42,7 +49,8 @@ const HomeAdvises = () => {
                                 <p className="text-lg font-normal pt-4 text-gray-500">
                                     La base de un buen trago es una buena
                                     cantidad de hielo para refrescar y diluir
-                                    correctamente, servir, y mantener frías tus bebidas, que nunca te falte!!
+                                    correctamente, servir, y mantener frías tus
+                                    bebidas, que nunca te falte!!
                                 </p>
                             </div>
                         </li>
