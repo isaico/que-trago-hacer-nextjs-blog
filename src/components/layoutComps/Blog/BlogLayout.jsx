@@ -24,7 +24,7 @@ const merriweather = dynamic(() => import('@/utils/fonts'));
 const ArticleTitle = dynamic(() => import('@/components/UiComps/ArticleTitle'));
 const Affiliations = dynamic(() => import('../Affiliations/Affiliations'));
 const SideIndexNav = dynamic(() => import('../SideIndexNav/SideIndexNav'));
-const SideTopics = dynamic(() => import('../SideTopics/SideTopics'));
+
 
 const BlogLayout = async ({ blog }) => {
     let cocktails = [];

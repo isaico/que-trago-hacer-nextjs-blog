@@ -7,7 +7,7 @@ import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
 import fetchBlogCategory from '@/utils/fetchBlogCategory';
 
 /* ------------------------------ Head metadata ----------------------------- */
-export async function generateMetadata({ params, searchParams }, parent) {
+export async function generateMetadata({ params }, parent) {
     // read route params
     const post = params.posts.replace(/-/g, ' ');
 
