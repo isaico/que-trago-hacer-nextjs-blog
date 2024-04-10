@@ -35,6 +35,10 @@ export async function generateMetadata({ params }, parent) {
     return {
         title: blogPost.title,
         description: blogPost.head_desc,
+        metadataBase: new URL(process.env.BASE_URL),
+        alternates: {
+            canonical: '/',
+        },
         openGraph: {
             title: blogPost.title,
             description: blogPost.head_desc,

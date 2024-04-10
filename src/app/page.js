@@ -13,7 +13,7 @@ const HomeBlogCards = dynamic(() =>
 /* ---------------------------------- head ---------------------------------- */
 export const metadata = {
     keywords: ['tragos', 'trago', 'cocteleria', 'cocteles'],
-    metadataBase: new URL('https://quetragohacer.online'),
+    metadataBase: new URL(process.env.BASE_URL),
     alternates: {
         canonical: '/',
     },
@@ -37,7 +37,6 @@ export const metadata = {
         description:
             'Descubre el mundo de la coctelería con este blog de recetas de cócteles. Desde tragos clásicos hasta modernos todos los secretos de la coctelería revelados',
     },
-   
 };
 
 export default function Home() {
