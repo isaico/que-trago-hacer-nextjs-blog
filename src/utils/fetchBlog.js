@@ -7,12 +7,14 @@ const fetchBlog = async (id) => {
         connectDB();
         // llamare a la coll "blog" y pedire un item segun su categoria
         const resp = await Blog.findOne({ category_id: id });
-        const data =  JSON.parse(JSON.stringify(resp))
+        const data = JSON.parse(JSON.stringify(resp));
+        if (!data) {
+            return { status: 404 };
+        }
         return data;
-        
     } catch (error) {
         return NextResponse.json(error, { status: 500 });
-    }   
+    }
 };
 
 export default fetchBlog;

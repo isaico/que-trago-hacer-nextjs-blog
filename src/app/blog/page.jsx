@@ -14,13 +14,15 @@ const Jumbotron = lazy(() =>
 /* ------------------------------ head metadata ----------------------------- */
 export const metadata = {
     title: {
-        default: '¿Qué trago hacer? - Blog de cocteleria y tragos',
+        default:
+            'Todos los posts - Blog de cocteleria clásica y recetas de tragos',
     },
     description:
         'Todas las publicaciones de tragos y cocktails los encontraras aquí, aprenderás sobre cocteleria básica y trucos para mejorar tus tragos.',
     twitter: {
         card: 'summary_large_image',
     },
+    creator: 'Isaias García',
 };
 
 const Page = async () => {

@@ -50,12 +50,12 @@ export const categoryPosts = [
     // },
 ];
 export const categoryPreparacion = [
-    {
-        path: '/blog/preparacion/batidos',
-        text: 'Cocteles Batidos',
-        key: 201,
+    // {
+    //     path: '/blog/preparacion/batidos',
+    //     text: 'Cocteles Batidos',
+    //     key: 201,
         
-    },
+    // },
     // {
     //     path: '/blog/preparacion/licuados',
     //     text: 'Cocteles Licuados',

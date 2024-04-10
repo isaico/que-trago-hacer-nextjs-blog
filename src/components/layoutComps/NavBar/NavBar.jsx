@@ -73,7 +73,7 @@ const NavBar = () => {
                                 {item && (
                                     <NavLink
                                         src={item.path}
-                                        pilar={item.pilar ? item.pilar : null}
+                                        // pilar={item.pilar ? item.pilar : null}
                                     >
                                         {item.text}
                                     </NavLink>

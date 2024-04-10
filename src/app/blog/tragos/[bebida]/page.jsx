@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import Loader from '@/components/UiComps/Loader';
 import fetchBlogCategory from '@/utils/fetchBlogCategory';
+import { notFound } from 'next/navigation';
 /* ------------------------------ lazy imports ------------------------------ */
 const ErrorFetchData = dynamic(() =>
     import('@/components/UiComps/ErrorFetchData')
@@ -16,6 +17,10 @@ const BlogLayout = dynamic(() =>
 
 const getPost = cache(async (paramsSlug) => {
     const post = await fetchBlog(paramsSlug);
+
+    if (!post) {
+        return null;
+    }
     return post;
 });
 /* ------------------------------ Head metadata ----------------------------- */
@@ -25,7 +30,9 @@ export async function generateMetadata({ params }, parent) {
 
     // fetch data
     const blogPost = await getPost(post);
-
+    if (!blogPost) {
+        return notFound();
+    }
     // optionally access and extend (rather than replace) parent metadata
     const previousImages = (await parent).openGraph?.images || [];
 
@@ -50,6 +57,9 @@ export async function generateStaticParams() {
 
 const Tragos = async ({ params }) => {
     const blog = await getPost(params.bebida.replace(/-/g, ' '));
+    if (blog.status === 404) {
+        notFound();
+    }
     return (
         <>
             {blog ? (

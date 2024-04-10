@@ -15,6 +15,20 @@ export const metadata = {
         'Descubre el mundo de la coctelería con este blog de recetas de cócteles. Desde tragos clásicos hasta modernos todos los secretos de la coctelería revelados',
     twitter: {
         card: 'summary_large_image',
+        title: '¿Qué trago hacer? - Blog de cocteleria y tragos',
+        description:
+            'Descubre el mundo de la coctelería con este blog de recetas de cócteles. Desde tragos clásicos hasta modernos todos los secretos de la coctelería revelados',
+    },
+    openGraph: {
+        title: '¿Qué trago hacer? - Blog de cocteleria y tragos',
+        description:
+            'Descubre el mundo de la coctelería con este blog de recetas de cócteles. Desde tragos clásicos hasta modernos todos los secretos de la coctelería revelados',
+    },
+    creator: 'Isaias García',
+    keywords: ['tragos', 'trago', 'cocteleria'],
+    metadataBase: new URL('https://quetragohacer.online'),
+    alternates: {
+        canonical: '/',
     },
 };
 

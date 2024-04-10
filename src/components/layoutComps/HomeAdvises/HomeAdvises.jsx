@@ -9,7 +9,7 @@ const HomeAdvises = () => {
                 <span className="text-grad-main font-medium">
                     "¿Qué trago hacer?"
                 </span>{' '}
-                es el blog ideal para los amantes de los tragos, sorprende a
+                es el blog ideal para los amantes de los cocteles, sorprende a
                 todos en tu siguiente reunion!,{' '}
                 <Link
                     href="/blog/posts/Tragos-y-cocteles-la-guia-definitiva"
@@ -22,7 +22,7 @@ const HomeAdvises = () => {
 
             <div className="bg-bg-white  border border-gray-200 rounded-lg p-8 md:p-12 mb-8 shadow-md   ">
                 <h2 className="text-black  text-3xl md:text-5xl font-extrabold mb-6">
-                    Consejos para Preparar Tragos en Casa
+                    Consejos para Preparar Cocteles en Casa
                 </h2>
                 <p className="text-lg font-normal  mb-6 text-gray-500">
                     Con estos consejos te convertirás en el experto de la
@@ -71,8 +71,8 @@ const HomeAdvises = () => {
                                     Dominar técnicas como batir, refrescar y
                                     macerar frutas te ayudará a lograr la
                                     textura y el equilibrio adecuados en tus
-                                    tragos. Investiga y practica estas
-                                    habilidades para lograr tragos difíciles.
+                                    cocteles. Investiga y practica estas
+                                    habilidades para lograr cocteles difíciles.
                                 </p>
                             </div>
                         </li>

@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import fetchBlogCategory from '@/utils/fetchBlogCategory';
 import Loader from '@/components/UiComps/Loader';
+import { notFound } from 'next/navigation';
 
 const ErrorFetchData = dynamic(() =>
     import('@/components/UiComps/ErrorFetchData')
@@ -25,7 +26,9 @@ export async function generateMetadata({ params }, parent) {
 
     // fetch data
     const blogPost = await getPost(post);
-
+    if (!blogPost) {
+        return notFound();
+    }
     // optionally access and extend (rather than replace) parent metadata
     const previousImages = (await parent).openGraph?.images || [];
 
@@ -53,6 +56,9 @@ export async function generateStaticParams() {
 
 const Preparacion = async ({ params }) => {
     const blog = await getPost(params.metodo.replace(/-/g, ' '));
+    if (blog.status === 404) {
+        notFound();
+    }
     return (
         <>
             {blog ? (

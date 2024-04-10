@@ -1,10 +1,16 @@
 import fetchBlog from '@/utils/fetchBlog';
-import BlogLayout from '@/components/layoutComps/Blog/BlogLayout';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
-const Loader = dynamic(() => import('@/components/UiComps/Loader'));
-import ErrorFetchData from '@/components/UiComps/ErrorFetchData';
 import fetchBlogCategory from '@/utils/fetchBlogCategory';
+import { notFound } from 'next/navigation';
+/* ------------------------------ lazy imports ------------------------------ */
+const Loader = dynamic(() => import('@/components/UiComps/Loader'));
+const ErrorFetchData = dynamic(() =>
+    import('@/components/UiComps/ErrorFetchData')
+);
+const BlogLayout = dynamic(() =>
+    import('@/components/layoutComps/Blog/BlogLayout')
+);
 
 /* ------------------------------ Head metadata ----------------------------- */
 export async function generateMetadata({ params }, parent) {
@@ -13,7 +19,9 @@ export async function generateMetadata({ params }, parent) {
 
     // fetch data
     const blogPost = await fetchBlog(post);
-
+    if (!blogPost) {
+        notFound();
+    }
     // optionally access and extend (rather than replace) parent metadata
     const previousImages = (await parent).openGraph?.images || [];
 
@@ -43,6 +51,9 @@ export async function generateStaticParams() {
 const Posts = async ({ params }) => {
     const post = params.posts.replace(/-/g, ' ');
     const blog = await fetchBlog(post);
+    if (blog.status === 404) {
+        notFound();
+    }
     return (
         <>
             {blog ? (
