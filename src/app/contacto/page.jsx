@@ -11,6 +11,11 @@ export const metadata = {
     },
     description:
         '¿Qué trago hacer? - Contactame para cualquier tipo de colaboración o promoción, deseas publicar tus productos o escribir en el blog? escríbeme...',
+    robots: {
+        index: false,
+        follow: true,
+        googleBot: { index: false, follow: true },
+    },
 };
 
 const contact = () => {

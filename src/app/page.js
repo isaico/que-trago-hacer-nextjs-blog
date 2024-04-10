@@ -10,6 +10,36 @@ const HomeBlogCards = dynamic(() =>
     import('@/components/layoutComps/HomeBlogCards/HomeBlogCards')
 );
 
+/* ---------------------------------- head ---------------------------------- */
+export const metadata = {
+    keywords: ['tragos', 'trago', 'cocteleria', 'cocteles'],
+    metadataBase: new URL('https://quetragohacer.online'),
+    alternates: {
+        canonical: '/',
+    },
+    twitter: {
+        title: '¿Qué trago hacer? - Blog de cocteleria y tragos',
+        description:
+            'Descubre el mundo de la coctelería con este blog de recetas de cócteles. Desde tragos clásicos hasta modernos todos los secretos de la coctelería revelados',
+    },
+    openGraph: {
+        title: '¿Qué trago hacer? - Blog de cocteleria y tragos',
+        description:
+            'Descubre el mundo de la coctelería con este blog de recetas de cócteles. Desde tragos clásicos hasta modernos todos los secretos de la coctelería revelados',
+    },
+    twitter: {
+        title: '¿Qué trago hacer? - Blog de cocteleria y tragos',
+        description:
+            'Descubre el mundo de la coctelería con este blog de recetas de cócteles. Desde tragos clásicos hasta modernos todos los secretos de la coctelería revelados',
+    },
+    openGraph: {
+        title: '¿Qué trago hacer? - Blog de cocteleria y tragos',
+        description:
+            'Descubre el mundo de la coctelería con este blog de recetas de cócteles. Desde tragos clásicos hasta modernos todos los secretos de la coctelería revelados',
+    },
+   
+};
+
 export default function Home() {
     return (
         <main className="text-gray-500 w-full">

@@ -23,6 +23,7 @@ export const metadata = {
         card: 'summary_large_image',
     },
     creator: 'Isaias García',
+    
 };
 
 const Page = async () => {

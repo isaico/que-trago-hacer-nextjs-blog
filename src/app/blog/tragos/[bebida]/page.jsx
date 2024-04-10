@@ -40,6 +40,8 @@ export async function generateMetadata({ params }, parent) {
         title: blogPost.title,
         description: blogPost.head_desc,
         openGraph: {
+            title: blogPost.title,
+            description: blogPost.head_desc,
             images: [
                 {
                     url: blogPost.image_url,
@@ -47,11 +49,20 @@ export async function generateMetadata({ params }, parent) {
                 ...previousImages,
             ],
         },
+        twitter: {
+            card: 'summary_large_image',
+            title: blogPost.title,
+            description: blogPost.head_desc,
+        },
+        authors: ['Isaias Garcia'],
+        type: 'article',
+        publishedTime: new Date(blogPost.createdAt),
+        keywords: ['tragos,cocteles,trago,cocteleria,cocteles clásicos'],
     };
 }
 export async function generateStaticParams() {
     const posts = await fetchBlogCategory('tragos');
-    return posts.map(({ category_id }) => category_id);
+    return posts.map(({ category_id }) => console.log(category_id));
 }
 /* ----------------------------- Page ----------------------------- */
 
