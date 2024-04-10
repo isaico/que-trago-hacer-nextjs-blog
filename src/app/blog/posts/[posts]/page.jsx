@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import fetchBlogCategory from '@/utils/fetchBlogCategory';
 import { notFound } from 'next/navigation';
+import { stringToRoute } from '@/utils/stringToRoute';
 /* ------------------------------ lazy imports ------------------------------ */
 const Loader = dynamic(() => import('@/components/UiComps/Loader'));
 const ErrorFetchData = dynamic(() =>
@@ -28,9 +29,15 @@ export async function generateMetadata({ params }, parent) {
     return {
         title: blogPost.title,
         description: blogPost.head_desc,
-        metadataBase: new URL(process.env.BASE_URL),
+        metadataBase: new URL(
+            `${process.env.BASE_URL}/posts/${stringToRoute(
+                post
+            )}/${stringToRoute(blogPost.category_id)}`
+        ),
         alternates: {
-            canonical: '/',
+            canonical: `/posts/${stringToRoute(post)}/${stringToRoute(
+                blogPost.category_id
+            )}`,
         },
         openGraph: {
             title: blogPost.title,
@@ -50,7 +57,14 @@ export async function generateMetadata({ params }, parent) {
         authors: ['Isaias Garcia'],
         type: 'article',
         publishedTime: new Date(blogPost.createdAt),
-        keywords: ['tragos,cocteles,trago,cocteleria,cocteles clásicos'],
+        keywords: [
+            'cocteles',
+            'tragos',
+            'cocteles clásicos',
+            'cocteleria',
+            'cocteleria basica',
+            'trago',
+        ],
     };
 }
 export async function generateStaticParams() {

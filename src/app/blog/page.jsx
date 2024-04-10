@@ -13,6 +13,10 @@ const Jumbotron = lazy(() =>
 
 /* ------------------------------ head metadata ----------------------------- */
 export const metadata = {
+    metadataBase: new URL(`${process.env.BASE_URL}/blog`),
+    alternates: {
+        canonical: '/blog',
+    },
     title: {
         default:
             'Todos los posts - Blog de cocteleria clásica y recetas de tragos',
@@ -23,7 +27,6 @@ export const metadata = {
         card: 'summary_large_image',
     },
     creator: 'Isaias García',
-    
 };
 
 const Page = async () => {
