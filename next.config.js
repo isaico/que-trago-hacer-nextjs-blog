@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  
     async headers() {
         return [
             {
@@ -15,11 +14,10 @@ const nextConfig = {
                         value: 'nosniff',
                     },
                     {
-                      key: 'Referrer-Policy',
-                      value: 'origin-when-cross-origin',
+                        key: 'Referrer-Policy',
+                        value: 'origin-when-cross-origin',
                     },
                 ],
-                
             },
         ];
     },

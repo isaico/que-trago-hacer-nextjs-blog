@@ -15,11 +15,13 @@ export const metadata = {
         'Descubre el mundo de la coctelería con este blog de recetas de cócteles. Desde tragos clásicos hasta modernos todos los secretos de la coctelería revelados',
     twitter: {
         card: 'summary_large_image',
-        
     },
-   
+    referrer: 'origin-when-cross-origin',
+    metadataBase: new URL(process.env.BASE_URL),
+    alternates: {
+        canonical: '/',
+    },
     creator: 'Isaias García',
-    
 };
 
 export default function RootLayout({ children }) {

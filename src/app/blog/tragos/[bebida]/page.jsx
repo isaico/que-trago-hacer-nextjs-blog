@@ -40,13 +40,9 @@ export async function generateMetadata({ params }, parent) {
     return {
         title: blogPost.title,
         description: blogPost.head_desc,
-        metadataBase: new URL(
-            `${process.env.BASE_URL}/tragos/${stringToRoute(
-                post
-            )}/${stringToRoute(blogPost.category_id)}`
-        ),
+       
         alternates: {
-            canonical: `/tragos/${stringToRoute(post)}/${stringToRoute(
+        canonical: `/blog/tragos/${stringToRoute(
                 blogPost.category_id
             )}`,
         },

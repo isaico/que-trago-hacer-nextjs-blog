@@ -29,14 +29,14 @@ export const categoryTragos = [
 ];
 export const categoryPosts = [
     {
-        path: '/blog/posts/Tragos-y-cocteles-la-guia-definitiva',
+        path: '/blog/posts/tragos-y-cocteles-la-guia-definitiva',
         text: 'Tragos y Cocteles: La guía definitiva de coctelería',
         key: 100,
         
     },
     {
         //matchear el category_id del blog con el final del path
-        path: '/blog/posts/Top-10-cocteles-clasicos',
+        path: '/blog/posts/top-10-cocteles-clasicos',
         key: 101,
         text: 'Los 10 cócteles clásicos que debes conocer',
     },

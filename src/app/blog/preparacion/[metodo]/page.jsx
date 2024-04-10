@@ -35,15 +35,9 @@ export async function generateMetadata({ params }, parent) {
     return {
         title: blogPost.title,
         description: blogPost.head_desc,
-        metadataBase: new URL(
-            `${process.env.BASE_URL}/preparacion/${stringToRoute(
-                post
-            )}/${stringToRoute(blogPost.category_id)}`
-        ),
+
         alternates: {
-            canonical: `/preparacion/${stringToRoute(post)}/${stringToRoute(
-                blogPost.category_id
-            )}`,
+            canonical: `/blog/preparacion/${stringToRoute(blogPost.category_id)}`,
         },
         openGraph: {
             title: blogPost.title,
