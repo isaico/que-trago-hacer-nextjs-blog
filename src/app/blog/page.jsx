@@ -13,10 +13,19 @@ const Jumbotron = lazy(() =>
 
 /* ------------------------------ head metadata ----------------------------- */
 export const metadata = {
-    metadataBase: new URL(`${process.env.BASE_URL}/blog`),
     alternates: {
         canonical: '/blog',
     },
+    keywords: [
+        'tragos',
+        'trago',
+        'cocteleria',
+        'cocteles',
+        'blog',
+        'tragos clasicos',
+        'tragos con vodka',
+        'tragos con gin'
+    ],
     title: {
         default:
             'Todos los posts - Blog de cocteleria clásica y recetas de tragos',

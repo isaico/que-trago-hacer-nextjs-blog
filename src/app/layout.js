@@ -18,9 +18,7 @@ export const metadata = {
     },
     referrer: 'origin-when-cross-origin',
     metadataBase: new URL(process.env.BASE_URL),
-    alternates: {
-        canonical: '/',
-    },
+    
     creator: 'Isaias García',
 };
 

@@ -13,8 +13,9 @@ const HomeBlogCards = dynamic(() =>
 /* ---------------------------------- head ---------------------------------- */
 export const metadata = {
     keywords: ['tragos', 'trago', 'cocteleria', 'cocteles'],
-  
-   
+    alternates: {
+        canonical: '/',
+    },
     twitter: {
         title: '¿Qué trago hacer? - Blog de cocteleria y tragos',
         description:

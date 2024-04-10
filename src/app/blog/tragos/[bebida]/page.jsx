@@ -40,11 +40,9 @@ export async function generateMetadata({ params }, parent) {
     return {
         title: blogPost.title,
         description: blogPost.head_desc,
-       
+
         alternates: {
-        canonical: `/blog/tragos/${stringToRoute(
-                blogPost.category_id
-            )}`,
+            canonical: `/blog/tragos/${stringToRoute(blogPost.category_id)}`,
         },
         openGraph: {
             title: blogPost.title,
