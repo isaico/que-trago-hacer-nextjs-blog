@@ -4,6 +4,7 @@ import { buildIds } from '@/utils/buildIds';
 import { sanitize } from 'isomorphic-dompurify';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
+import { merriweather } from '@/utils/fonts';
 // lazy/dynamic imports
 const Loader = dynamic(() => import('@/components/UiComps/Loader'));
 const CocktailsContainer = dynamic(() =>
@@ -20,11 +21,10 @@ const PostedBy = dynamic(() => import('@/components/UiComps/PostedBy'));
 const ArticleLayout = dynamic(() =>
     import('@/components/layoutComps/Article/ArticleLayout')
 );
-const merriweather = dynamic(() => import('@/utils/fonts'));
+// const merriweather = dynamic(() => import('@/utils/fonts'));
 const ArticleTitle = dynamic(() => import('@/components/UiComps/ArticleTitle'));
 const Affiliations = dynamic(() => import('../Affiliations/Affiliations'));
 const SideIndexNav = dynamic(() => import('../SideIndexNav/SideIndexNav'));
-
 
 const BlogLayout = async ({ blog }) => {
     let cocktails = [];
@@ -100,8 +100,13 @@ const BlogLayout = async ({ blog }) => {
                             <>
                                 {cocktails && cocktails.length > 0 ? (
                                     <article>
-                                        <ArticleTitle id="list_title">
+                                        <h3
+                                            className={` text-2xl md:text-3xl font-normal text-gray-900 pb-4 ${merriweather.className}`}
+                                        >
                                             {blog?.list_title}
+                                        </h3>
+                                        <ArticleTitle id="list_title">
+                                            asd
                                         </ArticleTitle>
 
                                         <CocktailsContainer
@@ -133,7 +138,6 @@ const BlogLayout = async ({ blog }) => {
                                 ></p>
                             </div>
                         )}
-                        
                     </div>
                 </div>
 

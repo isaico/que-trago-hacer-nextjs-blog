@@ -2,7 +2,7 @@ import Link from 'next/link';
 const HomeAdvises = () => {
     return (
         <>
-            <h2
+            <h3
                 className="text-black  text-3xl md:text-5xl  mb-28 mt-36 text-center border-b pb-8"
                 id="advises"
             >
@@ -18,12 +18,12 @@ const HomeAdvises = () => {
                     aprende sobre cocteleria
                 </Link>{' '}
                 con nuestra guía.
-            </h2>
+            </h3>
 
             <div className="bg-bg-white  border border-gray-200 rounded-lg p-8 md:p-12 mb-8 shadow-md   ">
-                <h2 className="text-black  text-3xl md:text-5xl font-extrabold mb-6">
+                <h4 className="text-black  text-3xl md:text-5xl font-extrabold mb-6">
                     Consejos para Preparar Cocteles en Casa
-                </h2>
+                </h4>
                 <p className="text-lg font-normal  mb-6 text-gray-500">
                     Con estos consejos te convertirás en el experto de la
                     cocteleria en casa.

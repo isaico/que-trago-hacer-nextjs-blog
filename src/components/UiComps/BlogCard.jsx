@@ -28,7 +28,7 @@ const BlogCard = ({ blog }) => {
                         <div>
                             <PostedBy time={blog.createdAt}></PostedBy>
                             <span className="text-sm text-gray-500">
-                                Categoría: {blog.blog_category}
+                                Categoría: <span className='text-primary'>{blog.blog_category}</span>
                             </span>
                         </div>
                         <h3 className="text-2xl font-medium pb-2 text-gray-900">
